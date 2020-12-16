@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="./assets/mdb/mdb-pro.min.css">
+    <!-- Material Design Bootstrap Ecommerce -->
+    <link rel="stylesheet" href="./assets/mdb/mdb.ecommerce.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Your custom styles (optional) -->
+    <link href="./css/icofont.min.css" rel="stylesheet">
+    <link href="./css/boxicons.min.css" rel="stylesheet">
+    <link href="./css/animate.min.css" rel="stylesheet">
+    <link href="./css/owl.carousel.min.css" rel="stylesheet">
+    <link href="./css/venobox.css" rel="stylesheet">
+    <link href="./css/aos.css" rel="stylesheet">
+    <style>
+        @media (max-width: 450px) {
+            .carousel .carousel-inner .carousel-item .view img {
+                height: 50vh;
+                width: auto !important;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        }
+    </style>
+    <style type="text/css">
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+
+<body class="profile" aria-busy="true">
+
+    <!-- Main Navigation -->
+    <header>
+
+        <!-- Modal Contact -->
+        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header py-4">
+                        <h5 class="modal-title mx-auto">Write to us</h5>
+                        <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form md-outline">
+                            <i class="fas fa-user prefix"></i>
+                            <input type="text" id="contactForm-name1" class="form-control">
+                            <label for="contactForm-name1">Your name</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-envelope prefix"></i>
+                            <input type="email" id="contactForm-email1" class="form-control">
+                            <label for="contactForm-email1">Your email</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-tag prefix"></i>
+                            <input type="text" id="contact321" class="form-control">
+                            <label for="contact321">Subject</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-pencil-alt prefix"></i>
+                            <textarea type="text" id="contact81" class="md-textarea form-control" rows="4"></textarea>
+                            <label for="contact81">Your message</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center py-4">
+                        <button class="btn btn-primary waves-effect waves-light">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Contact -->
+
+        <!-- Modal Login / Register -->
+        <div class="modal fade show" id="modalLoginRegister" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Pills -->
+                        <ul class="nav md-pills nav-justified pills-primary">
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded active show" data-toggle="tab"
+                                    href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#modalLoginRegister-login"
+                                    role="tab" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded" data-toggle="tab"
+                                    href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#modalLoginRegister-register"
+                                    role="tab" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <!-- Pills -->
+
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade in show active" id="modalLoginRegister-login" role="tabpanel">
+
+                                <!-- Login form -->
+                                <form id="formLoginRegister-login" class="pt-2"
+                                    action="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/login"
+                                    method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email">Your email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegiser-password" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegiser-password">Your password</label>
+                                    </div>
+
+                                    <div class="text-center mt-4 pt-3">
+                                        <button type="button"
+                                            class="btn btn-outline-primary mr-1 mb-2 waves-effect waves-light">Forgot
+                                            password?</button>
+                                        <button type="button"
+                                            class="btn btn-primary mb-2 waves-effect waves-light">Login</button>
+                                    </div>
+
+                                </form>
+                                <!-- Login form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                            <!-- Second panel -->
+                            <div class="tab-pane fade" id="modalLoginRegister-register" role="tabpanel">
+
+                                <!-- Register form -->
+                                <form id="formLoginRegister-register" class="pt-2"
+                                    action="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/register"
+                                    method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-user prefix"></i>
+                                        <input type="text" id="formLoginRegister-name" class="form-control">
+                                        <label data-error="wrong" data-success="right" for="formLoginRegister-name">Your
+                                            name</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-pencil-alt prefix"></i>
+                                        <input type="text" id="formLoginRegister-username" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-username">Your
+                                            username</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email-example" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email-example">Your
+                                            email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-example"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-example">Your
+                                            password</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-key prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-repeat"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-repeat">Repeat
+                                            password</label>
+                                    </div>
+
+                                    <div class="form-check mt-4 mb-3 pl-0 text-left">
+                                        <input type="checkbox" class="form-check-input filled-in"
+                                            id="formLoginRegister-newsletter" name="newsletter">
+                                        <label class="form-check-label small grey-text"
+                                            for="formLoginRegister-newsletter">
+                                            I agree to sign up for account notifications and newsletter
+                                        </label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <p class="small grey-text mb-4">Lorem ipsum dolor sit amet <a target="_blank"
+                                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Privacy
+                                                Policy</a>.</p>
+                                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Sign
+                                            up</button>
+                                    </div>
+
+                                </form>
+                                <!-- Register form -->
+
+                            </div>
+                            <!-- Second panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
+
+        <!-- Modal Login / Register -->
+        <div class="modal fade show" id="modalLoginRegister2" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Pills -->
+                        <ul class="nav md-pills nav-justified pills-primary">
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded" data-toggle="tab"
+                                    href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#modalLoginRegister-login2"
+                                    role="tab" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded active show" data-toggle="tab"
+                                    href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#modalLoginRegister-register2"
+                                    role="tab" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <!-- Pills -->
+
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade" id="modalLoginRegister-login2" role="tabpanel">
+
+                                <!-- Login form -->
+                                <form id="formLoginRegister-login2" class="pt-2"
+                                    action="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/login"
+                                    method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email2">Your email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegiser-password2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegiser-password2">Your
+                                            password</label>
+                                    </div>
+
+                                    <div class="text-center mt-4 pt-3">
+                                        <button type="button"
+                                            class="btn btn-outline-primary mr-1 mb-2 waves-effect waves-light">Forgot
+                                            password?</button>
+                                        <button type="button"
+                                            class="btn btn-primary mb-2 waves-effect waves-light">Login</button>
+                                    </div>
+
+                                </form>
+                                <!-- Login form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                            <!-- Second panel -->
+                            <div class="tab-pane fade in show active" id="modalLoginRegister-register2" role="tabpanel">
+
+                                <!-- Register form -->
+                                <form id="formLoginRegister-register2" class="pt-2"
+                                    action="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/register"
+                                    method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-user prefix"></i>
+                                        <input type="text" id="formLoginRegister-name2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-name2">Your name</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-pencil-alt prefix"></i>
+                                        <input type="text" id="formLoginRegister-username2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-username2">Your
+                                            username</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email-example2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email-example2">Your
+                                            email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-example2"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-example2">Your
+                                            password</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-key prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-repeat2"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-repeat2">Repeat
+                                            password</label>
+                                    </div>
+
+                                    <div class="form-check mt-4 mb-3 pl-0 text-left">
+                                        <input type="checkbox" class="form-check-input filled-in"
+                                            id="formLoginRegister-newsletter2" name="newsletter">
+                                        <label class="form-check-label small grey-text"
+                                            for="formLoginRegister-newsletter2">
+                                            I agree to sign up for account notifications and newsletter
+                                        </label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <p class="small grey-text mb-4">Lorem ipsum dolor sit amet <a target="_blank"
+                                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Privacy
+                                                Policy</a>.</p>
+                                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Sign
+                                            up</button>
+                                    </div>
+
+                                </form>
+                                <!-- Register form -->
+
+                            </div>
+                            <!-- Second panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="https://mdbecommerce.com/">
+                    <strong><span class="text-grey">Hom</span><span class="text-primary">i</span><span
+                            class="text-grey">es</span><span class="text-primary">.</span></strong>
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Right -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!"
+                                class="nav-link navbar-link-2 waves-effect">
+                                <span class="badge badge-pill badge-danger">5</span>
+                                <i class="fas fa-shopping-cart pl-0"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!"
+                                class="nav-link waves-effect">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!"
+                                class="nav-link waves-effect">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!"
+                                data-toggle="modal" data-target="#modalContactForm" class="nav-link waves-effect">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!"
+                                data-toggle="modal" data-target="#modalLoginRegister" class="nav-link waves-effect">
+                                Sign in
+                            </a>
+                        </li>
+                        <li class="nav-item pl-2 mb-2 mb-md-0">
+                            <a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!"
+                                data-toggle="modal" data-target="#modalLoginRegister2" type="button"
+                                class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign
+                                up</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Links -->
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <div class="jumbotron color-grey-light mt-70">
+            <div class="d-flex align-items-center h-100">
+                <div class="container text-center py-5">
+                    <!--Grid row-->
+                    <div class="row d-flex align-items-center">
+
+                        <!--Grid column-->
+                        <div class="col-md-6 mb-3 mb-md-0">
+
+                            <h2 class="font-weight-bold dark-grey-text mb-0 text-center text-md-left">Shop</h2>
+
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+
+                            <ol
+                                class="breadcrumb rounded-0 bg-transparent d-flex justify-content-center float-md-right p-0 mb-0">
+                                <li class="breadcrumb-item">
+                                    <a class="text-muted"
+                                        href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!"
+                                        title="Home">Home</a>
+                                </li>
+                                <li class="breadcrumb-item text-muted">
+                                    Shop
+                                </li>
+                                <li class="breadcrumb-item active font-weight-bold">
+                                    Set of 3 baskets
+                                </li>
+                            </ol>
+
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Main Navigation -->
+
+    <!-- Main layout -->
+    <main>
+
+        <div class="container">
+
+            <!--Section: Block Content-->
+            <section class="my-5">
+
+                <div class="row">
+                    <div class="col-md-5 mb-4 mb-md-0">
+
+                        <div class="view zoom z-depth-2 rounded">
+                            <img class="img-fluid w-100" src="./assets/images/profile/img(10).jpg" alt="Sample">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">
+                                <div class="mask waves-effect waves-light"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-7">
+
+                        <h5>Set of 3 seagrass baskets</h5>
+                        <p class="mb-2 text-muted text-uppercase small">Storage</p>
+                        <ul class="rating">
+                            <li>
+                                <i class="fas fa-star fa-sm text-primary"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star fa-sm text-primary"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star fa-sm text-primary"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star fa-sm text-primary"></i>
+                            </li>
+                            <li>
+                                <i class="far fa-star fa-sm text-primary"></i>
+                            </li>
+                        </ul>
+                        <p><span class="mr-1"><strong>$79.99</strong></span></p>
+                        <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo.
+                            Sit
+                            error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.</p>
+                        <div class="table-responsive">
+                            <table class="table table-sm table-borderless mb-0">
+                                <tbody>
+                                    <tr>
+                                        <th class="pl-0 w-25" scope="row"><strong>Size</strong></th>
+                                        <td>Different sizes</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="pl-0 w-25" scope="row"><strong>Material</strong></th>
+                                        <td>Seagrass</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="pl-0 w-25" scope="row"><strong>Color</strong></th>
+                                        <td>Sand</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <div class="table-responsive mb-2">
+                            <table class="table table-sm table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <td class="pl-0 pb-0 w-25">Quantity</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-0">
+                                            <div class="def-number-input number-input safari_only mb-0">
+                                                <button
+                                                    onclick="this.parentNode.querySelector(&#39;input[type=number]&#39;).stepDown()"
+                                                    class="minus"></button>
+                                                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                                <button
+                                                    onclick="this.parentNode.querySelector(&#39;input[type=number]&#39;).stepUp()"
+                                                    class="plus"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light">Buy
+                            now</button>
+                        <button type="button" class="btn btn-light btn-md mr-1 mb-2 waves-effect waves-light"><i
+                                class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                    </div>
+                </div>
+
+            </section>
+            <!--Section: Block Content-->
+
+            <!--Section: New products-->
+            <section>
+
+                <h3 class="text-center pt-5 mb-0">Our latest collection</h3>
+
+                <!-- Grid row -->
+                <div class="row mt-5 mb-4">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+
+                        <!-- Card -->
+                        <div class="">
+
+                            <div class="view zoom z-depth-2 rounded">
+                                <img class="img-fluid w-100" src="./assets/images/profile/img(66).jpg" alt="Sample">
+                                <a
+                                    href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">
+                                    <div class="mask waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="text-center pt-4">
+
+                                <h5>Seagrass basket - M</h5>
+                                <h6 class="mb-3">$ 23.00</h6>
+                                <button type="button" class="btn btn-primary btn-sm mr-1 waves-effect waves-light"><i
+                                        class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                                <button type="button"
+                                    class="btn btn-danger btn-sm px-3 material-tooltip-main waves-effect waves-light"
+                                    data-toggle="tooltip" data-placement="top" title=""
+                                    data-original-title="Add to wishlist"><i class="far fa-heart"></i></button>
+
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+
+                        <!-- Card -->
+                        <div class="">
+
+                            <div class="view zoom z-depth-2 rounded">
+                                <img class="img-fluid w-100" src="./assets/images/profile/img(23).jpg" alt="Sample">
+                                <a
+                                    href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">
+                                    <div class="mask waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="text-center pt-4">
+
+                                <h5>Seagrass basket - L</h5>
+                                <h6 class="mb-3">$ 25.00</h6>
+                                <button type="button" class="btn btn-primary btn-sm mr-1 waves-effect waves-light"><i
+                                        class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                                <button type="button"
+                                    class="btn btn-danger btn-sm px-3 material-tooltip-main waves-effect waves-light"
+                                    data-toggle="tooltip" data-placement="top" title=""
+                                    data-original-title="Add to wishlist"><i class="far fa-heart"></i></button>
+
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+
+                        <!-- Card -->
+                        <div class="">
+
+                            <div class="view zoom z-depth-2 rounded">
+                                <img class="img-fluid w-100" src="./assets/images/profile/img(63).jpg" alt="Sample">
+                                <a
+                                    href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">
+                                    <div class="mask waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="text-center pt-4">
+
+                                <h5>Flat seagrass basket</h5>
+                                <h6 class="mb-3">$ 20.00</h6>
+                                <button type="button" class="btn btn-primary btn-sm mr-1 waves-effect waves-light"><i
+                                        class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                                <button type="button"
+                                    class="btn btn-danger btn-sm px-3 material-tooltip-main waves-effect waves-light"
+                                    data-toggle="tooltip" data-placement="top" title=""
+                                    data-original-title="Add to wishlist"><i class="far fa-heart"></i></button>
+
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-3 mb-4">
+
+                        <!-- Card -->
+                        <div class="">
+
+                            <div class="view zoom z-depth-2 rounded">
+                                <img class="img-fluid w-100" src="./assets/images/profile/img(59).jpg" alt="Sample">
+                                <a
+                                    href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">
+                                    <div class="mask waves-effect waves-light"></div>
+                                </a>
+                            </div>
+
+                            <div class="text-center pt-4">
+
+                                <h5>Small wicker basket</h5>
+                                <h6 class="mb-3">$ 9.00</h6>
+                                <button type="button" class="btn btn-primary btn-sm mr-1 waves-effect waves-light"><i
+                                        class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                                <button type="button"
+                                    class="btn btn-danger btn-sm px-3 material-tooltip-main waves-effect waves-light"
+                                    data-toggle="tooltip" data-placement="top" title=""
+                                    data-original-title="Add to wishlist"><i class="far fa-heart"></i></button>
+
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </section>
+            <!--Section: New products-->
+
+        </div>
+
+    </main>
+    <!-- Main layout -->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small elegant-color">
+
+        <div class="color-primary">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left pt-4 pt-md-5">
+
+            <!-- Grid row -->
+            <div class="row mt-1 mt-md-0 mb-4 mb-md-0">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+                    <!-- Links -->
+                    <h5>About us</h5>
+                    <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+                    <ul class="list-unstyled foot-desc">
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">About
+                                us</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Terms
+                                of
+                                use</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Privacy
+                                policy</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Our
+                                brands</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Corporate
+                                social responsibility</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+                    <!-- Links -->
+                    <h5>Your account</h5>
+                    <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+                    <ul class="list-unstyled foot-desc">
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Sign
+                                in</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Sign
+                                up</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Your
+                                orders</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Account
+                                settings</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+                    <!-- Links -->
+                    <h5>Payments and delivery</h5>
+                    <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+                    <ul class="list-unstyled foot-desc">
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Free
+                                shipping</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Zero
+                                waste shipments</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Payments</a>
+                        </li>
+                        <li class="mb-2">
+                            <a
+                                href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/furniture/product.html#!">Shipping
+                                and returns</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
+
+                    <!-- Links -->
+                    <h5>Contacts</h5>
+                    <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
+
+                    <ul class="fa-ul foot-desc ml-4">
+                        <li class="mb-2"><span class="fa-li"><i class="far fa-map"></i></span>New York, Avenue Street 10
+                        </li>
+                        <li class="mb-2"><span class="fa-li"><i class="fas fa-phone-alt"></i></span>042 876 836 908</li>
+                        <li class="mb-2"><span class="fa-li"><i class="far fa-envelope"></i></span>company@example.com
+                        </li>
+                        <li><span class="fa-li"><i class="far fa-clock"></i></span>Monday - Friday: 10-17</li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+<script src="./assets/js/analytics.js.download"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+    crossorigin="anonymous"></script>
+<script src="./Material Design Bootstrap_files/jquery-3.4.1.min.js.download"></script>
+<script src="./assets/js/validate.js.download"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+    integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="./assets/mdb/mdb.min.js.download"></script>
+<!-- MDB Ecommerce JavaScript -->
+<script type="text/javascript" src="./assets/mdb/mdb.ecommerce.min.js.download"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+    integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+    crossorigin="anonymous"></script>
+<script src="./assets/js/owl.carousel.min.js.download"></script>
+<script src="./assets/js/venobox.min.js.download"></script>
+<script src="./assets/js/aos.js.download"></script>
+<script>
+    $(function () {
+        $('.material-tooltip-main').tooltip({
+            template: '<div class="tooltip md-tooltip-main"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-inner-main"></div></div>'
+        })
+    })
+</script>
+<script>
+    if (window.self == window.top) { (function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } 
+</script>
+<script src="./assets/js/main.js.download"></script>
+<script>
+    $('#multi').mdbRange({
+        single: {
+            active: true,
+            multi: {
+                active: true,
+                rangeLength: 1
+            },
+        }
+    });
+
+    $(document).ready(function () {
+        $('.mdb-select').materialSelect();
+        $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+            $(this).closest('.select-outline').find('label').toggleClass('active');
+            $(this).closest('.select-outline').find('.caret').toggleClass('active');
+        });
+    });
+</script>
+    <div class="hiddendiv common"></div>
+</body>
+
+</html>
