@@ -80,3 +80,61 @@ A  complain portal will ensure that all grievances will be catered. They can als
  - Reduced Costs : Using our portal, there is no need for as many third parties or middlemen to make guarantees because it doesn’t matter if you can trust your trading partner. Instead, you just have to trust the data on the blockchain. You also won’t have to review so much documentation to complete a trade because everyone will have permissioned access to a single, immutable version.
 
  </div>
+
+
+ <br>
+
+## Frontend Based Tech-Stack
+
+<br>
+
+
+
+
+<p float="left" align="middle">
+
+<a href="https://html.com/"><img height=100px style="margin:7.5px" src= "https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"></a>
+<a href="https://www.w3schools.com/css/"><img height=100px style="margin:7.5px" src= "https://cdn.iconscout.com/icon/free/png-512/css-118-569410.png"></a>
+<a href="https://www.javascript.com/"><img height=100px style="margin:7.5px" src= "https://banner2.cleanpng.com/20180417/fsw/kisspng-javascript-node-js-angularjs-jquery-github-5ad5a9c7373410.5023404615239520712261.jpg"></a>
+<a href="https://reactjs.org/"><img height=100px style="margin:7.5px" src= "https://cdn.worldvectorlogo.com/logos/react.svg"></a>
+<a href="https://web3js.readthedocs.io/en/v1.3.0/"><img height=100px style="margin:7.5px" src= "https://i.imgur.com/GX0qzK1.jpg"></a>
+<a href="https://flutter.dev/"><img height=100px style="margin:7.5px" src= "https://lh3.googleusercontent.com/proxy/ddvxdfbgcs9ylLHLB1NDpY9gnlylgca0B5oqVG5u4vhhI8k21eJjJhQYAxXuXyuiFHYkfMDfqsq1AV9mq6dyxPM-siulks7zcII7ZcH4gZEw3Uhsh88hNUlOssk"></a>
+</p>
+
+ <br>
+
+## Blockchain Based Tech-Stack
+
+<br>
+
+
+
+
+<p float="left" align="middle">
+
+<a href="https://ethereum.org/en/"><img height=100px style="margin:7.5px" src= "https://i.pinimg.com/originals/88/80/b5/8880b59a0d0d9eb470714426c2f371a7.png"></a>
+<a href="https://docs.soliditylang.org/en/v0.7.5/"><img height=100px style="margin:7.5px" src= "https://cointral.com/wp-content/uploads/2019/11/solidity-nedir.png"></a>
+<a href="https://www.trufflesuite.com/"><img height=100px style="margin:7.5px" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRwqCmH0v3EjrjBQ5huQN_8NhV1oj4jvU9g&usqp=CAU"></a>
+<a href="https://www.trufflesuite.com/drizzle"><img height=100px style="margin:7.5px" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu5Puv-KmV3_WZlzGbhJ3Jbd0u1rBI9e_gGg&usqp=CAU"></a>
+<a href="https://matic.network/"><img height=100px style="margin:7.5px" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNxgSVNPxXjQ1P5crZdo9wk4FbRJodcuR4-g&usqp=CAU"></a>
+<a href="https://ipfs.io/"><img height=100px style="margin:7.5px" src= "https://miro.medium.com/max/1200/1*xBysnRmAn8n17ZjPMVxfmg.png"></a>
+<a href="https://infura.io/"><img height=100px style="margin:7.5px" src= "https://www.trufflesuite.com/img/tutorials/infura/infura.png"></a>
+<a href="https://www.rinkeby.io/#stats"><img height=100px style="margin:7.5px" src= "https://www.devprovider.com/wp-content/uploads/2019/02/1N4Xyvmrm-6uMzJcKkU7BMw-1024x512.jpeg"></a>
+</p>
+
+ <br>
+
+## Future implementation
+
+<br>
+
+<div align = "left">
+
+ - Scan Index : In the future for security purposes, a full-fledged descriptive report for the person’s body organs will be uploaded on our server to authenticate that no other body part has been hampered with as there are many cases where the person donating or receiving the organ is unaware of what all has been done to him during surgery. The person’s report will be a result of a full CT scan or an MRI to ensure this
+
+ - Health card linking : As we all know that the government will be issuing a health card to every citizen in near future and so,as an advancement we will be linking it to the user at our network for the people to avail the benefits associated with it
+
+ - Stem Cells : At this moment there is no authenticated process for stem cell donation despite the fact that it can be used to replace any tissue in the body. We aim at developing a secure, easy, and smooth process for the donation and storage purposes like the one built for the organ donation by us.
+
+
+ </div>
