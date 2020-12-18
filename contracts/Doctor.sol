@@ -2,12 +2,11 @@ pragma solidity >=0.7.0 <0.8.0;
 
 import './Transplant.sol';
 
-contract Person {
-	address[] public  doctor ;
+contract Doctor {
+	address[] public  patient ;
 	string public name ;
 	string public email ;
 	uint public phone;
-	address public authority ;
 	Transplant[] public transplants ;
 	address public myaddress;
 	string public aadhar_number ;
@@ -18,13 +17,18 @@ contract Person {
 	    aadhar_number =_aadhar_number;
 	    myaddress = _myaddress ;
 	}
-
-	function addDoctor( address  _doc) public {
-		doctor.push(_doc);
-	}
-	function approveStage (address _contractAddress) public   {
+	function approveStage (address _contractAddress) external   {
 		Transplant tr = Transplant(_contractAddress);
 		tr.currentStageApproval();
 	}
+    function createStage ( address _contractAddress ) external {
+        Transplant tr = Transplant(_contractAddress);
+		tr.startNextStage();
+
+    }
+    function completecurrentStage ( address _contractAddress ) external {
+        Transplant tr = Transplant(_contractAddress);
+		tr.completeStage();
+    }
 	
 }
