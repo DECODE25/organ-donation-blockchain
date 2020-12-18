@@ -8,7 +8,7 @@ contract Person {
 	string public email ;
 	uint public phone;
 	address public authority ;
-	Transplant[] public transplants ;
+	address[] public transplants ;
 	address public myaddress;
 	string public aadhar_number ;
 
@@ -18,7 +18,9 @@ contract Person {
 	    aadhar_number =_aadhar_number;
 	    myaddress = _myaddress ;
 	}
-
+	function addTransplant( address  _transplant) public {
+		transplants.push(_transplant);
+	}
 	function addDoctor( address  _doc) public {
 		doctor.push(_doc);
 	}
