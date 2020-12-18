@@ -64,28 +64,6 @@ To build an ecosystem where the donors , recipients and others can interact with
 
 <br>
 
-## Current Drawbacks
-
-<br>
-<div align = "left">
-
-
- -  Intricate Procedure :  The current process of organ transplant is quite cumbersome , a lot for approvals from    different authorities has to be taken  in order to proceed at various stages of the process. No automated mechanism exists as a result of which the process is slow and not secure
-
-
- - Uncertainity of treatment : A recipient is not certain as to when his chance will come for the transplant . As a result he tries other means to obtain the organ
-
- - Secure Transaction : If a medically compatible donor backs out after the tests and medical procedures are done which the recipient paid for , then the donor does not pay back the recipient for the medical expenses he bore.
-
- - Fundraising : Currently no platform exists where underprivileged recipients can come in direct contact with nog’s , organization and other people willing to provide monetary donations to help such people.
-
- - Low Expertise : Few surgeons are available who are trained in the field of organ transplantation , and people in remote areas are unaware about them as a result the only option left is to surrender the responsibility in the hands of incompetent doctors.
-
- - Reporting Fraud : No such platform exists where people can report doctors and other staff indulged in the activity of illegal organ trafficking . The only option is to lodge an FIR , which  a lot of people refrain from due to other threats
- </div>
- 
-<br>
-
 ## Workflow Based Advantages
 
 <br>
