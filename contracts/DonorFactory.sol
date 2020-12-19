@@ -9,8 +9,8 @@ contract DonateOrganFactory {
     address public authority1;
     address public authority2;
 
-    mapping( address => address) people ;
-    mapping( address => address) doctors ;
+    mapping( address => address) public  people ;
+    mapping( address => address) public  doctors ;
     address[] transplants;
 
 
@@ -25,7 +25,7 @@ contract DonateOrganFactory {
         people[msg.sender] = address(person);
     }
 
-    function createDoctor ( string memory _name , string memory  _aadhar_number , address  _myaddress ) public {
+    function createDoctor ( string memory _name , string memory  _aadhar_number  ) public {
         Doctor doctor = new Doctor(_name , _aadhar_number , msg.sender);
         doctors[msg.sender] = address(doctor);
     }

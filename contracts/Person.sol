@@ -12,20 +12,30 @@ contract Person {
 	string public aadhar_number ;
 	mapping(address =>bool) doctorexists;
 
+
+	modifier isAdmin () {
+		require(msg.sender == myaddress);
+		_;
+	}
+	modifier restrictedDoctor () {
+		require(doctorexists[tx.origin] == true );
+		_;
+	}
+
 	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  )
 	{
 	    name = _name;
 	    aadhar_number =_aadhar_number;
 	    myaddress = _myaddress ;
 	}
-	function addTransplant( address  _transplant) public {
+	function addTransplant( address  _transplant) public restrictedDoctor{
 		transplants.push(_transplant);
 	}
-	function addDoctor( address  _doc) public {
+	function addDoctor( address  _doc) public isAdmin{
 		doctor.push(_doc);
 		doctorexists[_doc]= true ;
 	}
-	function approveStage (address _contractAddress) public   {
+	function approveStage (address _contractAddress) public isAdmin {
 		Transplant tr = Transplant(_contractAddress);
 		tr.currentStageApproval();
 	}

@@ -11,26 +11,30 @@ contract Doctor {
 	address public myaddress;
 	string public aadhar_number ;
 
+	modifier isAdmin () {
+		require(msg.sender == myaddress);
+		_;
+	}
 	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  )
 	{
 	    name = _name;
 	    aadhar_number =_aadhar_number;
 	    myaddress = _myaddress ;
 	}
-	function approveStage (address _contractAddress) external   {
+	function approveStage (address _contractAddress) external isAdmin  {
 		Transplant tr = Transplant(_contractAddress);
 		tr.currentStageApproval();
 	}
-    function createStage ( address _contractAddress ) external {
+    function createStage ( address _contractAddress ) external isAdmin {
         Transplant tr = Transplant(_contractAddress);
 		tr.startNextStage();
 
     }
-    function completecurrentStage ( address _contractAddress ) external {
+    function completecurrentStage ( address _contractAddress ) external isAdmin {
         Transplant tr = Transplant(_contractAddress);
 		tr.completeStage();
     }
-		function addTransplant( address  _transplant) public {
+	function addTransplant( address  _transplant) public isAdmin{
 		transplants.push(_transplant);
 	}
 
