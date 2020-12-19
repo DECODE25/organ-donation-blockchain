@@ -16,7 +16,7 @@ contract Doctor {
 		require(tx.origin == myaddress);
 		_;
 	}
-	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  )
+	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  ) public
 	{
 	    name = _name;
 	    aadhar_number =_aadhar_number;

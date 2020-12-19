@@ -45,7 +45,7 @@ contract Transplant {
 		}
 		
 
-		constructor ( address _receient , address _donor , address _approval_authority1 , address _approval_authority2 , uint _organ )  {
+		constructor ( address _receient , address _donor , address _approval_authority1 , address _approval_authority2 , uint _organ ) public  {
 		    recepient =_receient;
 		    donor =_donor;
 		    doctor= tx.origin ;

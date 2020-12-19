@@ -27,7 +27,7 @@ contract DonateOrganFactory {
         _;
     }
     
-    constructor (address _authority1 , address _authority2) {
+    constructor (address _authority1 , address _authority2) public {
         admin = msg.sender ;
         authority1=_authority1;
         authority2=_authority2;
