@@ -10568,3 +10568,7 @@ table.table-bordered.dataTable tbody td {
     width: 200%;
     height: 200%;
 }
+
+.img-height {
+    height: 20rem;
+}
