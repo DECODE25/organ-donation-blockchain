@@ -1,4 +1,5 @@
 import React ,{Component} from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Web3 from 'web3';
 import DonateOrganFactory from './abis/DonateOrganFactory.json'
 import './App.css';
@@ -6,26 +7,13 @@ import Tracking from "./components/tracking/Tracking";
 import {configureBlockchain} from './actions/contractActions'
 import store from './store';
 
+
 class App extends Component {
 
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
   }
-
-
-  constructor(props)
-  {
-    super(props)
-    this.state ={
-      account:'',
-      loading:true
-    }
-    // this.createProduct= this.createProduct.bind(this)
-    // this.purchaseProduct= this.purchaseProduct.bind(this)
-  }
-
-
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
