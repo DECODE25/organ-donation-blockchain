@@ -7,10 +7,10 @@ contract Person {
 	string public name ;
 	string public email ;
 	uint public phone;
-	address public authority ;
 	address[] public transplants ;
 	address public myaddress;
 	string public aadhar_number ;
+	mapping(address =>bool) doctorexists;
 
 	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  )
 	{
@@ -23,10 +23,16 @@ contract Person {
 	}
 	function addDoctor( address  _doc) public {
 		doctor.push(_doc);
+		doctorexists[_doc]= true ;
 	}
 	function approveStage (address _contractAddress) public   {
 		Transplant tr = Transplant(_contractAddress);
 		tr.currentStageApproval();
 	}
+
+	function isDoctor( address _doc) public view returns(bool) {
+		return doctorexists[_doc];
+	}
+	
 	
 }

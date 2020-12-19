@@ -32,9 +32,17 @@ contract DonateOrganFactory {
 
     function createTransplant (address _receient , address _donor , uint _organ) public isDoctor {
         Person recepient = Person(people[_receient]);
+        require(recepient.isDoctor(msg.sender));
+        Person donor = Person(people[_donor]);
+        require(donor.isDoctor(msg.sender));
+        Doctor doctor= Doctor(doctors[msg.sender]);
 
+        
         Transplant transplant = new Transplant( _receient , _donor , authority1 , authority2 , _organ );
         transplants.push(address(transplant));
+        recepient.addTransplant(address(transplant));
+        donor.addTransplant(address(transplant));
+        doctor.addTransplant(address(transplant));
 
     }
     

@@ -7,7 +7,7 @@ contract Doctor {
 	string public name ;
 	string public email ;
 	uint public phone;
-	Transplant[] public transplants ;
+	address[] public transplants ;
 	address public myaddress;
 	string public aadhar_number ;
 
@@ -30,5 +30,8 @@ contract Doctor {
         Transplant tr = Transplant(_contractAddress);
 		tr.completeStage();
     }
-	
+		function addTransplant( address  _transplant) public {
+		transplants.push(_transplant);
+	}
+
 }
