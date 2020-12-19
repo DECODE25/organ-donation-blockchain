@@ -8,6 +8,7 @@ import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
 import { configureBlockchain } from "./actions/contractActions";
 import store from "./store";
+import SIgnup from "./components/Forms/SIgnup";
 
 class App extends Component {
   async componentWillMount() {
@@ -53,6 +54,9 @@ class App extends Component {
           </Route>
           <Route exact path="/intro">
             <Intro />
+          </Route>
+          <Route exact path="/form">
+            <SIgnup />
           </Route>
         </Switch>
       </div>
