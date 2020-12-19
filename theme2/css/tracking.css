@@ -1,0 +1,109 @@
+body {
+  /* background-color: #e6e6e6; */
+  font-family: "Poppins", sans-serif;
+}
+
+.img-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-container img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.circle {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  text-align: center;
+  border: 1px solid #028ccc;
+  margin: 0;
+  color: #028ccc;
+}
+
+.circle.active {
+  padding-top: 4px;
+  border-color: #95c06b;
+  color: #95c06b;
+}
+
+.stepper-div {
+  display: inline-block;
+  width: 14.6em;
+  height: 3px;
+  background-color: #028ccc;
+  margin: 0;
+}
+
+.stepper-div.probing {
+  background: rgb(134, 226, 126);
+  background: linear-gradient(90deg, #95c06b 63%, rgba(2, 140, 204, 1) 100%);
+}
+
+.stepper-div.active {
+  background-color: #95c06b;
+}
+
+.col-half-offset {
+  margin-left: 4.166666667%;
+}
+
+.progress-icon {
+  color: #028ccc;
+}
+
+.progress-icon.active {
+  color: #95c06b;
+}
+
+.nav-item .nav-link {
+  color: #028ccc;
+}
+
+.tab-content .active {
+  background-color: #fff;
+}
+
+.content-table {
+  border-radius: 15px;
+}
+
+.table-heading {
+  color: rgb(97, 96, 96);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1400px) {
+  .stepper-div {
+    width: 12.3em
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .stepper-div {
+    width: 10em
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .stepper-div {
+    width: 7em
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stepper-div {
+    width: 5em
+  }
+}
