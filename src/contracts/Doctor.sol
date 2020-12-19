@@ -12,6 +12,11 @@ contract Doctor {
 	address public myaddress;
 	string public aadhar_number ;
 
+
+	//events approveStage
+	//events complete stage 
+	//events complete current stage 
+
 	modifier isAdmin () {
 		require(tx.origin == myaddress);
 		_;

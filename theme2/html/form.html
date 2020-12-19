@@ -1,24 +1,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Profile</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css"
         integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Disable tap highlight on IE -->
+    <link rel="stylesheet" href="../css/Icon-font-7-stroke-PIXEDEN-v-1.2.0/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 
-<body>
-    <header class="skin-light">
+<body class="skin-light" aria-busy="true">
+
+    <!-- Main Navigation -->
+    <header>
 
         <!-- Modal Contact -->
         <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -325,8 +331,116 @@
         </div>
         <!-- Modal Login / Register -->
 
+        <!-- Modal Edit -->
+        <div class="modal fade show" id="modaledit" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Update Profile</h3>
+                        </div>
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade in show active" id="modalupdateprofile" role="tabpanel">
+
+                                <!-- Update form -->
+                                <form id="formupdateProfile" class="pt-2" action="update" method="post">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-borderless mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Father's Name</strong>
+                                                    </th>
+                                                    <td>Jakie Doe</td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Spouse</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-spouse" class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Gender</strong></th>
+                                                    <td>Male</td>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Blood Group</strong></th>
+                                                    <td>O+</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Height</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-height" class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Weight</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-weight" class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Email</strong>
+                                                    </th>
+                                                    <td><input type="email" id="formeditProfile-email"
+                                                            class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Aadhar Number</strong>
+                                                    </th>
+                                                    <td>xxxxxxxx2047</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Employment Status</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-EmploymentStatus"
+                                                            class="form-control"></td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Occupation</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-Occupation"
+                                                            class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Company</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-Company"
+                                                            class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Company Address</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-CompanyAddress"
+                                                            class="form-control"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </form>
+                                <!-- Update form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Update
+                            Profile</button>
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar">
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top scrolling-navbar">
             <div class="container-fluid">
 
                 <!-- Brand -->
@@ -346,35 +460,33 @@
 
                     <!-- Right -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link navbar-link-2 waves-effect">
-                                <span class="badge badge-pill badge-danger">5</span>
-                                <i class="fas fa-shopping-cart pl-0"></i>
+                        <li class="nav-item center-elem">
+                            <a href="./dashboard.html" class="nav-link waves-effect">
+                                Dashboard
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link waves-effect">
-                                Shop
+                        <li class="nav-item center-elem">
+                            <a href="./doctors.html" class="nav-link waves-effect">
+                                Doctors
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link waves-effect">
-                                Blog
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#!" data-toggle="modal" data-target="#modalContactForm"
-                                class="nav-link waves-effect">
+                        <li class="nav-item center-elem">
+                            <a href="./form.html" class="nav-link waves-effect">
                                 Contact
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item center-elem">
+                            <a href="./profile.html" class="nav-link waves-effect">
+                                Profile
+                            </a>
+                        </li>
+                        <li class="nav-item center-elem">
                             <a href="#!" data-toggle="modal" data-target="#modalLoginRegister"
                                 class="nav-link waves-effect">
                                 Sign in
                             </a>
                         </li>
-                        <li class="nav-item pl-2 mb-2 mb-md-0">
+                        <li class="nav-item pl-2 mb-2 mb-md-0 center-elem">
                             <a href="#!" data-toggle="modal" data-target="#modalLoginRegister2" type="button"
                                 class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign
                                 up</a>
@@ -388,48 +500,160 @@
         <!-- Navbar -->
 
     </header>
-    <div class="form w-100 h-100 d-flex align-items-center">
-        <div class="wrap-contact100 mx-auto">
-            <div class="contact100-form-title"
-                style="background-image: url(https://images.unsplash.com/photo-1584362917165-526a968579e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1382&q=80);">
-                <span class="contact100-form-title-1">
-                    Contact Us
-                </span>
-                <span class="contact100-form-title-2">
-                    Feel free to drop us a line below!
-                </span>
+    <div class="jumbotron color-grey-light mt-70 mb-0">
+        <div class="d-flex align-items-center h-50" style="background-image: url(../images/features.jpg);">
+            <div class="container text-center py-5">
+                <!--Grid row-->
+                <h2 class="font-weight-bold text-white mb-0 text-center text-md-left">Form</h2>
+                <!--Grid row-->
             </div>
-            <form class="contact100-form validate-form">
-                <div class="wrap-input100 validate-input" data-validate="Name is required">
-                    <span class="label-input100">Full Name:</span>
-                    <input class="input100" type="text" name="name" placeholder="Enter full name">
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <span class="label-input100">Email:</span>
-                    <input class="input100" type="text" name="email" placeholder="Enter email addess">
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Phone is required">
-                    <span class="label-input100">Phone:</span>
-                    <input class="input100" type="text" name="phone" placeholder="Enter phone number">
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Message is required">
-                    <span class="label-input100">Message:</span>
-                    <textarea class="input100" name="message" placeholder="Your Comment..."></textarea>
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
-                        <span>
-                            Submit <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </button>
-                </div>
-            </form>
         </div>
     </div>
+    <!-- Main Navigation -->
+
+    <section class="section section-sm section-sm-mod-1 bg-white text-center">
+        <div class="shell">
+            <div class="range range-sm-center">
+                <div class="cell-sm-10 cell-md-7 cell-lg-6">
+                    <h4>Contact Us (with reCAPTCHA)</h4>
+                    <!-- RD Mailform-->
+                    <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact"
+                        method="post" action="bat/rd-mailform.php" novalidate="novalidate">
+                        <div class="range range-sm-bottom range-20">
+                            <div class="cell-sm-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control-has-validation" id="contact2-first-name"
+                                        type="text" name="first-name" data-constraints="@Required"><span
+                                        class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="contact2-first-name">First
+                                        name</label>
+                                </div>
+                            </div>
+                            <div class="cell-sm-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control-has-validation" id="contact2-last-name"
+                                        type="text" name="last-name" data-constraints="@Required"><span
+                                        class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="contact2-last-name">Last name</label>
+                                </div>
+                            </div>
+                            <div class="cell-xs-12">
+                                <div class="form-wrap">
+                                    <label class="form-label rd-input-label" for="contact2-message">Your Message</label>
+                                    <textarea class="form-input form-control-has-validation form-control-last-child"
+                                        id="contact2-message" name="message"
+                                        data-constraints="@Required"></textarea><span class="form-validation"></span>
+                                </div>
+                            </div>
+                            <div class="cell-sm-6">
+                                <div class="form-wrap">
+                                    <input class="form-input form-control-has-validation" id="contact2-email"
+                                        type="email" name="email" data-constraints="@Email @Required"><span
+                                        class="form-validation"></span>
+                                    <label class="form-label rd-input-label" for="contact2-email">E-mail</label>
+                                </div>
+                            </div>
+                            <div class="cell-sm-7">
+                                <div class="form-wrap form-wrap-recaptcha">
+                                    <!-- Google captcha-->
+                                    <div class="recaptcha" id="captcha1"
+                                        data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt">
+                                        <div style="width: 304px; height: 78px;">
+                                            <div><iframe
+                                                    src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt&amp;co=aHR0cHM6Ly9saXZlZGVtbzAwLnRlbXBsYXRlLWhlbHAuY29tOjQ0Mw..&amp;hl=en&amp;v=qc5B-qjP0QEimFYUxcpWJy5B&amp;theme=light&amp;size=normal&amp;cb=a7bsc2llfb8a"
+                                                    width="304" height="78" role="presentation" name="a-m70v8783oexj"
+                                                    frameborder="0" scrolling="no"
+                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                            </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                class="g-recaptcha-response"
+                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                        </div><iframe style="display: none;"></iframe>
+                                    </div><span class="form-validation"></span>
+                                </div>
+                            </div>
+                            <div class="cell-sm-6">
+                                <button class="button button-block button-primary" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>Medicio</h3>
+                            <p>
+                                A108 Adam Street <br>
+                                NY 535022, USA<br><br>
+                                <strong>Phone:</strong> +1 5589 55488 55<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                © Copyright <strong><span>Medicio</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medicio-free-bootstrap-theme/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -485,6 +709,9 @@
             });
         })
     </script>
+
+
+    <div class="hiddendiv common"></div>
 </body>
 
 </html>
