@@ -44,7 +44,7 @@ class App extends Component {
 
 
     const networkId = await web3.eth.net.getId() 
-    const networkData = Marketplace.networks[networkId]
+    const networkData = DonateOrganFactory.networks[networkId]
 
     if (networkData) 
     {
