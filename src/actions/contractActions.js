@@ -4,3 +4,7 @@ export const configureBlockchain = ( web3 , DonorFactory  ) => async dispatch =>
 
 
 };
+
+export const setUserType = (user) => {
+    
+}
