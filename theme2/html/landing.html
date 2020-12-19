@@ -26,8 +26,8 @@
 
 <body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
 
-    <!-- ======= Header ======= -->
-    <header class="skin-light">
+    <!-- Main Navigation -->
+    <header>
 
         <!-- Modal Contact -->
         <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -334,8 +334,116 @@
         </div>
         <!-- Modal Login / Register -->
 
+        <!-- Modal Edit -->
+        <div class="modal fade show" id="modaledit" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Update Profile</h3>
+                        </div>
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade in show active" id="modalupdateprofile" role="tabpanel">
+
+                                <!-- Update form -->
+                                <form id="formupdateProfile" class="pt-2" action="update" method="post">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-borderless mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Father's Name</strong>
+                                                    </th>
+                                                    <td>Jakie Doe</td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Spouse</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-spouse" class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Gender</strong></th>
+                                                    <td>Male</td>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Blood Group</strong></th>
+                                                    <td>O+</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Height</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-height" class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Weight</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-weight" class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Email</strong>
+                                                    </th>
+                                                    <td><input type="email" id="formeditProfile-email"
+                                                            class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Aadhar Number</strong>
+                                                    </th>
+                                                    <td>xxxxxxxx2047</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Employment Status</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-EmploymentStatus"
+                                                            class="form-control"></td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Occupation</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-Occupation"
+                                                            class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Company</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-Company"
+                                                            class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Company Address</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-CompanyAddress"
+                                                            class="form-control"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </form>
+                                <!-- Update form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Update
+                            Profile</button>
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar">
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top scrolling-navbar">
             <div class="container-fluid">
 
                 <!-- Brand -->
@@ -355,35 +463,33 @@
 
                     <!-- Right -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link navbar-link-2 waves-effect">
-                                <span class="badge badge-pill badge-danger">5</span>
-                                <i class="fas fa-shopping-cart pl-0"></i>
+                        <li class="nav-item center-elem">
+                            <a href="./dashboard.html" class="nav-link waves-effect">
+                                Dashboard
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link waves-effect">
-                                Shop
+                        <li class="nav-item center-elem">
+                            <a href="./doctors.html" class="nav-link waves-effect">
+                                Doctors
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link waves-effect">
-                                Blog
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#!" data-toggle="modal" data-target="#modalContactForm"
-                                class="nav-link waves-effect">
+                        <li class="nav-item center-elem">
+                            <a href="./form.html" class="nav-link waves-effect">
                                 Contact
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item center-elem">
+                            <a href="./profile.html" class="nav-link waves-effect">
+                                Profile
+                            </a>
+                        </li>
+                        <li class="nav-item center-elem">
                             <a href="#!" data-toggle="modal" data-target="#modalLoginRegister"
                                 class="nav-link waves-effect">
                                 Sign in
                             </a>
                         </li>
-                        <li class="nav-item pl-2 mb-2 mb-md-0">
+                        <li class="nav-item pl-2 mb-2 mb-md-0 center-elem">
                             <a href="#!" data-toggle="modal" data-target="#modalLoginRegister2" type="button"
                                 class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign
                                 up</a>
@@ -397,6 +503,7 @@
         <!-- Navbar -->
 
     </header>
+    <!-- Main Navigation -->
     <!-- ======= Hero Section ======= -->
     <section id="hero">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
