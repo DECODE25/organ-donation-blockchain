@@ -23,12 +23,13 @@ contract Person {
 		_;
 	}
 
-	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  ) public	{
+	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  )
+	{
 	    name = _name;
 	    aadhar_number =_aadhar_number;
 	    myaddress = _myaddress ;
 	}
-	function addTransplant( address  _transplant) public restrictedDoctor{
+	function addTransplant( address  _transplant) public {
 		transplants.push(_transplant);
 	}
 	function addDoctor( address  _doc) public isAdmin{

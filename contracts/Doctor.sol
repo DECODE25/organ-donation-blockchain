@@ -13,10 +13,11 @@ contract Doctor {
 	string public aadhar_number ;
 
 	modifier isAdmin () {
-		require(msg.sender == myaddress);
+		require(tx.origin == myaddress);
 		_;
 	}
-	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  ) public 	{
+	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  )
+	{
 	    name = _name;
 	    aadhar_number =_aadhar_number;
 	    myaddress = _myaddress ;
@@ -34,8 +35,9 @@ contract Doctor {
         Transplant tr = Transplant(_contractAddress);
 		tr.completeStage();
     }
-	function addTransplant( address  _transplant) public isAdmin{
+	function addTransplant( address  _transplant) public {
 		transplants.push(_transplant);
 	}
+	
 
 }

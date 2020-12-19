@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.25 <0.7.0;
 
+//complete the transplant function is left
+
 contract Transplant {
 
 		struct doc {
@@ -30,35 +32,40 @@ contract Transplant {
 		
 		//mapping user address => stage no => bool
 		mapping (address => bool) entity ;
-		mapping ( uint256 => mapping ( address => bool )) approval ;
+		mapping ( uint256 => mapping ( address => bool )) public approval ;
 		mapping (uint256 => doc[]) docs ;
 
 		modifier onlyDoctor() {
-		    require(msg.sender == doctor);
+		    require(tx.origin == doctor);
 		    _;
 		}
 		modifier belongs () {
-		    require (msg.sender == donor || msg.sender == recepient || msg.sender == doctor || msg.sender == approval_authority1 || msg.sender == approval_authority2 );
+		    require (tx.origin == donor || tx.origin == recepient || tx.origin == doctor || tx.origin == approval_authority1 || tx.origin == approval_authority2 );
 		    _;
 		}
 		
 
-		constructor ( address _receient , address _donor , address _approval_authority1 , address _approval_authority2 , uint _organ ) public {
+		constructor ( address _receient , address _donor , address _approval_authority1 , address _approval_authority2 , uint _organ )  {
 		    recepient =_receient;
 		    donor =_donor;
-		    doctor= msg.sender ;
+		    doctor= tx.origin ;
 		    approval_authority1 = _approval_authority1;
 		    approval_authority2 = _approval_authority2;
 		    organ =_organ;
+		    Stage memory newStage = Stage({
+		        completed:false,
+		        voteCount:0,
+		        started:true 
+		    });
+		    stages.push(newStage);
 		    stageNo=0;
+		    
 		    
 		}
 		
 		function startNextStage () public onlyDoctor {
-		    if(stageNo != 0)
-		    {
-		        require(stages[stageNo -1].completed == true);
-		    }
+			require(stages[stageNo].voteCount == 5 , "Not Enough Votes");
+			require(stages[stageNo].completed == true , "Stage Not completed yet");
 		    stageNo = stageNo+1;
 		    Stage memory newStage = Stage({
 		        completed:false,
@@ -68,8 +75,9 @@ contract Transplant {
 		    stages.push(newStage);
 		}
 		function currentStageApproval () public belongs  { //upload ipfs docs here pending functionality  
-			require(!approval[stageNo][msg.sender]);
-			approval[stageNo][msg.sender]= true ;
+		//check the stage has been started and the user has not already applied
+			require(!approval[stageNo][tx.origin]);
+			approval[stageNo][tx.origin]= true ;
 			stages[stageNo].voteCount ++ ;
 		}
 		function completeStage () public onlyDoctor {
@@ -80,6 +88,9 @@ contract Transplant {
 			require(approval[stageNo][approval_authority2] == true );
 			require(approval[stageNo][approval_authority1] == true );
 			stages[stageNo].completed =true ;
+		}
+		function getmapppingvalue (uint256 _stage , address _addr ) public view returns (bool) {
+		    return (approval[_stage][_addr]);
 		}
 		
 }
