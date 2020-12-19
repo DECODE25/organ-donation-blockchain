@@ -3,6 +3,8 @@ import Web3 from 'web3';
 import DonateOrganFactory from './abis/DonateOrganFactory.json'
 import './App.css';
 import Tracking from "./components/tracking/Tracking";
+import {configureBlockchain} from './actions/contractActions'
+import store from './store';
 
 class App extends Component {
 
@@ -40,23 +42,19 @@ class App extends Component {
     const web3 = window.web3 ;
     const accounts = await web3.eth.getAccounts();
     console.log(accounts[0]);
-    this.setState({account:accounts[0]}) 
-
-
+    // this.setState({account:accounts[0]}) ;
     const networkId = await web3.eth.net.getId() 
-    const networkData = Marketplace.networks[networkId]
+    const networkData = DonateOrganFactory.networks[networkId]
 
     if (networkData) 
     {
       const abi = DonateOrganFactory.abi
       const factoryContract = new  web3.eth.Contract(abi,networkData.address );
-      // const authAddress = await factoryContract.methods.people(this.state.account).call();
-      // if (address === "0x0000000000000000000000000000000000000000") 
-      // {
-        
-      // } 
+      store.dispatch(configureBlockchain(web3 , factoryContract));
     }
-
+    else {
+      window.alert('Marketplace contract not deployed to the public network')
+    }
 
   }
 
@@ -83,6 +81,6 @@ class App extends Component {
     );
   }
 }
- 
+
 
 export default App;
