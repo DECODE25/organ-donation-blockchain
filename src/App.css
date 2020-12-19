@@ -11060,7 +11060,7 @@ table.table-bordered.dataTable tbody td {
   font-family: "Poppins", sans-serif;
 }
 
-#tracking #header {
+#tracking #header, #main {
     background-color: #f8f9fa !important;
 }
 
@@ -11108,6 +11108,7 @@ table.table-bordered.dataTable tbody td {
 
 .progress-icon {
   color: #028ccc;
+  font-size: 15px
 }
 
 .progress-icon.active {
@@ -11118,28 +11119,18 @@ table.table-bordered.dataTable tbody td {
   color: #028ccc;
 }
 
-.tab-content .active {
-  background-color: #fff;
+.tr-h-fs {
+  font-size: 25px
 }
-
-.content-table {
-  border-radius: 15px;
-}
-
-.table-heading {
-  color: rgb(97, 96, 96);
-  font-weight: 400;
-}
-
 @media screen and (max-width: 1200px) {
   .stepper-div {
-    width: 13em;
+    width: 11em;
   }
 }
 
 @media screen and (max-width: 992px) {
   .stepper-div {
-    width: 7em;
+    width: 7.6em;
   }
 }
 
