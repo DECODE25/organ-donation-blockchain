@@ -4,7 +4,7 @@ import ProgressBar from "./ProgressBar";
 import TabSection from "./TabSection";
 
 const Tracking = () => {
-  const [stepsCompleted, setStepsCompleted] = useState(0);
+  const [stepsCompleted, setStepsCompleted] = useState(2);
   return (
     <div id="tracking">
       <div id="header" className="w-100 shadow pb-5">
