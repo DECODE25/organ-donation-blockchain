@@ -1,8 +1,5 @@
-const ConvertLib = artifacts.require("ConvertLib");
-const MetaCoin = artifacts.require("MetaCoin");
+const DonateOrganFactory = artifacts.require("./DonateOrganFactory");
 
-module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+module.exports = async function (deployer)  {
+  await deployer.deploy(DonateOrganFactory , "0xDdC5B37Af559a0ed454a42D465b783baAB875b59" , "0x23e8c1272EaA6c20768AC1c8360313C229d64631" );
 };

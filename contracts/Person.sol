@@ -1,4 +1,5 @@
-pragma solidity >=0.7.0 <0.8.0;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.25 <0.7.0;
 
 import './Transplant.sol';
 
@@ -22,8 +23,7 @@ contract Person {
 		_;
 	}
 
-	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  )
-	{
+	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  ) public	{
 	    name = _name;
 	    aadhar_number =_aadhar_number;
 	    myaddress = _myaddress ;
