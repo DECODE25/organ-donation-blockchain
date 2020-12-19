@@ -23,6 +23,9 @@ contract Person {
 		_;
 	}
 
+	//events addDoctor 
+	//approveStage
+
 	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  ) public
 	{
 	    name = _name;

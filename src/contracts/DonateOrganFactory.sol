@@ -15,6 +15,11 @@ contract DonateOrganFactory {
     mapping( address => address) public  doctors ;
     address[] public transplants ;
 
+    //events person created 
+    //events doctor created 
+    //events approved 
+    //create transplant 
+
 
     modifier isDoctor() {
         require(doctors[msg.sender] != address(0));
