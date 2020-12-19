@@ -5,6 +5,9 @@ export const configureBlockchain = ( web3 , DonorFactory  ) => async dispatch =>
 
 };
 
-export const setUserType = (user) => {
-    
+export const setTypeOfUser = (user) => {
+    return {
+        type: "UPLOAD_TYPE",
+        payload: {type: user}
+    }
 }
