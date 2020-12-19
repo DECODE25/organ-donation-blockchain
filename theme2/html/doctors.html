@@ -11,21 +11,6 @@
     <meta name="author" content="Ansonika">
     <title>FINDOCTOR - Find easily a doctor and book online an appointment</title>
 
-    <!-- Favicons-->
-    <link rel="shortcut icon" href="http://www.ansonika.com/findoctor/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon"
-        href="http://www.ansonika.com/findoctor/img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72"
-        href="http://www.ansonika.com/findoctor/img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
-        href="http://www.ansonika.com/findoctor/img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
-        href="http://www.ansonika.com/findoctor/img/apple-touch-icon-144x144-precomposed.png">
-
-    <!-- GOOGLE WEB FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
     <!-- Bootstrap core CSS -->
@@ -35,10 +20,380 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css"
+        integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
 </head>
 
 <body style="transform: none;">
+    <header class="skin-light">
 
+        <!-- Modal Contact -->
+        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header py-4">
+                        <h5 class="modal-title mx-auto">Write to us</h5>
+                        <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form md-outline">
+                            <i class="fas fa-user prefix"></i>
+                            <input type="text" id="contactForm-name1" class="form-control">
+                            <label for="contactForm-name1">Your name</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-envelope prefix"></i>
+                            <input type="email" id="contactForm-email1" class="form-control">
+                            <label for="contactForm-email1">Your email</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-tag prefix"></i>
+                            <input type="text" id="contact321" class="form-control">
+                            <label for="contact321">Subject</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-pencil-alt prefix"></i>
+                            <textarea type="text" id="contact81" class="md-textarea form-control" rows="4"></textarea>
+                            <label for="contact81">Your message</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center py-4">
+                        <button class="btn btn-primary waves-effect waves-light">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Contact -->
+
+        <!-- Modal Login / Register -->
+        <div class="modal fade show" id="modalLoginRegister" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Pills -->
+                        <ul class="nav md-pills nav-justified pills-primary">
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded active show" data-toggle="tab"
+                                    href="#modalLoginRegister-login" role="tab" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded" data-toggle="tab"
+                                    href="#modalLoginRegister-register" role="tab" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <!-- Pills -->
+
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade in show active" id="modalLoginRegister-login" role="tabpanel">
+
+                                <!-- Login form -->
+                                <form id="formLoginRegister-login" class="pt-2" action="login" method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email">Your
+                                            email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegiser-password" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegiser-password">Your
+                                            password</label>
+                                    </div>
+
+                                    <div class="text-center mt-4 pt-3">
+                                        <button type="button"
+                                            class="btn btn-outline-primary mr-1 mb-2 waves-effect waves-light">Forgot
+                                            password?</button>
+                                        <button type="button"
+                                            class="btn btn-primary mb-2 waves-effect waves-light">Login</button>
+                                    </div>
+
+                                </form>
+                                <!-- Login form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                            <!-- Second panel -->
+                            <div class="tab-pane fade" id="modalLoginRegister-register" role="tabpanel">
+
+                                <!-- Register form -->
+                                <form id="formLoginRegister-register" class="pt-2" action="register" method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-user prefix"></i>
+                                        <input type="text" id="formLoginRegister-name" class="form-control">
+                                        <label data-error="wrong" data-success="right" for="formLoginRegister-name">Your
+                                            name</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-pencil-alt prefix"></i>
+                                        <input type="text" id="formLoginRegister-username" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-username">Your
+                                            username</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email-example" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email-example">Your email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-example"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-example">Your password</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-key prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-repeat"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-repeat">Repeat password</label>
+                                    </div>
+
+                                    <div class="form-check mt-4 mb-3 pl-0 text-left">
+                                        <input type="checkbox" class="form-check-input filled-in"
+                                            id="formLoginRegister-newsletter" name="newsletter">
+                                        <label class="form-check-label small grey-text"
+                                            for="formLoginRegister-newsletter">
+                                            I agree to sign up for account notifications and newsletter
+                                        </label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <p class="small grey-text mb-4">Lorem ipsum dolor sit amet <a target="_blank"
+                                                href="#!">Privacy Policy</a>.</p>
+                                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Sign
+                                            up</button>
+                                    </div>
+
+                                </form>
+                                <!-- Register form -->
+
+                            </div>
+                            <!-- Second panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
+
+        <!-- Modal Login / Register -->
+        <div class="modal fade show" id="modalLoginRegister2" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Pills -->
+                        <ul class="nav md-pills nav-justified pills-primary">
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded" data-toggle="tab"
+                                    href="#modalLoginRegister-login2" role="tab" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded active show" data-toggle="tab"
+                                    href="#modalLoginRegister-register2" role="tab" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <!-- Pills -->
+
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade" id="modalLoginRegister-login2" role="tabpanel">
+
+                                <!-- Login form -->
+                                <form id="formLoginRegister-login2" class="pt-2" action="login" method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email2">Your
+                                            email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegiser-password2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegiser-password2">Your
+                                            password</label>
+                                    </div>
+
+                                    <div class="text-center mt-4 pt-3">
+                                        <button type="button"
+                                            class="btn btn-outline-primary mr-1 mb-2 waves-effect waves-light">Forgot
+                                            password?</button>
+                                        <button type="button"
+                                            class="btn btn-primary mb-2 waves-effect waves-light">Login</button>
+                                    </div>
+
+                                </form>
+                                <!-- Login form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                            <!-- Second panel -->
+                            <div class="tab-pane fade in show active" id="modalLoginRegister-register2" role="tabpanel">
+
+                                <!-- Register form -->
+                                <form id="formLoginRegister-register2" class="pt-2" action="register" method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-user prefix"></i>
+                                        <input type="text" id="formLoginRegister-name2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-name2">Your
+                                            name</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-pencil-alt prefix"></i>
+                                        <input type="text" id="formLoginRegister-username2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-username2">Your username</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email-example2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email-example2">Your email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-example2"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-example2">Your password</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-key prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-repeat2"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-repeat2">Repeat password</label>
+                                    </div>
+
+                                    <div class="form-check mt-4 mb-3 pl-0 text-left">
+                                        <input type="checkbox" class="form-check-input filled-in"
+                                            id="formLoginRegister-newsletter2" name="newsletter">
+                                        <label class="form-check-label small grey-text"
+                                            for="formLoginRegister-newsletter2">
+                                            I agree to sign up for account notifications and newsletter
+                                        </label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <p class="small grey-text mb-4">Lorem ipsum dolor sit amet <a target="_blank"
+                                                href="#!">Privacy Policy</a>.</p>
+                                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Sign
+                                            up</button>
+                                    </div>
+
+                                </form>
+                                <!-- Register form -->
+
+                            </div>
+                            <!-- Second panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="https://mdbecommerce.com/">
+                    <strong><span class="text-grey">Hom</span><span class="text-primary">i</span><span
+                            class="text-grey">es</span><span class="text-primary">.</span></strong>
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Right -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link navbar-link-2 waves-effect">
+                                <span class="badge badge-pill badge-danger">5</span>
+                                <i class="fas fa-shopping-cart pl-0"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link waves-effect">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link waves-effect">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" data-toggle="modal" data-target="#modalContactForm"
+                                class="nav-link waves-effect">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" data-toggle="modal" data-target="#modalLoginRegister"
+                                class="nav-link waves-effect">
+                                Sign in
+                            </a>
+                        </li>
+                        <li class="nav-item pl-2 mb-2 mb-md-0">
+                            <a href="#!" data-toggle="modal" data-target="#modalLoginRegister2" type="button"
+                                class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign
+                                up</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Links -->
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
     <div id="mm-0" class="mm-page mm-slideout">
         <div id="page" style="transform: none;">
 
@@ -80,9 +435,9 @@
                             <li>
                                 <h6>Layout</h6>
                                 <div class="layout_view">
-                                    <a href="#0" class="active"><i class="icon-th"></i></a>
-                                    <a href="list.html"><i class="icon-th-list"></i></a>
-                                    <a href="list-map.html"><i class="icon-map-1"></i></a>
+                                    <a href="#0" class="active"><i class="fa fa-th"></i></a>
+                                    <a href="list.html"><i class="fa fa-list"></i></a>
+                                    <a href="list-map.html"><i class="fa fa-map"></i></a>
                                 </div>
                             </li>
                             <li>
@@ -94,8 +449,8 @@
                                     <option value="Women">Women</option>
                                 </select>
                                 <div id="sbHolder_80917570" class="sbHolder"><a id="sbToggle_80917570" href="#"
-                                        class="sbToggle"></a><a id="sbSelector_80917570" href="#"
-                                        class="sbSelector">Closest</a>
+                                        class="sbToggle"><i class="fa fa-caret-down"></i></a><a id="sbSelector_80917570"
+                                        href="#" class="sbSelector">Closest</a>
                                     <ul id="sbOptions_80917570" class="sbOptions" style="display: none;">
                                         <li><a href="#Closest" rel="Closest" class="sbFocus">Closest</a></li>
                                         <li><a href="#Best rated" rel="Best rated">Best rated</a></li>
@@ -117,7 +472,9 @@
                                 <div class="col-md-6">
                                     <div class="box_list wow fadeIn animated"
                                         style="visibility: visible; animation-name: fadeIn;">
-                                        <a href="#0" class="wish_bt"></a>
+                                        <a href="#0" class="wish_bt">
+                                            <i class="far fa-heart"></i>
+                                        </a>
                                         <figure>
                                             <a href="detail-page.html"><img
                                                     src="http://www.ansonika.com/findoctor/img/doctor_listing_1.jpg"
@@ -131,9 +488,9 @@
 
                                             <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis
                                                 persecuti cuodo....</p>
-                                            <span class="rating"><i class="icon_star voted"></i><i
-                                                    class="icon_star voted"></i><i class="icon_star voted"></i><i
-                                                    class="icon_star"></i><i class="icon_star"></i>
+                                            <span class="rating"><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star voted"></i><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i>
                                                 <small>(145)</small></span>
                                             <a href="badges.html" data-toggle="tooltip" data-placement="top"
                                                 data-original-title="Badge Level" class="badge_list_1"><img
@@ -142,9 +499,9 @@
                                         </div>
                                         <ul>
                                             <li><a href="#0" onclick="onHtmlClick('Doctors', 0)"><i
-                                                        class="icon_pin_alt"></i>View on map</a></li>
+                                                        class="fas fa-map"></i>View on map</a></li>
                                             <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"
-                                                    target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
+                                                    target="_blank"><i class="fas fa-map"></i>Directions</a></li>
                                             <li><a href="detail-page.html">Book now</a></li>
                                         </ul>
                                     </div>
@@ -154,7 +511,9 @@
                                 <div class="col-md-6">
                                     <div class="box_list wow fadeIn animated"
                                         style="visibility: visible; animation-name: fadeIn;">
-                                        <a href="#0" class="wish_bt"></a>
+                                        <a href="#0" class="wish_bt">
+                                            <i class="far fa-heart"></i>
+                                        </a>
                                         <figure>
                                             <a href="detail-page.html"><img
                                                     src="http://www.ansonika.com/findoctor/img/doctor_listing_2.jpg"
@@ -167,9 +526,9 @@
                                             <h3>Dr. Will Griever</h3>
                                             <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis
                                                 persecuti cuodo....</p>
-                                            <span class="rating"><i class="icon_star voted"></i><i
-                                                    class="icon_star voted"></i><i class="icon_star voted"></i><i
-                                                    class="icon_star"></i><i class="icon_star"></i>
+                                            <span class="rating"><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star voted"></i><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i>
                                                 <small>(145)</small></span>
                                             <a href="badges.html" data-toggle="tooltip" data-placement="top"
                                                 data-original-title="Badge Level" class="badge_list_1"><img
@@ -178,9 +537,9 @@
                                         </div>
                                         <ul>
                                             <li><a href="#0" onclick="onHtmlClick('Doctors', 1)"><i
-                                                        class="icon_pin_alt"></i>View on map</a></li>
+                                                        class="fas fa-map"></i>View on map</a></li>
                                             <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"
-                                                    target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
+                                                    target="_blank"><i class="fas fa-map"></i>Directions</a></li>
                                             <li><a href="detail-page.html">Book now</a></li>
                                         </ul>
                                     </div>
@@ -190,7 +549,9 @@
                                 <div class="col-md-6">
                                     <div class="box_list wow fadeIn animated"
                                         style="visibility: visible; animation-name: fadeIn;">
-                                        <a href="#0" class="wish_bt"></a>
+                                        <a href="#0" class="wish_bt">
+                                            <i class="far fa-heart"></i>
+                                        </a>
                                         <figure>
                                             <a href="detail-page.html"><img
                                                     src="http://www.ansonika.com/findoctor/img/doctor_listing_3.jpg"
@@ -203,9 +564,9 @@
                                             <h3>Dr. Jhoanna Steel</h3>
                                             <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis
                                                 persecuti cuodo....</p>
-                                            <span class="rating"><i class="icon_star voted"></i><i
-                                                    class="icon_star voted"></i><i class="icon_star voted"></i><i
-                                                    class="icon_star"></i><i class="icon_star"></i>
+                                            <span class="rating"><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star voted"></i><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i>
                                                 <small>(145)</small></span>
                                             <a href="badges.html" data-toggle="tooltip" data-placement="top"
                                                 data-original-title="Badge Level" class="badge_list_1"><img
@@ -214,9 +575,9 @@
                                         </div>
                                         <ul>
                                             <li><a href="#0" onclick="onHtmlClick('Doctors', 2)"><i
-                                                        class="icon_pin_alt"></i>View on map</a></li>
+                                                        class="fas fa-map"></i>View on map</a></li>
                                             <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"
-                                                    target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
+                                                    target="_blank"><i class="fas fa-map"></i>Directions</a></li>
                                             <li><a href="detail-page.html">Book now</a></li>
                                         </ul>
                                     </div>
@@ -226,7 +587,9 @@
                                 <div class="col-md-6">
                                     <div class="box_list wow fadeIn animated"
                                         style="visibility: visible; animation-name: fadeIn;">
-                                        <a href="#0" class="wish_bt"></a>
+                                        <a href="#0" class="wish_bt">
+                                            <i class="far fa-heart"></i>
+                                        </a>
                                         <figure>
                                             <a href="detail-page.html"><img
                                                     src="http://www.ansonika.com/findoctor/img/doctor_listing_4.jpg"
@@ -239,9 +602,9 @@
                                             <h3>Dr. Slaughter</h3>
                                             <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis
                                                 persecuti cuodo....</p>
-                                            <span class="rating"><i class="icon_star voted"></i><i
-                                                    class="icon_star voted"></i><i class="icon_star voted"></i><i
-                                                    class="icon_star"></i><i class="icon_star"></i>
+                                            <span class="rating"><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star voted"></i><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i>
                                                 <small>(145)</small></span>
                                             <a href="badges.html" data-toggle="tooltip" data-placement="top"
                                                 data-original-title="Badge Level" class="badge_list_1"><img
@@ -250,9 +613,9 @@
                                         </div>
                                         <ul>
                                             <li><a href="#0" onclick="onHtmlClick('Doctors', 3)"><i
-                                                        class="icon_pin_alt"></i>View on map</a></li>
+                                                        class="fas fa-map"></i>View on map</a></li>
                                             <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"
-                                                    target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
+                                                    target="_blank"><i class="fas fa-map"></i>Directions</a></li>
                                             <li><a href="detail-page.html">Book now</a></li>
                                         </ul>
                                     </div>
@@ -262,7 +625,8 @@
                                 <div class="col-md-6">
                                     <div class="box_list wow fadeIn"
                                         style="visibility: visible; animation-name: fadeIn;">
-                                        <a href="#0" class="wish_bt"></a>
+                                        <a href="#0" class="wish_bt"><i class="far fa-heart"></i>
+                                        </a>
                                         <figure>
                                             <a href="detail-page.html"><img
                                                     src="http://www.ansonika.com/findoctor/img/doctor_listing_5.jpg"
@@ -275,9 +639,9 @@
                                             <h3>Dr. Watchmaker</h3>
                                             <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis
                                                 persecuti cuodo....</p>
-                                            <span class="rating"><i class="icon_star voted"></i><i
-                                                    class="icon_star voted"></i><i class="icon_star voted"></i><i
-                                                    class="icon_star"></i><i class="icon_star"></i>
+                                            <span class="rating"><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star voted"></i><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i>
                                                 <small>(145)</small></span>
                                             <a href="badges.html" data-toggle="tooltip" data-placement="top"
                                                 data-original-title="Badge Level" class="badge_list_1"><img
@@ -286,9 +650,9 @@
                                         </div>
                                         <ul>
                                             <li><a href="#0" onclick="onHtmlClick('Doctors', 1)"><i
-                                                        class="icon_pin_alt"></i>View on map</a></li>
+                                                        class="fas fa-map"></i>View on map</a></li>
                                             <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"
-                                                    target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
+                                                    target="_blank"><i class="fas fa-map"></i>Directions</a></li>
                                             <li><a href="detail-page.html">Book now</a></li>
                                         </ul>
                                     </div>
@@ -298,7 +662,7 @@
                                 <div class="col-md-6">
                                     <div class="box_list wow fadeIn"
                                         style="visibility: visible; animation-name: fadeIn;">
-                                        <a href="#0" class="wish_bt"></a>
+                                        <a href="#0" class="wish_bt"><i class="far fa-heart"></i></a>
                                         <figure>
                                             <a href="detail-page.html"><img
                                                     src="http://www.ansonika.com/findoctor/img/doctor_listing_6.jpg"
@@ -311,9 +675,9 @@
                                             <h3>Dr. Sunshine</h3>
                                             <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis
                                                 persecuti cuodo....</p>
-                                            <span class="rating"><i class="icon_star voted"></i><i
-                                                    class="icon_star voted"></i><i class="icon_star voted"></i><i
-                                                    class="icon_star"></i><i class="icon_star"></i>
+                                            <span class="rating"><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star voted"></i><i class="fas fa-star voted"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i>
                                                 <small>(145)</small></span>
                                             <a href="badges.html" data-toggle="tooltip" data-placement="top"
                                                 data-original-title="Badge Level" class="badge_list_1"><img
@@ -322,9 +686,9 @@
                                         </div>
                                         <ul>
                                             <li><a href="#0" onclick="onHtmlClick('Doctors', 2)"><i
-                                                        class="icon_pin_alt"></i>View on map</a></li>
+                                                        class="fas fa-map"></i>View on map</a></li>
                                             <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"
-                                                    target="_blank"><i class="icon_pin_alt"></i>Directions</a></li>
+                                                    target="_blank"><i class="fas fa-map"></i>Directions</a></li>
                                             <li><a href="detail-page.html">Book now</a></li>
                                         </ul>
                                     </div>
@@ -399,10 +763,9 @@
                             <div class="follow_us">
                                 <h5>Follow us</h5>
                                 <ul>
-                                    <li><a href="#0"><i class="social_facebook"></i></a></li>
-                                    <li><a href="#0"><i class="social_twitter"></i></a></li>
-                                    <li><a href="#0"><i class="social_linkedin"></i></a></li>
-                                    <li><a href="#0"><i class="social_instagram"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
