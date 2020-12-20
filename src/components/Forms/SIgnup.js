@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import {Redirect} from 'react-router-dom'
+import {Redirect , withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 import Navbar from '../Navbar/Navbar'
 import Footer from '..//Footer/Footer'
@@ -14,26 +14,32 @@ const Signup = ( { contracts , setAuthentication ,history}) => {
 
     const [formData, setformData] = useState({
         name:"",
-        aadharNo:""
+        aadhar:""
     })
 
     const handleChange = async (e) => {
         setformData({ ...formData , [e.target.name]:e.target.value })
+        console.log(formData)
+
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const accounts = await contracts.web3.eth.getAccounts()
+        console.log("callled")
+        const accounts = await contracts.web3.eth.getAccounts();
+        console.log(accounts[0]);
         const {name , aadhar } = formData ;
-        if( contracts.Type == "User") {
-            setLoading(true);
+        if( contracts.type == "User") {
+            // setLoading(true);
+            console.log("callled2")
             const perso = await contracts.Factory.methods.createPerson(name , aadhar).send({ from: accounts[0]})
             const addressContract = await contracts.Factory.methods.people(accounts[0]).call();
             const personContract = new contracts.web3.eth.Contract(Person.abi , addressContract);
+            console.log(personContract)
             setAuthentication(personContract)
-            setLoading(false);
+            // setLoading(false);
             history.push('/dashboard')
         }
-        if( contracts.Type == "User") {
+        if( contracts.type == "Doctor") {
             setLoading(true);
             const perso = await contracts.Factory.methods.createPerson(name , aadhar).send({ from: accounts[0]})
             const addressContract = await contracts.Factory.methods.doctors(accounts[0]).call();
@@ -78,7 +84,7 @@ const Signup = ( { contracts , setAuthentication ,history}) => {
                                 <div className="cell-sm-6">
                                 <div className="form-wrap">
                                     <input className="form-input form-control-has-validation" id="contact2-first-name" type="text" name="name" 
-                                    onchange= {(e)=> handleChange(e)}
+                                    onChange= {(e)=> handleChange(e)}
                                     value= {formData.name} data-constraints="@Required" /><span className="form-validation" />
                                     <label className="form-label rd-input-label" htmlFor="contact2-first-name">Name</label>
                                 </div>
@@ -93,8 +99,8 @@ const Signup = ( { contracts , setAuthentication ,history}) => {
                                 <div className="form-wrap">
                                     <label className="form-label rd-input-label" htmlFor="contact2-message">Aadhar Number</label>
                                     <input className="form-input form-control-has-validation" id="contact2-first-name" type="text" name="aadhar" 
-                                    onchange= {(e)=> handleChange(e)}
-                                    value= {formData.name} data-constraints="@Required" />
+                                    onChange= {(e)=> handleChange(e)}
+                                    value= {formData.aadhar} data-constraints="@Required" />
                                 </div>
                                 </div>
                                 <div className="cell-sm-6">
@@ -119,4 +125,4 @@ const mapStateToProps = (state) =>{
     }
 }
 
-export default connect(mapStateToProps , {setAuthentication}) (Signup)
+export default connect(mapStateToProps , {setAuthentication}) (withRouter(Signup))

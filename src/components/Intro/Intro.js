@@ -1,5 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
+import {withRouter} from 'react-router-dom'
 import { setTypeOfUser } from "../../actions/contractActions";
 import img29 from "../../images/img29.jpg";
 import doc from "../../images/doc.jpg";
@@ -74,4 +75,4 @@ const mapStateToProps = (state) =>{
   }
 }
 
-export default connect(mapStateToProps, {setTypeOfUser})(Intro);
+export default connect(mapStateToProps, {setTypeOfUser})(withRouter(Intro));
