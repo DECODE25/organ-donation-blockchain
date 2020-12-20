@@ -12,6 +12,8 @@ contract Person {
 	address public myaddress;
 	string public aadhar_number ;
 	mapping(address =>bool) doctorexists;
+	uint256 public count ; 
+
 
 
 	modifier isAdmin () {
@@ -31,6 +33,7 @@ contract Person {
 	}
 	function addTransplant( address  _transplant) public {
 		transplants.push(_transplant);
+		count++;
 	}
 	function addDoctor( address  _doc) public isAdmin{
 		doctor.push(_doc);

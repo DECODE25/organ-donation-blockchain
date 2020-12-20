@@ -14,6 +14,7 @@ contract DonateOrganFactory {
     mapping( address => address) public  people ;
     mapping( address => address) public  doctors ;
     address[] public transplants ;
+    uint256 public count ; 
 
     event personevent (
         address indexed _contractAddress
@@ -50,7 +51,7 @@ contract DonateOrganFactory {
         admin = msg.sender ;
         authority1=_authority1;
         authority2=_authority2;
-        
+        count=0;
     }
 
 
@@ -80,6 +81,7 @@ contract DonateOrganFactory {
         recepient.addTransplant(address(transplant));
         donor.addTransplant(address(transplant));
         doctor.addTransplant(address(transplant));
+        count++;
 
         emit transplantevent(msg.sender , address(transplant) , _receient , _organ )
 

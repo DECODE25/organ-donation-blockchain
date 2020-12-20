@@ -1,12 +1,166 @@
-import React from 'react'
+import React , { Component} from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
+import {connect} from "react-redux";
+
+class Dashboard extends Component{
+
+  async componentWillMount() {
+    await this.loadBlockChainData();
+    // await this.loadBlockchainData();
+  }
+
+  state = {
+    name:'',
+    aadhar_number:'',
+    transaddr:[],
+    transplants:[],
+    opposites:[],
+    type:'',
+    account:null,
+    address :null , 
+  }
 
 
-const Dashboard = () => {
-    return (
+  loadBlockChainData=async()=>{
+    const {contract} = this.props
+    console.log(this.props.contract)
+    console.log("entered");
+    const accounts = await contract.web3.eth.getAccounts()
+    console.log("entered" , accounts[0]);
+
+
+    const name = await contract.Personal.methods.name().call();
+    console.log(name);
+    const aadhar_number = await contract.Personal.methods.aadhar_number().call();
+    // const transplants_number = await contract.Personal.methods.count().call();
+
+    // console.log("no" , transplants_number)
+
+    const transaddr = await contract.Personal.methods.transplants(0).call();
+    if (transaddr ) {
+      this.setState({... this.state , name , account:accounts[0] , aadhar_number , transplants : this.state.transplants.push(transaddr)});
+
+    }
+    else 
+    {
+      this.setState({... this.state ,account:accounts[0] , name , aadhar_number });
+    }
+
+  }
+
+
+
+
+  render () {
+
+
+    
+    return !this.props.contract.loading && (
         <div>
             <Navbar / >
+            <div
+        className="modal fade show"
+        id="modalcreate"
+        tabIndex={-1}
+        role="dialog"
+        aria-modal="true"
+      >
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-body">
+              {/* Pills */}
+              <ul className="nav md-pills nav-justified pills-primary">
+                <li className="nav-item">
+                  <a
+                    className="nav-link border border-primary border-rounded active show"
+                    data-toggle="tab"
+                    href="#modalcreate-login"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    Create Transplant 
+                  </a>
+                </li>
+              </ul>
+              {/* Pills */}
+              {/* Content */}
+              <div className="tab-content py-0">
+                {/* First panel */}
+                <div
+                  className="tab-pane fade in show active"
+                  id="modalcreate-login"
+                  role="tabpanel"
+                >
+                  {/* Login form */}
+                  <form
+                    id="formLoginRegister-login"
+                    className="pt-2"
+                    action="login"
+                    method="post"
+                  >
+                    <div className="md-form md-outline">
+                      <i className="fas fa-envelope prefix" />
+                      <input
+                        type="email"
+                        id="formLoginRegister-email"
+                        className="form-control"
+                      />
+                      <label
+                        data-error="wrong"
+                        data-success="right"
+                        htmlFor="formLoginRegister-email"
+                      >
+                        Your email
+                      </label>
+                    </div>
+                    <div className="md-form md-outline">
+                      <i className="fas fa-lock prefix" />
+                      <input
+                        type="password"
+                        id="formLoginRegiser-password"
+                        className="form-control"
+                      />
+                      <label
+                        data-error="wrong"
+                        data-success="right"
+                        htmlFor="formLoginRegiser-password"
+                      >
+                        Your password
+                      </label>
+                    </div>
+                    <div className="text-center mt-4 pt-3">
+                      
+                      <button
+                        type="submit"
+                        className="btn btn-primary mb-2 waves-effect waves-light submit"
+                      >
+                        Create
+                      </button>
+                    </div>
+                  </form>
+                  {/* Login form */}
+                </div>
+                {/* First panel */}
+                
+              </div>
+              {/* Content */}
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-outline-primary waves-effect waves-light"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Modal Login / Register */}
+      {/* Modal Login / Register */}
+      
             <div className="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar closed-sidebar closed-sidebar-mobile">
 
   <div className="ui-theme-settings">
@@ -337,8 +491,18 @@ const Dashboard = () => {
                 Portfolio Performance
               </div>
               <div className="btn-actions-pane-right text-capitalize">
-                <button className="btn-wide btn-outline-2x mr-md-2 btn btn-outline-focus btn-sm">View
-                  All</button>
+                {
+                  this.props.contract.type == "User" &&
+                  <a
+                  href="#!"
+                  data-toggle="modal"
+                  data-target="#modalcreate"
+                  className="nav-link waves-effect"
+                >
+                  Create Transplant 
+                </a>
+                }
+
               </div>
             </div>
             <div className="no-gutters row">
@@ -2297,6 +2461,14 @@ const Dashboard = () => {
             <Footer />
         </div>
     )
+    
+  }
 }
 
-export default Dashboard
+const mapStateToProps = (state) =>{
+  return {
+    contract : state.contract
+  }
+}
+
+export default connect(mapStateToProps, {})(Dashboard);
