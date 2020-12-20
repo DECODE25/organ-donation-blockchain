@@ -3,10 +3,45 @@ import {connect} from "react-redux";
 import { setTypeOfUser } from "../../actions/contractActions";
 import img29 from "../../images/img29.jpg";
 import doc from "../../images/doc.jpg";
+import Person from '../../abis/Person.json'
+import Doctor from '../../abis/Doctor.json'
+import {setAuthentication} from '../../actions/contractActions'
 
-const Intro = ({setTypeOfUser}) => {
-  const handleClick = (e) => {
+
+
+const Intro = ({ contract , setTypeOfUser , history}) => {
+  const handleClick = async (e) => {
       setTypeOfUser(e.target.id);
+      const accounts = await contract.web3.eth.getAccounts()
+      if(e.target.id === "User")
+      {
+        console.log("persowwwwwwwwwn"  )
+        const perso = await contract.Factory.methods.people(accounts[0]).call();
+        console.log("person" ,perso )
+        if (perso === "0x0000000000000000000000000000000000000000" )
+        {
+          history.push("/form");
+        }
+        else {
+        const personContract = new contract.web3.eth.Contract(Person.abi , perso);
+        setAuthentication(personContract)
+        history.push('/dashboard')
+
+        }
+      }
+      if(e.target.id === "Doctor")
+      {
+        const perso = await contract.Factory.methods.doctors(accounts[0]).call();
+        if (perso === "0x0000000000000000000000000000000000000000" )
+        {
+          history.push("/form");
+        }
+        else {
+        const personContract = new contract.web3.eth.Contract(Doctor.abi , perso);
+        setAuthentication(personContract);
+        history.push('/dashboard');
+        }
+      }
   }
   return (
     <div class="skin-light">
@@ -33,4 +68,10 @@ const Intro = ({setTypeOfUser}) => {
   );
 };
 
-export default connect(null, {setTypeOfUser})(Intro);
+const mapStateToProps = (state) =>{
+  return {
+    contract : state.contract
+  }
+}
+
+export default connect(mapStateToProps, {setTypeOfUser})(Intro);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -743,14 +744,14 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-md navbar-light bg-white fixed-top scrolling-navbar">
         <div className="container-fluid">
           {/* Brand */}
-          <a className="navbar-brand" href="https://mdbecommerce.com/">
+          <Link className="navbar-brand" to="/">
             <strong>
-              <span className="text-grey">Hom</span>
-              <span className="text-primary">i</span>
-              <span className="text-grey">es</span>
+              <span className="text-grey">Jee</span>
+              <span className="text-primary">v</span>
+              <span className="text-grey">an</span>
               <span className="text-primary">.</span>
             </strong>
-          </a>
+          </Link>
           {/* Collapse button */}
           <button
             className="navbar-toggler"
@@ -768,9 +769,9 @@ const Navbar = () => {
             {/* Right */}
             <ul className="navbar-nav ml-auto">
               <li className="nav-item center-elem">
-                <a href="./dashboard.html" className="nav-link waves-effect">
-                  Dashboard
-                </a>
+                <Link to="/intro" className="nav-link waves-effect">
+                  Login
+                </Link>
               </li>
               <li className="nav-item center-elem">
                 <a href="./doctors.html" className="nav-link waves-effect">

@@ -1,5 +1,5 @@
 const DonateOrganFactory = artifacts.require("./DonateOrganFactory");
 
 module.exports = async function (deployer)  {
-  await deployer.deploy(DonateOrganFactory , "0xDdC5B37Af559a0ed454a42D465b783baAB875b59" , "0x23e8c1272EaA6c20768AC1c8360313C229d64631" );
+  await deployer.deploy(DonateOrganFactory , "0x38b5F86DBfd4c5cE716a634DE5b91425A4C73c0B" , "0x0fd3Ec0295a3569C637adEF5B31fFE88D4Fa8708" );
 };
