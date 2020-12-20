@@ -1,9 +1,24 @@
 import React from 'react'
+import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
+import slide1 from '../../images/slide-1.jpg'
+import slide2 from '../../images/slide-2.jpg'
+import slide3 from '../../images/slide-3.jpg'
+import features from '../../images/features.jpg'
+import testimonials1 from '../../images/testimonials-1.jpg'
+import testimonials2 from '../../images/testimonials-2.jpg'
+import testimonials3 from '../../images/testimonials-3.jpg'
+import testimonials4 from '../../images/testimonials-4.jpg'
+import testimonials5 from '../../images/testimonials-5.jpg'
+import about from '../../images/about.jpg'
+
+
 
 const Landing = () => {
     return (
         <div>
-            <div>
+  <div>
+    <Navbar/>
   {/* ======= Hero Section ======= */}
   <section id="hero">
     <div id="heroCarousel" className="carousel slide carousel-fade" data-ride="carousel">
@@ -14,7 +29,7 @@ const Landing = () => {
       </ol>
       <div className="carousel-inner" role="listbox">
         {/* Slide 1 */}
-        <div className="carousel-item" style={{backgroundImage: 'url(../images/slide-1.jpg)'}}>
+        <div className="carousel-item" style={{backgroundImage: `url(${slide1})`}}>
           <div className="container">
             <h2>Welcome to <span>Medicio</span></h2>
             <p>We provide an ecosystem where the donors, recipients and others can interact with each other
@@ -23,7 +38,7 @@ const Landing = () => {
           </div>
         </div>
         {/* Slide 2 */}
-        <div className="carousel-item active" style={{backgroundImage: 'url(../images/slide-2.jpg)'}}>
+        <div className="carousel-item active" style={{backgroundImage: `url(${slide2})`}}>
           <div className="container">
             <h2>Tracking Procedure Status</h2>
             <p>Each step (paperwork, medical tests) in the procedure of organ donation will be depicted as a
@@ -35,7 +50,7 @@ const Landing = () => {
           </div>
         </div>
         {/* Slide 3 */}
-        <div className="carousel-item" style={{backgroundImage: 'url(../images/slide-3.jpg)'}}>
+        <div className="carousel-item" style={{backgroundImage: `url(${slide3})`}}>
           <div className="container">
             <h2>Moneyback Guarantee</h2>
             <p>Using blockchain technology powered by smart contracts we will ensure that no money of the
@@ -132,7 +147,7 @@ const Landing = () => {
         </div>
         <div className="row">
           <div className="col-lg-6 aos-init" data-aos="fade-right">
-            <img src="../images/about.jpg" className="img-fluid" alt />
+            <img src={about} className="img-fluid" alt />
           </div>
           <div className="col-lg-6 pt-4 pt-lg-0 content aos-init" data-aos="fade-left">
             <h3>Increased Efficiency</h3>
@@ -238,7 +253,7 @@ const Landing = () => {
                 the one built for the organ donation by us.</p>
             </div>
           </div>
-          <div className="image col-lg-6 order-1 order-lg-2 aos-init" style={{backgroundImage: 'url("../images/features.jpg")'}} data-aos="zoom-in" />
+          <div className="image col-lg-6 order-1 order-lg-2 aos-init" style={{backgroundImage: `url(${features})`}} data-aos="zoom-in" />
         </div>
       </div>
     </section>{/* End Features Section */}
@@ -332,7 +347,7 @@ const Landing = () => {
                     Maecen aliquam, risus at semper.
                     <i className="bx bxs-quote-alt-right quote-icon-right" />
                   </p>
-                  <img src="../images/testimonials-1.jpg" className="testimonial-img" alt />
+                  <img src={testimonials1} className="testimonial-img" alt />
                   <h3>Saul Goodman</h3>
                   <h4>Ceo &amp; Founder</h4>
                 </div>
@@ -346,7 +361,7 @@ const Landing = () => {
                     irure amet legam anim culpa.
                     <i className="bx bxs-quote-alt-right quote-icon-right" />
                   </p>
-                  <img src="../images/testimonials-2.jpg" className="testimonial-img" alt />
+                  <img src={testimonials2} className="testimonial-img" alt />
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                 </div>
@@ -360,7 +375,7 @@ const Landing = () => {
                     sint minim.
                     <i className="bx bxs-quote-alt-right quote-icon-right" />
                   </p>
-                  <img src="../images/testimonials-3.jpg" className="testimonial-img" alt />
+                  <img src={testimonials3}className="testimonial-img" alt />
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
                 </div>
@@ -374,7 +389,8 @@ const Landing = () => {
                     quem dolore labore illum veniam.
                     <i className="bx bxs-quote-alt-right quote-icon-right" />
                   </p>
-                  <img src="../images/testimonials-4.jpg" className="testimonial-img" alt />
+                  <img src={testimonials4}
+                  className="testimonial-img" alt />
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
                 </div>
@@ -388,7 +404,7 @@ const Landing = () => {
                     esse veniam culpa fore nisi cillum quid.
                     <i className="bx bxs-quote-alt-right quote-icon-right" />
                   </p>
-                  <img src="../images/testimonials-5.jpg" className="testimonial-img" alt />
+                  <img src={testimonials5} className="testimonial-img" alt />
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
                 </div>
@@ -553,70 +569,7 @@ const Landing = () => {
     </section>{/* End Contact Section */}
   </main>{/* End #main */}
   {/* ======= Footer ======= */}
-  <footer id="footer">
-    <div className="footer-top">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <div className="footer-info">
-              <h3>Medicio</h3>
-              <p>
-                A108 Adam Street <br />
-                NY 535022, USA<br /><br />
-                <strong>Phone:</strong> +1 5589 55488 55<br />
-                <strong>Email:</strong> info@example.com<br />
-              </p>
-              <div className="social-links mt-3">
-                <a href="#" className="twitter"><i className="icofont-twitter" /></a>
-                <a href="#" className="facebook"><i className="icofont-facebook" /></a>
-                <a href="#" className="instagram"><i className="icofont-instagram" /></a>
-                <a href="#" className="linkedin"><i className="icofont-linkedin" /></a>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Home</a></li>
-              <li><i className="bx bx-chevron-right" /> <a href="#">About us</a></li>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Services</a></li>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Terms of service</a></li>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-          <div className="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Web Design</a></li>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Web Development</a></li>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Product Management</a></li>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Marketing</a></li>
-              <li><i className="bx bx-chevron-right" /> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-          <div className="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action method="post">
-              <input type="email" name="email" /><input type="submit" defaultValue="Subscribe" />
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="container">
-      <div className="copyright">
-        © Copyright <strong><span>Medicio</span></strong>. All Rights Reserved
-      </div>
-      <div className="credits">
-        {/* All the links in the footer should remain intact. */}
-        {/* You can delete the links only if you purchased the pro version. */}
-        {/* Licensing information: https://bootstrapmade.com/license/ */}
-        {/* Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medicio-free-bootstrap-theme/ */}
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer>{/* End Footer */}
+  <Footer/>
   <a href="#" className="back-to-top"><i className="icofont-simple-up" /></a>
 </div>
 
