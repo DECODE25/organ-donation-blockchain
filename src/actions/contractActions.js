@@ -11,3 +11,11 @@ export const setTypeOfUser = (user) => {
         payload: {type: user}
     }
 }
+
+
+export const setAuthentication = (Personal) => {
+    return {
+        type: "UPLOAD_PERSONAL" ,
+        payload: {Personal: Personal}
+    }
+}

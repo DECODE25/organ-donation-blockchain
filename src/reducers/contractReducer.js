@@ -1,7 +1,7 @@
   
   const initialState = {
     web3: null,
-    isAuthenticated: null,
+    isAuthenticated: false ,
     loading: true,
     type: null,
     Factory: null,

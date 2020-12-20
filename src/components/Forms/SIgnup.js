@@ -4,9 +4,13 @@ import { connect } from 'react-redux'
 import Navbar from '../Navbar/Navbar'
 import Footer from '..//Footer/Footer'
 import image1 from '../../images/features.jpg'
+import Person from '../../abis/Person.json'
+import Doctor from '../../abis/Doctor.json'
+import {setAuthentication} from '../../actions/contractActions'
 
+const Signup = ( { contracts , setAuthentication ,history}) => {
 
-const Signup = ( { contracts }) => {
+    const [loading, setLoading] = useState(false);
 
     const [formData, setformData] = useState({
         name:"",
@@ -17,10 +21,32 @@ const Signup = ( { contracts }) => {
         setformData({ ...formData , [e.target.name]:e.target.value })
     }
     const handleSubmit = async (e) => {
-        setformData({ ...formData , [e.target.name]:e.target.value })
+        e.preventDefault();
+        const accounts = await contracts.web3.eth.getAccounts()
+        const {name , aadhar } = formData ;
+        if( contracts.Type == "User") {
+            setLoading(true);
+            const perso = await contracts.Factory.methods.createPerson(name , aadhar).send({ from: accounts[0]})
+            const addressContract = await contracts.Factory.methods.people(accounts[0]).call();
+            const personContract = new contracts.web3.eth.Contract(Person.abi , addressContract);
+            setAuthentication(personContract)
+            setLoading(false);
+            history.push('/dashboard')
+        }
+        if( contracts.Type == "User") {
+            setLoading(true);
+            const perso = await contracts.Factory.methods.createPerson(name , aadhar).send({ from: accounts[0]})
+            const addressContract = await contracts.Factory.methods.doctors(accounts[0]).call();
+            const personContract = new contracts.web3.eth.Contract(Doctor.abi , addressContract);
+            setAuthentication(personContract)
+            setLoading(false);
+            history.push('/dashboard')
+
+        }
+
     }
 
-    return (
+    return !loading ? (
         <div>
             <Navbar />
 
@@ -46,46 +72,33 @@ const Signup = ( { contracts }) => {
 
 
 
-                            <form className="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" noValidate="novalidate">
+                            <form className="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" noValidate="novalidate"
+                            onSubmit={(e)=>{handleSubmit(e)}}>
                             <div className="range range-sm-bottom range-20">
                                 <div className="cell-sm-6">
                                 <div className="form-wrap">
-                                    <input className="form-input form-control-has-validation" id="contact2-first-name" type="text" name="first-name" data-constraints="@Required" /><span className="form-validation" />
-                                    <label className="form-label rd-input-label" htmlFor="contact2-first-name">First
-                                    name</label>
+                                    <input className="form-input form-control-has-validation" id="contact2-first-name" type="text" name="name" 
+                                    onchange= {(e)=> handleChange(e)}
+                                    value= {formData.name} data-constraints="@Required" /><span className="form-validation" />
+                                    <label className="form-label rd-input-label" htmlFor="contact2-first-name">Name</label>
                                 </div>
                                 </div>
-                                <div className="cell-sm-6">
+                                {/* <div className="cell-sm-6">
                                 <div className="form-wrap">
                                     <input className="form-input form-control-has-validation" id="contact2-last-name" type="text" name="last-name" data-constraints="@Required" /><span className="form-validation" />
                                     <label className="form-label rd-input-label" htmlFor="contact2-last-name">Last name</label>
                                 </div>
-                                </div>
+                                </div> */}
                                 <div className="cell-xs-12">
                                 <div className="form-wrap">
-                                    <label className="form-label rd-input-label" htmlFor="contact2-message">Your Message</label>
-                                    <textarea className="form-input form-control-has-validation form-control-last-child" id="contact2-message" name="message" data-constraints="@Required" defaultValue={""} /><span className="form-validation" />
+                                    <label className="form-label rd-input-label" htmlFor="contact2-message">Aadhar Number</label>
+                                    <input className="form-input form-control-has-validation" id="contact2-first-name" type="text" name="aadhar" 
+                                    onchange= {(e)=> handleChange(e)}
+                                    value= {formData.name} data-constraints="@Required" />
                                 </div>
                                 </div>
                                 <div className="cell-sm-6">
-                                <div className="form-wrap">
-                                    <input className="form-input form-control-has-validation" id="contact2-email" type="email" name="email" data-constraints="@Email @Required" /><span className="form-validation" />
-                                    <label className="form-label rd-input-label" htmlFor="contact2-email">E-mail</label>
-                                </div>
-                                </div>
-                                <div className="cell-sm-7">
-                                <div className="form-wrap form-wrap-recaptcha">
-                                    {/* Google captcha*/}
-                                    <div className="recaptcha" id="captcha1" data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt">
-                                    <div style={{width: 304, height: 78}}>
-                                        <div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt&co=aHR0cHM6Ly9saXZlZGVtbzAwLnRlbXBsYXRlLWhlbHAuY29tOjQ0Mw..&hl=en&v=qc5B-qjP0QEimFYUxcpWJy5B&theme=light&size=normal&cb=a7bsc2llfb8a" width={304} height={78} role="presentation" frameBorder={0} scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" />
-                                        </div><textarea id="g-recaptcha-response" name="g-recaptcha-response" className="g-recaptcha-response" style={{width: 250, height: 40, border: '1px solid rgb(193, 193, 193)', margin: '10px 25px', padding: 0, resize: 'none', display: 'none'}} defaultValue={""} />
-                                    </div><iframe style={{display: 'none'}} />
-                                    </div><span className="form-validation" />
-                                </div>
-                                </div>
-                                <div className="cell-sm-6">
-                                <button className="button button-block button-primary" type="submit">Send Message</button>
+                                <button className="button button-block button-primary submit" type="submit">Register</button>
                                 </div>
                             </div>
                             </form>
@@ -97,7 +110,7 @@ const Signup = ( { contracts }) => {
             <Footer />
             
         </div>
-    )
+    ) : "loading"
 }
 
 const mapStateToProps = (state) =>{
@@ -106,4 +119,4 @@ const mapStateToProps = (state) =>{
     }
 }
 
-export default connect() (Signup)
+export default connect(mapStateToProps , {setAuthentication}) (Signup)
