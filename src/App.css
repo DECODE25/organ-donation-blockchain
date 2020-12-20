@@ -11009,7 +11009,7 @@ button::-moz-focus-inner {
 }
 
 .col-half-offset {
-  margin-left: 4.166666667%;
+  margin-left: 4.166666666%;
 }
 
 .progress-icon {
@@ -11028,6 +11028,7 @@ button::-moz-focus-inner {
 .tr-h-fs {
   font-size: 25px
 }
+
 @media screen and (max-width: 1200px) {
   .stepper-div {
     width: 11em;
