@@ -110,7 +110,17 @@ const TabContent = () => {
       </div>
       <div className="col-12">
         <hr />
-        <h3>Documents</h3>
+        <div className="row align-items-center">
+          <div className="col-6">
+            <h3>Documents</h3>
+          </div>
+          <div className="col-6 text-right">
+              <label htmlFor="file-upload" className="btn btn-primary">
+                Upload Document
+              </label>
+              <input id="file-upload" type="file" hidden/>
+          </div>
+        </div>
         <div className="row pt-3 jusify-content-center">
           <div className="col-md-3">
             <div className="card w-100">
