@@ -9,6 +9,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import PersonPinIcon from "@material-ui/icons/PersonPin";
 import HelpIcon from "@material-ui/icons/Help";
 import ShoppingBasket from "@material-ui/icons/ShoppingBasket";
+import ThumbUp from "@material-ui/icons/ThumbUp";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import TabContent from "./TabContent";
@@ -72,11 +73,12 @@ const TabSection = () => {
           textColor="default"
           centered
         >
-          <Tab label="Item One" icon={<PhoneIcon />} {...a11yProps(0)} />
-          <Tab label="Item Two" icon={<FavoriteIcon />} {...a11yProps(1)} />
-          <Tab label="Item Three" icon={<PersonPinIcon />} {...a11yProps(2)} />
-          <Tab label="Item Four" icon={<HelpIcon />} {...a11yProps(3)} />
-          <Tab label="Item Five" icon={<ShoppingBasket />} {...a11yProps(4)} />
+          <Tab label="Details" icon={<PhoneIcon />} {...a11yProps(0)} />
+          <Tab label="Donor" icon={<FavoriteIcon />} {...a11yProps(1)} />
+          <Tab label="Recipient" icon={<PersonPinIcon />} {...a11yProps(2)} />
+          <Tab label="Doctors" icon={<HelpIcon />} {...a11yProps(3)} />
+          <Tab label="Govt Auth I" icon={<ShoppingBasket />} {...a11yProps(4)} />
+          <Tab label="Govt Auth II" icon={<ThumbUp />} {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
