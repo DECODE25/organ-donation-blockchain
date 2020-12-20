@@ -110,9 +110,9 @@ const ProgressIcons = ({ stepsCompleted }) => {
   ];
   let progress = [];
   let i = 5;
-  while ((i !== 0)&&(stepsCompleted<=5)) {
+  while (i !== 0 && stepsCompleted <= 5) {
     if (stepsCompleted > 0) {
-      if (i === 5 )
+      if (i === 5)
         progress.push(
           <div className="col-2 text-center progress-icon active">
             {contentForDiv[5 - i]}
@@ -125,11 +125,18 @@ const ProgressIcons = ({ stepsCompleted }) => {
           </div>
         );
     } else {
-      progress.push(
-        <div className="col-2 col-half-offset text-center progress-icon">
-          {contentForDiv[5 - i]}
-        </div>
-      );
+      if (i === 5)
+        progress.push(
+          <div className="col-2 text-center progress-icon">
+            {contentForDiv[5 - i]}
+          </div>
+        );
+      else
+        progress.push(
+          <div className="col-2 col-half-offset text-center progress-icon">
+            {contentForDiv[5 - i]}
+          </div>
+        );
     }
     stepsCompleted--;
     i--;
