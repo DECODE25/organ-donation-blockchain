@@ -27,9 +27,487 @@
 </head>
 
 <body>
+    <!-- Main Navigation -->
+    <header>
+
+        <!-- Modal Contact -->
+        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header py-4">
+                        <h5 class="modal-title mx-auto">Write to us</h5>
+                        <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form md-outline">
+                            <i class="fas fa-user prefix"></i>
+                            <input type="text" id="contactForm-name1" class="form-control">
+                            <label for="contactForm-name1">Your name</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-envelope prefix"></i>
+                            <input type="email" id="contactForm-email1" class="form-control">
+                            <label for="contactForm-email1">Your email</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-tag prefix"></i>
+                            <input type="text" id="contact321" class="form-control">
+                            <label for="contact321">Subject</label>
+                        </div>
+                        <div class="md-form md-outline">
+                            <i class="fas fa-pencil-alt prefix"></i>
+                            <textarea type="text" id="contact81" class="md-textarea form-control" rows="4"></textarea>
+                            <label for="contact81">Your message</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center py-4">
+                        <button class="btn btn-primary waves-effect waves-light">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Contact -->
+
+        <!-- Modal Login / Register -->
+        <div class="modal fade show" id="modalLoginRegister" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Pills -->
+                        <ul class="nav md-pills nav-justified pills-primary">
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded active show" data-toggle="tab"
+                                    href="#modalLoginRegister-login" role="tab" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded" data-toggle="tab"
+                                    href="#modalLoginRegister-register" role="tab" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <!-- Pills -->
+
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade in show active" id="modalLoginRegister-login" role="tabpanel">
+
+                                <!-- Login form -->
+                                <form id="formLoginRegister-login" class="pt-2" action="login" method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email">Your
+                                            email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegiser-password" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegiser-password">Your
+                                            password</label>
+                                    </div>
+
+                                    <div class="text-center mt-4 pt-3">
+                                        <button type="button"
+                                            class="btn btn-outline-primary mr-1 mb-2 waves-effect waves-light">Forgot
+                                            password?</button>
+                                        <button type="button"
+                                            class="btn btn-primary mb-2 waves-effect waves-light">Login</button>
+                                    </div>
+
+                                </form>
+                                <!-- Login form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                            <!-- Second panel -->
+                            <div class="tab-pane fade" id="modalLoginRegister-register" role="tabpanel">
+
+                                <!-- Register form -->
+                                <form id="formLoginRegister-register" class="pt-2" action="register" method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-user prefix"></i>
+                                        <input type="text" id="formLoginRegister-name" class="form-control">
+                                        <label data-error="wrong" data-success="right" for="formLoginRegister-name">Your
+                                            name</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-pencil-alt prefix"></i>
+                                        <input type="text" id="formLoginRegister-username" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-username">Your
+                                            username</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email-example" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email-example">Your email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-example"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-example">Your password</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-key prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-repeat"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-repeat">Repeat password</label>
+                                    </div>
+
+                                    <div class="form-check mt-4 mb-3 pl-0 text-left">
+                                        <input type="checkbox" class="form-check-input filled-in"
+                                            id="formLoginRegister-newsletter" name="newsletter">
+                                        <label class="form-check-label small grey-text"
+                                            for="formLoginRegister-newsletter">
+                                            I agree to sign up for account notifications and newsletter
+                                        </label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <p class="small grey-text mb-4">Lorem ipsum dolor sit amet <a target="_blank"
+                                                href="#!">Privacy Policy</a>.</p>
+                                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Sign
+                                            up</button>
+                                    </div>
+
+                                </form>
+                                <!-- Register form -->
+
+                            </div>
+                            <!-- Second panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
+
+        <!-- Modal Login / Register -->
+        <div class="modal fade show" id="modalLoginRegister2" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <!-- Pills -->
+                        <ul class="nav md-pills nav-justified pills-primary">
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded" data-toggle="tab"
+                                    href="#modalLoginRegister-login2" role="tab" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-primary border-rounded active show" data-toggle="tab"
+                                    href="#modalLoginRegister-register2" role="tab" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <!-- Pills -->
+
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade" id="modalLoginRegister-login2" role="tabpanel">
+
+                                <!-- Login form -->
+                                <form id="formLoginRegister-login2" class="pt-2" action="login" method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email2">Your
+                                            email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegiser-password2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegiser-password2">Your
+                                            password</label>
+                                    </div>
+
+                                    <div class="text-center mt-4 pt-3">
+                                        <button type="button"
+                                            class="btn btn-outline-primary mr-1 mb-2 waves-effect waves-light">Forgot
+                                            password?</button>
+                                        <button type="button"
+                                            class="btn btn-primary mb-2 waves-effect waves-light">Login</button>
+                                    </div>
+
+                                </form>
+                                <!-- Login form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                            <!-- Second panel -->
+                            <div class="tab-pane fade in show active" id="modalLoginRegister-register2" role="tabpanel">
+
+                                <!-- Register form -->
+                                <form id="formLoginRegister-register2" class="pt-2" action="register" method="post">
+
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-user prefix"></i>
+                                        <input type="text" id="formLoginRegister-name2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-name2">Your
+                                            name</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-pencil-alt prefix"></i>
+                                        <input type="text" id="formLoginRegister-username2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-username2">Your username</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        <input type="email" id="formLoginRegister-email-example2" class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-email-example2">Your email</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-lock prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-example2"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-example2">Your password</label>
+                                    </div>
+                                    <div class="md-form md-outline">
+                                        <i class="fas fa-key prefix"></i>
+                                        <input type="password" id="formLoginRegister-password-repeat2"
+                                            class="form-control">
+                                        <label data-error="wrong" data-success="right"
+                                            for="formLoginRegister-password-repeat2">Repeat password</label>
+                                    </div>
+
+                                    <div class="form-check mt-4 mb-3 pl-0 text-left">
+                                        <input type="checkbox" class="form-check-input filled-in"
+                                            id="formLoginRegister-newsletter2" name="newsletter">
+                                        <label class="form-check-label small grey-text"
+                                            for="formLoginRegister-newsletter2">
+                                            I agree to sign up for account notifications and newsletter
+                                        </label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <p class="small grey-text mb-4">Lorem ipsum dolor sit amet <a target="_blank"
+                                                href="#!">Privacy Policy</a>.</p>
+                                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Sign
+                                            up</button>
+                                    </div>
+
+                                </form>
+                                <!-- Register form -->
+
+                            </div>
+                            <!-- Second panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
+
+        <!-- Modal Edit -->
+        <div class="modal fade show" id="modaledit" tabindex="-1" role="dialog" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h3>Update Profile</h3>
+                        </div>
+                        <!-- Content -->
+                        <div class="tab-content py-0">
+
+                            <!-- First panel -->
+                            <div class="tab-pane fade in show active" id="modalupdateprofile" role="tabpanel">
+
+                                <!-- Update form -->
+                                <form id="formupdateProfile" class="pt-2" action="update" method="post">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-borderless mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Father's Name</strong>
+                                                    </th>
+                                                    <td>Jakie Doe</td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Spouse</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-spouse" class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Gender</strong></th>
+                                                    <td>Male</td>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Blood Group</strong></th>
+                                                    <td>O+</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Height</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-height" class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Weight</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-weight" class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Email</strong>
+                                                    </th>
+                                                    <td><input type="email" id="formeditProfile-email"
+                                                            class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25" scope="row"><strong>Aadhar Number</strong>
+                                                    </th>
+                                                    <td>xxxxxxxx2047</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Employment Status</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-EmploymentStatus"
+                                                            class="form-control"></td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Occupation</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-Occupation"
+                                                            class="form-control">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Company</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-Company"
+                                                            class="form-control">
+                                                    </td>
+                                                    <th class="pl-0 w-25 md-form md-outline" scope="row">
+                                                        <strong>Company Address</strong>
+                                                    </th>
+                                                    <td><input type="" id="formeditProfile-CompanyAddress"
+                                                            class="form-control"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </form>
+                                <!-- Update form -->
+
+                            </div>
+                            <!-- First panel -->
+
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary my-2 waves-effect waves-light">Update
+                            Profile</button>
+                        <button type="button" class="btn btn-outline-primary waves-effect waves-light"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Login / Register -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top scrolling-navbar">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="https://mdbecommerce.com/">
+                    <strong><span class="text-grey">Hom</span><span class="text-primary">i</span><span
+                            class="text-grey">es</span><span class="text-primary">.</span></strong>
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Right -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item center-elem">
+                            <a href="./dashboard.html" class="nav-link waves-effect">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item center-elem">
+                            <a href="./doctors.html" class="nav-link waves-effect">
+                                Doctors
+                            </a>
+                        </li>
+                        <li class="nav-item center-elem">
+                            <a href="./form.html" class="nav-link waves-effect">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="nav-item center-elem">
+                            <a href="./profile.html" class="nav-link waves-effect">
+                                Profile
+                            </a>
+                        </li>
+                        <li class="nav-item center-elem">
+                            <a href="#!" data-toggle="modal" data-target="#modalLoginRegister"
+                                class="nav-link waves-effect">
+                                Sign in
+                            </a>
+                        </li>
+                        <li class="nav-item pl-2 mb-2 mb-md-0 center-elem">
+                            <a href="#!" data-toggle="modal" data-target="#modalLoginRegister2" type="button"
+                                class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign
+                                up</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Links -->
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+    </header>
+    <!-- Main Navigation -->
     <div
         class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar closed-sidebar closed-sidebar-mobile">
-        <div class="app-header header-shadow">
+        <!-- <div class="app-header header-shadow">
             <div class="app-header__logo">
                 <div class="logo-src"></div>
                 <div class="header__pane ml-auto">
@@ -1019,7 +1497,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="ui-theme-settings">
             <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning">
                 <i class="fa fa-cog fa-w-16 fa-spin fa-2x"></i>
@@ -1518,33 +1996,33 @@
                 </div>
                 <div class="scrollbar-sidebar ps ps--active-y">
                     <div class="app-sidebar__inner">
-                        <ul class="vertical-nav-menu metismenu">
-                            <li class="app-sidebar__heading">Menu</li>
+                        <ul class="vertical-nav-menu metismenu mt-4">
+                            <li class="app-sidebar__heading">Navigation</li>
                             <li class="mm-active">
                                 <a href="#" aria-expanded="true">
-                                    <i class="metismenu-icon pe-7s-rocket"></i>Dashboards
+                                    <i class="metismenu-icon pe-7s-rocket"></i>Dashboard
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul class="mm-collapse mm-show">
                                     <li>
                                         <a href="index.html" class="mm-active">
-                                            <i class="metismenu-icon"></i>Analytics
+                                            <i class="metismenu-icon"></i>Portfolio Performance
                                         </a>
                                     </li>
                                     <li>
                                         <a href="dashboards-commerce.html">
-                                            <i class="metismenu-icon"></i>Commerce
+                                            <i class="metismenu-icon"></i>Graphical Analysis
                                         </a>
                                     </li>
                                     <li>
                                         <a href="dashboards-sales.html">
                                             <i class="metismenu-icon">
-                                            </i>Sales
+                                            </i>Personal Details
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="metismenu-icon"></i> Minimal
+                                            <i class="metismenu-icon"></i> Transaction History
                                             <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                         </a>
                                         <ul class="mm-collapse">
@@ -1560,14 +2038,9 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="dashboards-crm.html">
-                                            <i class="metismenu-icon"></i> CRM
-                                        </a>
-                                    </li>
                                 </ul>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     <i class="metismenu-icon pe-7s-browser"></i>Pages
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
@@ -1650,8 +2123,8 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
-                            <li class="app-sidebar__heading">UI Components</li>
+                            </li> -->
+                            <!-- <li class="app-sidebar__heading">UI Components</li>
                             <li>
                                 <a href="#">
                                     <i class="metismenu-icon pe-7s-diamond"></i> Elements
@@ -1967,7 +2440,7 @@
                                 <a href="charts-sparklines.html">
                                     <i class="metismenu-icon pe-7s-graph1"></i>Chart Sparklines
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
@@ -1986,71 +2459,13 @@
                                 <div class="page-title-icon">
                                     <i class="pe-7s-car icon-gradient bg-mean-fruit"></i>
                                 </div>
-                                <div>Analytics Dashboard
+                                <div>Your Dashboard
                                     <div class="page-title-subheading">This is an example dashboard created using
                                         build-in elements and components.</div>
                                 </div>
                             </div>
-                            <div class="page-title-actions">
-                                <button type="button" data-toggle="tooltip" title="" data-placement="bottom"
-                                    class="btn-shadow mr-3 btn btn-dark" data-original-title="Example Tooltip">
-                                    <i class="fa fa-star"></i>
-                                </button>
-                                <div class="d-inline-block dropdown">
-                                    <button type="button" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false" class="btn-shadow dropdown-toggle btn btn-info">
-                                        <span class="btn-icon-wrapper pr-2 opacity-7">
-                                            <i class="fa fa-business-time fa-w-20"></i>
-                                        </span>
-                                        Buttons
-                                    </button>
-                                    <div tabindex="-1" role="menu" aria-hidden="true"
-                                        class="dropdown-menu dropdown-menu-right">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link">
-                                                    <i class="nav-link-icon lnr-inbox"></i>
-                                                    <span> Inbox</span>
-                                                    <div class="ml-auto badge badge-pill badge-secondary">86</div>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link">
-                                                    <i class="nav-link-icon lnr-book"></i>
-                                                    <span> Book</span>
-                                                    <div class="ml-auto badge badge-pill badge-danger">5</div>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link">
-                                                    <i class="nav-link-icon lnr-picture"></i>
-                                                    <span> Picture</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a disabled="" class="nav-link disabled">
-                                                    <i class="nav-link-icon lnr-file-empty"></i>
-                                                    <span> File Disabled</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                    <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
-                        <li class="nav-item">
-                            <a role="tab" class="nav-link active" href="index.html">
-                                <span>Variation 1</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a role="tab" class="nav-link" href="analytics-variation.html">
-                                <span>Variation 2</span>
-                            </a>
-                        </li>
-                    </ul>
                     <div class="tabs-animation">
                         <div class="mb-3 card">
                             <div class="card-header-tab card-header">
@@ -2071,14 +2486,14 @@
                                             <i class="lnr-laptop-phone text-dark opacity-8"></i>
                                         </div>
                                         <div class="widget-chart-content">
-                                            <div class="widget-subheading">Cash Deposits</div>
+                                            <div class="widget-subheading">Total Donors</div>
                                             <div class="widget-numbers">1,7M</div>
                                             <div class="widget-description opacity-8 text-focus">
-                                                <div class="d-inline text-danger pr-1">
-                                                    <i class="fa fa-angle-down"></i>
+                                                <div class="d-inline text-success pr-1">
+                                                    <i class="fa fa-angle-up"></i>
                                                     <span class="pl-1">54.1%</span>
                                                 </div>
-                                                less earnings
+                                                and Increasing
                                             </div>
                                         </div>
                                     </div>
@@ -2091,12 +2506,12 @@
                                             <i class="lnr-graduation-hat text-white"></i>
                                         </div>
                                         <div class="widget-chart-content">
-                                            <div class="widget-subheading">Invested Dividents</div>
-                                            <div class="widget-numbers"><span>9M</span></div>
+                                            <div class="widget-subheading">Total Recipients</div>
+                                            <div class="widget-numbers"><span>4.2M</span></div>
                                             <div class="widget-description opacity-8 text-focus">
                                                 Grow Rate:
                                                 <span class="text-info pl-1">
-                                                    <i class="fa fa-angle-down"></i>
+                                                    <i class="fa fa-angle-up"></i>
                                                     <span class="pl-1">14.1%</span>
                                                 </span>
                                             </div>
@@ -2111,13 +2526,12 @@
                                             <i class="lnr-apartment text-white"></i>
                                         </div>
                                         <div class="widget-chart-content">
-                                            <div class="widget-subheading">Capital Gains</div>
-                                            <div class="widget-numbers text-success"><span>$563</span></div>
+                                            <div class="widget-subheading">Current Position</div>
+                                            <div class="widget-numbers text-success"><span>13</span></div>
                                             <div class="widget-description text-focus">
-                                                Increased by
-                                                <span class="text-warning pl-1">
+                                                Increasing
+                                                <span class="text-success pl-1">
                                                     <i class="fa fa-angle-up"></i>
-                                                    <span class="pl-1">7.35%</span>
                                                 </span>
                                             </div>
                                         </div>
@@ -2127,9 +2541,9 @@
                             <div class="text-center d-block p-3 card-footer">
                                 <button class="btn-pill btn-shadow btn-wide fsize-1 btn btn-primary btn-lg">
                                     <span class="mr-2 opacity-7">
-                                        <i class="icon icon-anim-pulse ion-ios-analytics-outline"></i>
+                                        <i class="fas fa-angle-down"></i>
                                     </span>
-                                    <span class="mr-1">View Complete Report</span>
+                                    <span class="mr-1">View Personal Report</span>
                                 </button>
                             </div>
                         </div>
@@ -2139,7 +2553,7 @@
                                     <div class="card-header-tab card-header">
                                         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
                                             <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"></i>
-                                            Technical Support
+                                            Graphical Analysis
                                         </div>
                                         <div class="btn-actions-pane-right text-capitalize actions-icon-btn">
                                             <div class="btn-group dropdown">
@@ -2464,7 +2878,7 @@
                                                                                 <div class="widget-chart-flex">
                                                                                     <div
                                                                                         class="widget-title opacity-5 text-muted text-uppercase">
-                                                                                        New Accounts since 2018</div>
+                                                                                        New Donors</div>
                                                                                 </div>
                                                                                 <div class="widget-numbers">
                                                                                     <div class="widget-chart-flex">
@@ -2755,14 +3169,14 @@
                                                                                 <div class="widget-chart-flex">
                                                                                     <div
                                                                                         class="widget-title opacity-5 text-muted text-uppercase">
-                                                                                        Last Year Total Sales</div>
+                                                                                        Organ Trafficking</div>
                                                                                 </div>
                                                                                 <div class="widget-numbers">
                                                                                     <div class="widget-chart-flex">
                                                                                         <div>
+                                                                                            <span>12</span>
                                                                                             <small
-                                                                                                class="opacity-3 pr-1">$</small>
-                                                                                            <span>629</span>
+                                                                                                class="opacity-3 pr-1">%</small>
                                                                                             <span
                                                                                                 class="text-primary pl-3">
                                                                                                 <i
@@ -4151,7 +4565,7 @@
                                         </div>
                                         <h6
                                             class="text-muted text-uppercase font-size-md opacity-5 pl-3 pr-3 pb-1 font-weight-normal">
-                                            Sales Progress</h6>
+                                            Expenses</h6>
                                         <ul class="list-group list-group-flush">
                                             <li class="p-3 bg-transparent list-group-item">
                                                 <div class="widget-content p-0">
@@ -4159,7 +4573,8 @@
                                                         <div class="widget-content-wrapper">
                                                             <div class="widget-content-left">
                                                                 <div class="widget-heading">Total Orders</div>
-                                                                <div class="widget-subheading">Last year expenses</div>
+                                                                <div class="widget-subheading">Last year's total expense
+                                                                </div>
                                                             </div>
                                                             <div class="widget-content-right">
                                                                 <div class="widget-numbers text-success">
@@ -4176,10 +4591,6 @@
                                                                     aria-valuemax="100" style="width: 43%;">
                                                                 </div>
                                                             </div>
-                                                            <div class="progress-sub-label">
-                                                                <div class="sub-label-left">YoY Growth</div>
-                                                                <div class="sub-label-right">100%</div>
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -4193,7 +4604,7 @@
                                     <div class="card-header-tab card-header">
                                         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
                                             <i class="header-icon lnr-lighter icon-gradient bg-amy-crisp"></i>
-                                            Timeline Example
+                                            Personal Details
                                         </div>
                                         <div class="btn-actions-pane-right text-capitalize actions-icon-btn">
                                             <div class="btn-group dropdown">
@@ -4621,7 +5032,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-6 col-xl-3">
                                 <div
                                     class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-success border-success">
@@ -5202,12 +5613,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="card mb-3">
                             <div class="card-header-tab card-header">
                                 <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i
-                                        class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>Easy Dynamic
-                                    Tables
+                                        class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>Transplant
+                                    History
                                 </div>
                                 <div class="btn-actions-pane-right actions-icon-btn">
                                     <div class="btn-group dropdown">
@@ -5266,27 +5677,29 @@
                                                         <th class="sorting_asc" tabindex="0" aria-controls="example"
                                                             rowspan="1" colspan="1" style="width: 118.2px;"
                                                             aria-sort="ascending"
-                                                            aria-label="Name: activate to sort column descending">Name
+                                                            aria-label="Name: activate to sort column descending">
+                                                            Doctor Name
                                                         </th>
                                                         <th class="sorting" tabindex="0" aria-controls="example"
                                                             rowspan="1" colspan="1" style="width: 190.2px;"
                                                             aria-label="Position: activate to sort column ascending">
-                                                            Position</th>
+                                                            Transplant</th>
                                                         <th class="sorting" tabindex="0" aria-controls="example"
                                                             rowspan="1" colspan="1" style="width: 84.2px;"
                                                             aria-label="Office: activate to sort column ascending">
-                                                            Office</th>
+                                                            City</th>
                                                         <th class="sorting" tabindex="0" aria-controls="example"
                                                             rowspan="1" colspan="1" style="width: 40.2px;"
-                                                            aria-label="Age: activate to sort column ascending">Age</th>
+                                                            aria-label="Age: activate to sort column ascending">Date Of
+                                                            Initiation</th>
                                                         <th class="sorting" tabindex="0" aria-controls="example"
                                                             rowspan="1" colspan="1" style="width: 87.2px;"
                                                             aria-label="Start date: activate to sort column ascending">
-                                                            Start date</th>
+                                                            Date Of Completion</th>
                                                         <th class="sorting" tabindex="0" aria-controls="example"
                                                             rowspan="1" colspan="1" style="width: 63.2px;"
                                                             aria-label="Salary: activate to sort column ascending">
-                                                            Salary</th>
+                                                            Cost</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -5349,65 +5762,65 @@
 
                                                     <tr role="row" class="odd">
                                                         <td class="sorting_1 dtr-control">Airi Satou</td>
-                                                        <td>Accountant</td>
+                                                        <td>Skin Transplant</td>
                                                         <td>Tokyo</td>
-                                                        <td>33</td>
+                                                        <td>2008/10/30</td>
                                                         <td>2008/11/28</td>
                                                         <td>$162,700</td>
                                                     </tr>
                                                     <tr role="row" class="even">
                                                         <td class="sorting_1 dtr-control">Angelica Ramos</td>
-                                                        <td>Chief Executive Officer (CEO)</td>
+                                                        <td>Lung Transplant</td>
                                                         <td>London</td>
-                                                        <td>47</td>
+                                                        <td>2009/09/05</td>
                                                         <td>2009/10/09</td>
                                                         <td>$1,200,000</td>
                                                     </tr>
                                                     <tr role="row" class="odd">
                                                         <td class="sorting_1 dtr-control">Ashton Cox</td>
-                                                        <td>Junior Technical Author</td>
+                                                        <td>Heart Transplant</td>
                                                         <td>San Francisco</td>
-                                                        <td>66</td>
-                                                        <td>2009/01/12</td>
+                                                        <td>2009/01/20</td>
+                                                        <td>2009/02/12</td>
                                                         <td>$86,000</td>
                                                     </tr>
                                                     <tr role="row" class="even">
                                                         <td class="sorting_1 dtr-control">Bradley Greer</td>
-                                                        <td>Software Engineer</td>
+                                                        <td>Blood Transfusion</td>
                                                         <td>London</td>
-                                                        <td>41</td>
+                                                        <td>2012/9/25</td>
                                                         <td>2012/10/13</td>
                                                         <td>$132,000</td>
                                                     </tr>
                                                     <tr role="row" class="odd">
                                                         <td class="sorting_1 dtr-control">Brenden Wagner</td>
-                                                        <td>Software Engineer</td>
+                                                        <td>Bone Marrow Transplant</td>
                                                         <td>San Francisco</td>
-                                                        <td>28</td>
+                                                        <td>2011/05/07</td>
                                                         <td>2011/06/07</td>
                                                         <td>$206,850</td>
                                                     </tr>
                                                     <tr role="row" class="even">
                                                         <td class="sorting_1 dtr-control">Brielle Williamson</td>
-                                                        <td>Integration Specialist</td>
+                                                        <td>Liver Transplant</td>
                                                         <td>New York</td>
-                                                        <td>61</td>
+                                                        <td>2012/10/03</td>
                                                         <td>2012/12/02</td>
                                                         <td>$372,000</td>
                                                     </tr>
                                                     <tr role="row" class="odd">
                                                         <td class="sorting_1 dtr-control">Bruno Nash</td>
-                                                        <td>Software Engineer</td>
+                                                        <td>Eye Transplant</td>
                                                         <td>London</td>
-                                                        <td>38</td>
+                                                        <td>2011/04/02</td>
                                                         <td>2011/05/03</td>
                                                         <td>$163,500</td>
                                                     </tr>
                                                     <tr role="row" class="even">
                                                         <td class="sorting_1 dtr-control">Caesar Vance</td>
-                                                        <td>Pre-Sales Support</td>
+                                                        <td>Kidney Transplant</td>
                                                         <td>New York</td>
-                                                        <td>21</td>
+                                                        <td>2011/11/20</td>
                                                         <td>2011/12/12</td>
                                                         <td>$106,450</td>
                                                     </tr>
@@ -5415,27 +5828,27 @@
                                                         <td class="sorting_1 dtr-control">Cara Stevens</td>
                                                         <td>Sales Assistant</td>
                                                         <td>New York</td>
-                                                        <td>46</td>
+                                                        <td>2011/11/18</td>
                                                         <td>2011/12/06</td>
                                                         <td>$145,600</td>
                                                     </tr>
                                                     <tr role="row" class="even">
                                                         <td class="sorting_1 dtr-control">Cedric Kelly</td>
-                                                        <td>Senior Javascript Developer</td>
+                                                        <td>Eye Transplant</td>
                                                         <td>Edinburgh</td>
-                                                        <td>22</td>
+                                                        <td>2012/02/29</td>
                                                         <td>2012/03/29</td>
                                                         <td>$433,060</td>
                                                     </tr>
                                                 </tbody>
                                                 <tfoot>
                                                     <tr>
-                                                        <th rowspan="1" colspan="1">Name</th>
-                                                        <th rowspan="1" colspan="1">Position</th>
-                                                        <th rowspan="1" colspan="1">Office</th>
-                                                        <th rowspan="1" colspan="1">Age</th>
-                                                        <th rowspan="1" colspan="1">Start date</th>
-                                                        <th rowspan="1" colspan="1">Salary</th>
+                                                        <th rowspan="1" colspan="1">Doctor Name</th>
+                                                        <th rowspan="1" colspan="1">Transplant</th>
+                                                        <th rowspan="1" colspan="1">City</th>
+                                                        <th rowspan="1" colspan="1">Date Of Initiation</th>
+                                                        <th rowspan="1" colspan="1">Date Of Completion</th>
+                                                        <th rowspan="1" colspan="1">Cost</th>
                                                     </tr>
                                                 </tfoot>
                                             </table>
@@ -5482,7 +5895,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-sm-12 col-lg-6">
                                 <div class="card-hover-shadow-2x mb-3 card">
                                     <div class="card-header-tab card-header">
@@ -6106,8 +6519,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card no-shadow bg-transparent no-border rm-borders mb-3">
+                        </div> -->
+                        <!-- <div class="card no-shadow bg-transparent no-border rm-borders mb-3">
                             <div class="card">
                                 <div class="no-gutters row">
                                     <div class="col-md-12 col-lg-4">
@@ -6217,7 +6630,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- ======= Footer ======= -->
@@ -6817,6 +7230,61 @@
             d="M-1 152L-1 152C-1 152 35.375 152 35.375 152C35.375 152 58.95833333333333 152 58.95833333333333 152C58.95833333333333 152 82.54166666666666 152 82.54166666666666 152C82.54166666666666 152 106.12499999999999 152 106.12499999999999 152C106.12499999999999 152 129.70833333333331 152 129.70833333333331 152C129.70833333333331 152 153.29166666666666 152 153.29166666666666 152C153.29166666666666 152 176.875 152 176.875 152C176.875 152 200.45833333333334 152 200.45833333333334 152C200.45833333333334 152 224.04166666666669 152 224.04166666666669 152C224.04166666666669 152 247.62500000000003 152 247.62500000000003 152C247.62500000000003 152 271.20833333333337 152 271.20833333333337 152C271.20833333333337 152 294.7916666666667 152 294.7916666666667 152C294.7916666666667 152 318.375 152 318.375 152C318.375 152 341.9583333333333 152 341.9583333333333 152C341.9583333333333 152 365.54166666666663 152 365.54166666666663 152C365.54166666666663 152 389.12499999999994 152 389.12499999999994 152C389.12499999999994 152 412.70833333333326 152 412.70833333333326 152C412.70833333333326 152 436.2916666666666 152 436.2916666666666 152C436.2916666666666 152 459.8749999999999 152 459.8749999999999 152C459.8749999999999 152 483.4583333333332 152 483.4583333333332 152C483.4583333333332 152 507.0416666666665 152 507.0416666666665 152C507.0416666666665 152 530.6249999999999 152 530.6249999999999 152C530.6249999999999 152 554.2083333333333 152 554.2083333333333 152C554.2083333333333 152 554.2083333333333 152 554.2083333333333 152 ">
         </path>
     </svg>
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('.material-tooltip-main').tooltip({
+                template: '<div class="tooltip md-tooltip-main"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-inner-main"></div></div>'
+            })
+            $(".testimonials-carousel").owlCarousel({
+                autoplay: true,
+                dots: true,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    900: {
+                        items: 3
+                    }
+                }
+            });
+            $(".gallery-carousel").owlCarousel({
+                autoplay: true,
+                dots: true,
+                loop: true,
+                center: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 3
+                    },
+                    992: {
+                        items: 4
+                    },
+                    1200: {
+                        items: 5
+                    }
+                }
+            });
+        })
+    </script>
 </body>
 
 </html>
