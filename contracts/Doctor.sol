@@ -38,6 +38,12 @@ contract Doctor {
 	function addTransplant( address  _transplant) public {
 		transplants.push(_transplant);
 	}
+	function transplantCount() public view returns(uint256) {
+		return transplants.length
+	}
+	function oppositecount() public view returns(uint256) {
+		return patient.length
+	}
 	
 
 }

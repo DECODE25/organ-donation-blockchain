@@ -10,7 +10,7 @@ import {setAuthentication} from '../../actions/contractActions'
 
 
 
-const Intro = ({ contract , setTypeOfUser , history}) => {
+const Intro = ({ contract , setTypeOfUser , setAuthentication , history}) => {
   const handleClick = async (e) => {
       setTypeOfUser(e.target.id);
       const accounts = await contract.web3.eth.getAccounts()
@@ -75,4 +75,4 @@ const mapStateToProps = (state) =>{
   }
 }
 
-export default connect(mapStateToProps, {setTypeOfUser})(withRouter(Intro));
+export default connect(mapStateToProps, {setTypeOfUser , setAuthentication})(withRouter(Intro));

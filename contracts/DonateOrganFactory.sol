@@ -88,5 +88,9 @@ contract DonateOrganFactory {
         Transplant tr = Transplant ( _trans) ;
         tr.currentStageApproval();
     }
-    
+
+    function transplantCount() public view returns(uint256) {
+		return transplants.length
+	}
+
 }

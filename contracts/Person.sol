@@ -44,6 +44,12 @@ contract Person {
 	function isDoctor( address _doc) public view returns(bool) {
 		return doctorexists[_doc];
 	}
+	function transplantCount() public view returns(uint256) {
+		return transplants.length
+	}
+	function oppositecount() public view returns(uint256) {
+		return doctor.length
+	}
 	
 	
 }
