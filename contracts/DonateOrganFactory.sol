@@ -14,25 +14,25 @@ contract DonateOrganFactory {
     mapping( address => address) public  people ;
     mapping( address => address) public  doctors ;
     address[] public transplants ;
-    uint256 public count ; 
+    uint256 public count ;
 
     event personevent (
         address indexed _contractAddress
-        string name , 
-        string aadhar_number 
+        string name ,
+        string aadhar_number
     )
 
     event doctorevent (
         address indexed _contractAddress
-        string name , 
-        string aadhar_number 
+        string name ,
+        string aadhar_number
     )
 
     event transplantevent (
         address indexed doctor ,
         address indexed transplant ,
-        address recepeint , 
-        uint256 organ  
+        address recepeint ,
+        uint256 organ
     )
 
 
@@ -40,13 +40,13 @@ contract DonateOrganFactory {
         require(doctors[msg.sender] != address(0));
         _;
     }
-    
-    
+
+
     modifier isrestricted () {
         require(msg.sender == authority1 || msg.sender == authority2);
         _;
     }
-    
+
     constructor (address _authority1 , address _authority2) public {
         admin = msg.sender ;
         authority1=_authority1;

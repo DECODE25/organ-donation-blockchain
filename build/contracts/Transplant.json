@@ -244,24 +244,14 @@
   "ast": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/contracts/Transplant.sol",
     "exportedSymbols": {
-      "Transplant": [
-        833
-      ]
+      "Transplant": [833]
     },
     "id": 834,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 519,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:4"
       },
@@ -272,9 +262,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 833,
-        "linearizedBaseContracts": [
-          833
-        ],
+        "linearizedBaseContracts": [833],
         "name": "Transplant",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -956,10 +944,7 @@
                       "id": 569,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "778:7:4",
                       "typeDescriptions": {
@@ -1407,10 +1392,7 @@
                       "id": 580,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "851:7:4",
                       "typeDescriptions": {
@@ -1755,9 +1737,7 @@
                   "src": "1340:13:4"
                 },
                 {
-                  "assignments": [
-                    648
-                  ],
+                  "assignments": [648],
                   "declarations": [
                     {
                       "constant": false,
@@ -1879,11 +1859,7 @@
                     "isPure": true,
                     "kind": "structConstructorCall",
                     "lValueRequested": false,
-                    "names": [
-                      "completed",
-                      "voteCount",
-                      "started"
-                    ],
+                    "names": ["completed", "voteCount", "started"],
                     "nodeType": "FunctionCall",
                     "src": "1385:90:4",
                     "typeDescriptions": {
@@ -2313,10 +2289,7 @@
                       "id": 671,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 852,
                       "src": "1596:7:4",
                       "typeDescriptions": {
@@ -2472,10 +2445,7 @@
                       "id": 681,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 852,
                       "src": "1661:7:4",
                       "typeDescriptions": {
@@ -2585,9 +2555,7 @@
                   "src": "1739:19:4"
                 },
                 {
-                  "assignments": [
-                    698
-                  ],
+                  "assignments": [698],
                   "declarations": [
                     {
                       "constant": false,
@@ -2709,11 +2677,7 @@
                     "isPure": true,
                     "kind": "structConstructorCall",
                     "lValueRequested": false,
-                    "names": [
-                      "completed",
-                      "voteCount",
-                      "started"
-                    ],
+                    "names": ["completed", "voteCount", "started"],
                     "nodeType": "FunctionCall",
                     "src": "1790:90:4",
                     "typeDescriptions": {
@@ -2961,10 +2925,7 @@
                       "id": 717,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2093:7:4",
                       "typeDescriptions": {
@@ -3349,10 +3310,7 @@
                       "id": 748,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2262:7:4",
                       "typeDescriptions": {
@@ -3497,10 +3455,7 @@
                       "id": 757,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2306:7:4",
                       "typeDescriptions": {
@@ -3645,10 +3600,7 @@
                       "id": 767,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2353:7:4",
                       "typeDescriptions": {
@@ -3793,10 +3745,7 @@
                       "id": 777,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2404:7:4",
                       "typeDescriptions": {
@@ -3941,10 +3890,7 @@
                       "id": 787,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2452:7:4",
                       "typeDescriptions": {
@@ -4089,10 +4035,7 @@
                       "id": 797,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2513:7:4",
                       "typeDescriptions": {
@@ -4473,24 +4416,14 @@
   "legacyAST": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/contracts/Transplant.sol",
     "exportedSymbols": {
-      "Transplant": [
-        833
-      ]
+      "Transplant": [833]
     },
     "id": 834,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 519,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:4"
       },
@@ -4501,9 +4434,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 833,
-        "linearizedBaseContracts": [
-          833
-        ],
+        "linearizedBaseContracts": [833],
         "name": "Transplant",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -5185,10 +5116,7 @@
                       "id": 569,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "778:7:4",
                       "typeDescriptions": {
@@ -5636,10 +5564,7 @@
                       "id": 580,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "851:7:4",
                       "typeDescriptions": {
@@ -5984,9 +5909,7 @@
                   "src": "1340:13:4"
                 },
                 {
-                  "assignments": [
-                    648
-                  ],
+                  "assignments": [648],
                   "declarations": [
                     {
                       "constant": false,
@@ -6108,11 +6031,7 @@
                     "isPure": true,
                     "kind": "structConstructorCall",
                     "lValueRequested": false,
-                    "names": [
-                      "completed",
-                      "voteCount",
-                      "started"
-                    ],
+                    "names": ["completed", "voteCount", "started"],
                     "nodeType": "FunctionCall",
                     "src": "1385:90:4",
                     "typeDescriptions": {
@@ -6542,10 +6461,7 @@
                       "id": 671,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 852,
                       "src": "1596:7:4",
                       "typeDescriptions": {
@@ -6701,10 +6617,7 @@
                       "id": 681,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 852,
                       "src": "1661:7:4",
                       "typeDescriptions": {
@@ -6814,9 +6727,7 @@
                   "src": "1739:19:4"
                 },
                 {
-                  "assignments": [
-                    698
-                  ],
+                  "assignments": [698],
                   "declarations": [
                     {
                       "constant": false,
@@ -6938,11 +6849,7 @@
                     "isPure": true,
                     "kind": "structConstructorCall",
                     "lValueRequested": false,
-                    "names": [
-                      "completed",
-                      "voteCount",
-                      "started"
-                    ],
+                    "names": ["completed", "voteCount", "started"],
                     "nodeType": "FunctionCall",
                     "src": "1790:90:4",
                     "typeDescriptions": {
@@ -7190,10 +7097,7 @@
                       "id": 717,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2093:7:4",
                       "typeDescriptions": {
@@ -7578,10 +7482,7 @@
                       "id": 748,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2262:7:4",
                       "typeDescriptions": {
@@ -7726,10 +7627,7 @@
                       "id": 757,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2306:7:4",
                       "typeDescriptions": {
@@ -7874,10 +7772,7 @@
                       "id": 767,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2353:7:4",
                       "typeDescriptions": {
@@ -8022,10 +7917,7 @@
                       "id": 777,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2404:7:4",
                       "typeDescriptions": {
@@ -8170,10 +8062,7 @@
                       "id": 787,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2452:7:4",
                       "typeDescriptions": {
@@ -8318,10 +8207,7 @@
                       "id": 797,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "2513:7:4",
                       "typeDescriptions": {

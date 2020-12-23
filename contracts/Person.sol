@@ -12,7 +12,7 @@ contract Person {
 	address public myaddress;
 	string public aadhar_number ;
 	mapping(address =>bool) doctorexists;
-	uint256 public count ; 
+	uint256 public count ;
 
 
 
@@ -53,6 +53,6 @@ contract Person {
 	function oppositecount() public view returns(uint256) {
 		return doctor.length
 	}
-	
-	
+
+
 }

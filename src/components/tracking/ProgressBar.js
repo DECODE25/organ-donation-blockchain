@@ -4,7 +4,7 @@ const ProgressBar = ({ stepsCompleted }) => {
   let progress = [];
   let i = 5;
   let progressArrayItems = 0;
-  while ((i !== 0)&&(stepsCompleted<=5)) {
+  while (i !== 0 && stepsCompleted <= 5) {
     if (stepsCompleted > 0) {
       progress.push(
         <span className="circle active">

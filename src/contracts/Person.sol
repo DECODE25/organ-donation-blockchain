@@ -23,7 +23,7 @@ contract Person {
 		_;
 	}
 
-	//events addDoctor 
+	//events addDoctor
 	//approveStage
 
 	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  ) public
@@ -47,6 +47,6 @@ contract Person {
 	function isDoctor( address _doc) public view returns(bool) {
 		return doctorexists[_doc];
 	}
-	
-	
+
+
 }

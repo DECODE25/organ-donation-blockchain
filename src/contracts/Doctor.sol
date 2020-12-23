@@ -14,8 +14,8 @@ contract Doctor {
 
 
 	//events approveStage
-	//events complete stage 
-	//events complete current stage 
+	//events complete stage
+	//events complete current stage
 
 	modifier isAdmin () {
 		require(tx.origin == myaddress);
@@ -43,6 +43,6 @@ contract Doctor {
 	function addTransplant( address  _transplant) public {
 		transplants.push(_transplant);
 	}
-	
+
 
 }

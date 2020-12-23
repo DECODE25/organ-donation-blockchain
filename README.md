@@ -12,20 +12,15 @@
 
 # DECODE25
 
-
 ## Idea USP
 
 To build an ecosystem where the donors , recipients and others can interact with each other directly on secure lines to make the entire procedure more fluid and secure.
-
 
  <br>
 
 ## Frontend Based Tech-Stack
 
 <br>
-
-
-
 
 <p float="left" align="middle">
 
@@ -35,6 +30,7 @@ To build an ecosystem where the donors , recipients and others can interact with
 <a href="https://reactjs.org/"><img height=100px style="margin:7.5px" src= "https://cdn.worldvectorlogo.com/logos/react.svg"></a>
 <a href="https://web3js.readthedocs.io/en/v1.3.0/"><img height=100px style="margin:7.5px" src= "https://i.imgur.com/GX0qzK1.jpg"></a>
 <a href="https://flutter.dev/"><img height=100px style="margin:7.5px" src= "https://lh3.googleusercontent.com/proxy/ddvxdfbgcs9ylLHLB1NDpY9gnlylgca0B5oqVG5u4vhhI8k21eJjJhQYAxXuXyuiFHYkfMDfqsq1AV9mq6dyxPM-siulks7zcII7ZcH4gZEw3Uhsh88hNUlOssk"></a>
+
 </p>
 
  <br>
@@ -42,9 +38,6 @@ To build an ecosystem where the donors , recipients and others can interact with
 ## Blockchain Based Tech-Stack
 
 <br>
-
-
-
 
 <p float="left" align="middle">
 
@@ -56,11 +49,10 @@ To build an ecosystem where the donors , recipients and others can interact with
 <a href="https://ipfs.io/"><img height=100px style="margin:7.5px" src= "https://miro.medium.com/max/1200/1*xBysnRmAn8n17ZjPMVxfmg.png"></a>
 <a href="https://infura.io/"><img height=100px style="margin:7.5px" src= "https://www.trufflesuite.com/img/tutorials/infura/infura.png"></a>
 <a href="https://www.rinkeby.io/#stats"><img height=100px style="margin:7.5px" src= "https://www.devprovider.com/wp-content/uploads/2019/02/1N4Xyvmrm-6uMzJcKkU7BMw-1024x512.jpeg"></a>
+
 </p>
 
  <br>
-
-
 
 <br>
 
@@ -69,20 +61,17 @@ To build an ecosystem where the donors , recipients and others can interact with
 <br>
 <div align = "left">
 
- - Tracking Procedure Status : Each step (paperwork, medical tests) in the procedure of organ donation will be depicted as a checkpoint on the app/website, and the concerned authority can approve their concerned checkpoint and upload suitable documents (reports ) to validate their claim. This will ease the entire process, add transparency to it, and will provide a more secure ledger for the documents
+- Tracking Procedure Status : Each step (paperwork, medical tests) in the procedure of organ donation will be depicted as a checkpoint on the app/website, and the concerned authority can approve their concerned checkpoint and upload suitable documents (reports ) to validate their claim. This will ease the entire process, add transparency to it, and will provide a more secure ledger for the documents
 
+- Funding from NGO's : Recipients of the organs will come in direct contact with NGO’s, organization, and other people willing to provide monetary donations to support them in the process ensuring no-one is denied an organ due to lack of funds.
 
- - Funding from NGO's : Recipients of the organs will come in direct contact with NGO’s, organization, and other people willing to provide monetary donations to support them in the process ensuring no-one is denied an organ due to lack of funds.
+- Moneyback Guarantee : Using blockchain technology powered by smart contracts we will ensure that no money of the recipient is wasted on a donor who backs out due to unforeseen and obsolete reasons, after promising an organ and going through the medical procedures.
 
- - Moneyback Guarantee : Using blockchain technology powered by smart contracts we will ensure that no money of the recipient is wasted on a donor who backs out due to unforeseen and obsolete reasons, after promising an organ and going through the medical procedures.
+- Tracking Status of Donor : Recipients would be able to check their rank in the priority queue for receiving the organ, without having to go to the hospital. They would also be able to see all the potential donors on the app/website
+- Direct Contact with Professionals : With the help of our website/app, direct contact with good surgeons and people experienced in the field would be possible. One can know about the the benefits or risks of undergoing the procedure, all precautions and long term effects of the same. Direct communication will also establish patient trust in the Doctor.
 
- - Tracking Status of Donor : Recipients would be able to check their rank in the priority queue for receiving the organ, without having to go to the hospital. They would also be able to see all the potential donors on the app/website
- - Direct Contact with Professionals : With the help of our website/app, direct contact with good surgeons and people experienced in the field would be possible. One can know about the the benefits or risks of undergoing the procedure, all precautions and long term effects of the same. Direct communication will also establish patient trust in the Doctor.
-
-
-
- - Grievance Portal : User satisfaction is top priority.
-A  complain portal will ensure that all grievances will be catered. They can also report any discrepancy that they noticed, ensuring a fault free system.
+- Grievance Portal : User satisfaction is top priority.
+A complain portal will ensure that all grievances will be catered. They can also report any discrepancy that they noticed, ensuring a fault free system.
  </div>
 
  <br>
@@ -92,18 +81,16 @@ A  complain portal will ensure that all grievances will be catered. They can als
 <br>
 <div align = "left">
 
- - Increased Efficiency : Using traditional, paper-heavy processes, trading anything is a time-consuming process that is prone to human error and often requires third-party mediation. However, by streamlining and automating these processes with blockchain, transactions can be completed faster and more efficiently. Since record-keeping is performed using a single digital ledger that is shared with both the parties, we don’t have to reconcile multiple ledgers, hence ending up with less clutter. And when everyone has access to the same information, it becomes easier to trust each other without the need for numerous intermediaries. Thus, clearing and settlement can occur much quicker.
+- Increased Efficiency : Using traditional, paper-heavy processes, trading anything is a time-consuming process that is prone to human error and often requires third-party mediation. However, by streamlining and automating these processes with blockchain, transactions can be completed faster and more efficiently. Since record-keeping is performed using a single digital ledger that is shared with both the parties, we don’t have to reconcile multiple ledgers, hence ending up with less clutter. And when everyone has access to the same information, it becomes easier to trust each other without the need for numerous intermediaries. Thus, clearing and settlement can occur much quicker.
 
+- Greater Transparency : With the use of blockchain, all our transactions will be transparent and as blockchain is a type of distributed ledger, the network and both the parties involved will share individual copies and these documents can only be updated through consensus, that is after everyone’s consent. To change a single transaction record would require the alteration of all subsequent records and the collusion of the entire network. Thus, data on our network will be all the more accurate, consistent, and transparent than when it is pushed through paper-heavy processes.
 
- - Greater Transparency : With the use of blockchain, all our transactions will be transparent and as blockchain is a type of distributed ledger, the network and both the parties involved will share individual copies and these documents can only be updated through consensus, that is after everyone’s consent. To change a single transaction record would require the alteration of all subsequent records and the collusion of the entire network. Thus, data on our network will be all the more accurate, consistent, and transparent than when it is pushed through paper-heavy processes.
+- Improved Traceability : Each and every transaction taking place here are recorded on a blockchain, hence ending up with an audit trail through which we can easily track each and every transaction at each and every step. This historical transaction data can help to verify the authenticity of assets and prevent fraud.
 
- - Improved Traceability : Each and every transaction taking place here are recorded on a blockchain, hence ending up with an audit trail through which we can easily track each and every transaction at each and every step. This historical transaction data can help to verify the authenticity of assets and prevent fraud.
-
- - Enhanced Security : There are several ways blockchain is more secure than other record-keeping systems. Transactions must be agreed upon before they are recorded. After a transaction is approved, it is encrypted and linked to the previous transaction. This, along with the fact that information is stored across a network of computers instead of on a single server, makes it very difficult for hackers to compromise the transaction data.
- - Reduced Costs : Using our portal, there is no need for as many third parties or middlemen to make guarantees because it doesn’t matter if you can trust your trading partner. Instead, you just have to trust the data on the blockchain. You also won’t have to review so much documentation to complete a trade because everyone will have permissioned access to a single, immutable version.
+- Enhanced Security : There are several ways blockchain is more secure than other record-keeping systems. Transactions must be agreed upon before they are recorded. After a transaction is approved, it is encrypted and linked to the previous transaction. This, along with the fact that information is stored across a network of computers instead of on a single server, makes it very difficult for hackers to compromise the transaction data.
+- Reduced Costs : Using our portal, there is no need for as many third parties or middlemen to make guarantees because it doesn’t matter if you can trust your trading partner. Instead, you just have to trust the data on the blockchain. You also won’t have to review so much documentation to complete a trade because everyone will have permissioned access to a single, immutable version.
 
  </div>
-
 
 ## Future implementation
 
@@ -111,11 +98,10 @@ A  complain portal will ensure that all grievances will be catered. They can als
 
 <div align = "left">
 
- - Scan Index : In the future for security purposes, a full-fledged descriptive report for the person’s body organs will be uploaded on our server to authenticate that no other body part has been hampered with as there are many cases where the person donating or receiving the organ is unaware of what all has been done to him during surgery. The person’s report will be a result of a full CT scan or an MRI to ensure this
+- Scan Index : In the future for security purposes, a full-fledged descriptive report for the person’s body organs will be uploaded on our server to authenticate that no other body part has been hampered with as there are many cases where the person donating or receiving the organ is unaware of what all has been done to him during surgery. The person’s report will be a result of a full CT scan or an MRI to ensure this
 
- - Health card linking : As we all know that the government will be issuing a health card to every citizen in near future and so,as an advancement we will be linking it to the user at our network for the people to avail the benefits associated with it
+- Health card linking : As we all know that the government will be issuing a health card to every citizen in near future and so,as an advancement we will be linking it to the user at our network for the people to avail the benefits associated with it
 
- - Stem Cells : At this moment there is no authenticated process for stem cell donation despite the fact that it can be used to replace any tissue in the body. We aim at developing a secure, easy, and smooth process for the donation and storage purposes like the one built for the organ donation by us.
-
+- Stem Cells : At this moment there is no authenticated process for stem cell donation despite the fact that it can be used to replace any tissue in the body. We aim at developing a secure, easy, and smooth process for the donation and storage purposes like the one built for the organ donation by us.
 
  </div>

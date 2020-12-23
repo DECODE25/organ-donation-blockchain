@@ -86,24 +86,24 @@ h1 {
 
 @media screen and (max-width: 1400px) {
   .stepper-div {
-    width: 12.3em
+    width: 12.3em;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .stepper-div {
-    width: 10em
+    width: 10em;
   }
 }
 
 @media screen and (max-width: 992px) {
   .stepper-div {
-    width: 7em
+    width: 7em;
   }
 }
 
 @media screen and (max-width: 768px) {
   .stepper-div {
-    width: 5em
+    width: 5em;
   }
 }

@@ -9,11 +9,10 @@ import Navbar from "./components/Navbar/Navbar";
 import { configureBlockchain } from "./actions/contractActions";
 import store from "./store";
 import SIgnup from "./components/Forms/SIgnup";
-import Landing from './components/Landing/Landing'
-import Dashboard from './components/Dashboard/Dashboard'
-import Profile from './components/profile/profile'
-import PrivateRoute from './utils/PrivateComponent'
-
+import Landing from "./components/Landing/Landing";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Profile from "./components/profile/profile";
+import PrivateRoute from "./utils/PrivateComponent";
 
 class App extends Component {
   async componentWillMount() {
@@ -54,7 +53,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Switch>
-        <Route exact path="/">
+          <Route exact path="/">
             <Landing />
           </Route>
           <Route exact path="/track">

@@ -11,7 +11,7 @@ contract Doctor {
 	address[] public transplants ;
 	address public myaddress;
 	string public aadhar_number ;
-	    uint256 public count ; 
+	    uint256 public count ;
 
 
 	modifier isAdmin () {
@@ -47,6 +47,6 @@ contract Doctor {
 	function oppositecount() public view returns(uint256) {
 		return patient.length
 	}
-	
+
 
 }

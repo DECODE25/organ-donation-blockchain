@@ -217,24 +217,14 @@
   "ast": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/contracts/Person.sol",
     "exportedSymbols": {
-      "Person": [
-        517
-      ]
+      "Person": [517]
     },
     "id": 518,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 386,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:3"
       },
@@ -256,9 +246,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 517,
-        "linearizedBaseContracts": [
-          517
-        ],
+        "linearizedBaseContracts": [517],
         "name": "Person",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -594,10 +582,7 @@
                       "id": 409,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "361:7:3",
                       "typeDescriptions": {
@@ -757,10 +742,7 @@
                       "id": 420,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "437:7:3",
                       "typeDescriptions": {
@@ -1424,9 +1406,7 @@
               "src": "940:81:3",
               "statements": [
                 {
-                  "assignments": [
-                    493
-                  ],
+                  "assignments": [493],
                   "declarations": [
                     {
                       "constant": false,
@@ -1780,24 +1760,14 @@
   "legacyAST": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/contracts/Person.sol",
     "exportedSymbols": {
-      "Person": [
-        517
-      ]
+      "Person": [517]
     },
     "id": 518,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 386,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:3"
       },
@@ -1819,9 +1789,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 517,
-        "linearizedBaseContracts": [
-          517
-        ],
+        "linearizedBaseContracts": [517],
         "name": "Person",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -2157,10 +2125,7 @@
                       "id": 409,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "361:7:3",
                       "typeDescriptions": {
@@ -2320,10 +2285,7 @@
                       "id": 420,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "437:7:3",
                       "typeDescriptions": {
@@ -2987,9 +2949,7 @@
               "src": "940:81:3",
               "statements": [
                 {
-                  "assignments": [
-                    493
-                  ],
+                  "assignments": [493],
                   "declarations": [
                     {
                       "constant": false,

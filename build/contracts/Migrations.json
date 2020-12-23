@@ -63,24 +63,14 @@
   "ast": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/contracts/Migrations.sol",
     "exportedSymbols": {
-      "Migrations": [
-        369
-      ]
+      "Migrations": [369]
     },
     "id": 370,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 334,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:2"
       },
@@ -91,9 +81,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 369,
-        "linearizedBaseContracts": [
-          369
-        ],
+        "linearizedBaseContracts": [369],
         "name": "Migrations",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -474,24 +462,14 @@
   "legacyAST": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/contracts/Migrations.sol",
     "exportedSymbols": {
-      "Migrations": [
-        369
-      ]
+      "Migrations": [369]
     },
     "id": 370,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 334,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:2"
       },
@@ -502,9 +480,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 369,
-        "linearizedBaseContracts": [
-          369
-        ],
+        "linearizedBaseContracts": [369],
         "name": "Migrations",
         "nodeType": "ContractDefinition",
         "nodes": [

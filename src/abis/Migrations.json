@@ -63,24 +63,14 @@
   "ast": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/src/contracts/Migrations.sol",
     "exportedSymbols": {
-      "Migrations": [
-        384
-      ]
+      "Migrations": [384]
     },
     "id": 385,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 349,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:2"
       },
@@ -91,9 +81,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 384,
-        "linearizedBaseContracts": [
-          384
-        ],
+        "linearizedBaseContracts": [384],
         "name": "Migrations",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -474,24 +462,14 @@
   "legacyAST": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/src/contracts/Migrations.sol",
     "exportedSymbols": {
-      "Migrations": [
-        384
-      ]
+      "Migrations": [384]
     },
     "id": 385,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 349,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:2"
       },
@@ -502,9 +480,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 384,
-        "linearizedBaseContracts": [
-          384
-        ],
+        "linearizedBaseContracts": [384],
         "name": "Migrations",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -890,12 +866,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x4675b10c6946A3076D0146FE945909B04b093FB4",
-      "transactionHash": "0x40b8e01eae29175c1315ebfc76f97022f73924e0b1ca1943c7322b19811e812c"
+      "address": "0x1c18Ef08Bea7f43B1948d7D63d19e6c9ff2033b1",
+      "transactionHash": "0x778e0175d54c478ca467ddbc4a14e5d79cc000ee34c4d44f0f43727e47baa86b"
     }
   },
   "schemaVersion": "3.2.3",
-  "updatedAt": "2020-12-20T11:18:19.284Z",
+  "updatedAt": "2020-12-20T12:41:35.429Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

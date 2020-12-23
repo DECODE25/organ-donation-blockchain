@@ -115,10 +115,10 @@ const TabContent = () => {
             <h3>Documents</h3>
           </div>
           <div className="col-6 text-right">
-              <label htmlFor="file-upload" className="btn btn-primary">
-                Upload Document
-              </label>
-              <input id="file-upload" type="file" hidden/>
+            <label htmlFor="file-upload" className="btn btn-primary">
+              Upload Document
+            </label>
+            <input id="file-upload" type="file" hidden />
           </div>
         </div>
         <div className="row pt-3 jusify-content-center">

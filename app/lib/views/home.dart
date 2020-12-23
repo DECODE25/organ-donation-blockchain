@@ -250,9 +250,6 @@ class DoctorsTile extends StatelessWidget {
           ],
         ),
       ),
-    ); 
+    );
   }
 }
-
-
-

@@ -15,28 +15,28 @@ contract DonateOrganFactory {
     mapping( address => address) public  doctors ;
     address[] public transplants ;
 
-    //events person created 
-    //events doctor created 
-    //events approved 
-    //create transplant 
+    //events person created
+    //events doctor created
+    //events approved
+    //create transplant
 
 
     modifier isDoctor() {
         require(doctors[msg.sender] != address(0));
         _;
     }
-    
-    
+
+
     modifier isrestricted () {
         require(msg.sender == authority1 || msg.sender == authority2);
         _;
     }
-    
+
     constructor (address _authority1 , address _authority2) public {
         admin = msg.sender ;
         authority1=_authority1;
         authority2=_authority2;
-        
+
     }
 
 
@@ -68,5 +68,5 @@ contract DonateOrganFactory {
         Transplant tr = Transplant ( _trans) ;
         tr.currentStageApproval();
     }
-    
+
 }

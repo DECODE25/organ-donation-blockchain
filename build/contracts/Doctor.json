@@ -211,24 +211,14 @@
   "ast": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/contracts/Doctor.sol",
     "exportedSymbols": {
-      "Doctor": [
-        121
-      ]
+      "Doctor": [121]
     },
     "id": 122,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:0"
       },
@@ -250,9 +240,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 121,
-        "linearizedBaseContracts": [
-          121
-        ],
+        "linearizedBaseContracts": [121],
         "name": "Doctor",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -543,10 +531,7 @@
                       "id": 20,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "322:7:0",
                       "typeDescriptions": {
@@ -850,9 +835,7 @@
               "src": "620:81:0",
               "statements": [
                 {
-                  "assignments": [
-                    59
-                  ],
+                  "assignments": [59],
                   "declarations": [
                     {
                       "constant": false,
@@ -1069,9 +1052,7 @@
               "src": "773:85:0",
               "statements": [
                 {
-                  "assignments": [
-                    78
-                  ],
+                  "assignments": [78],
                   "declarations": [
                     {
                       "constant": false,
@@ -1288,9 +1269,7 @@
               "src": "939:83:0",
               "statements": [
                 {
-                  "assignments": [
-                    97
-                  ],
+                  "assignments": [97],
                   "declarations": [
                     {
                       "constant": false,
@@ -1641,24 +1620,14 @@
   "legacyAST": {
     "absolutePath": "/home/specter25/cs2019-2023/blockchain/organ-donation-blockchain/contracts/Doctor.sol",
     "exportedSymbols": {
-      "Doctor": [
-        121
-      ]
+      "Doctor": [121]
     },
     "id": 122,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".25",
-          "<",
-          "0.7",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.4", ".25", "<", "0.7", ".0"],
         "nodeType": "PragmaDirective",
         "src": "32:32:0"
       },
@@ -1680,9 +1649,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 121,
-        "linearizedBaseContracts": [
-          121
-        ],
+        "linearizedBaseContracts": [121],
         "name": "Doctor",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1973,10 +1940,7 @@
                       "id": 20,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        851,
-                        852
-                      ],
+                      "overloadedDeclarations": [851, 852],
                       "referencedDeclaration": 851,
                       "src": "322:7:0",
                       "typeDescriptions": {
@@ -2280,9 +2244,7 @@
               "src": "620:81:0",
               "statements": [
                 {
-                  "assignments": [
-                    59
-                  ],
+                  "assignments": [59],
                   "declarations": [
                     {
                       "constant": false,
@@ -2499,9 +2461,7 @@
               "src": "773:85:0",
               "statements": [
                 {
-                  "assignments": [
-                    78
-                  ],
+                  "assignments": [78],
                   "declarations": [
                     {
                       "constant": false,
@@ -2718,9 +2678,7 @@
               "src": "939:83:0",
               "statements": [
                 {
-                  "assignments": [
-                    97
-                  ],
+                  "assignments": [97],
                   "declarations": [
                     {
                       "constant": false,
