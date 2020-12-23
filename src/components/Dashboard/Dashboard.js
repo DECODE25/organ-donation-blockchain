@@ -18,6 +18,11 @@ class Dashboard extends Component {
     type: "",
     account: null,
     address: null,
+    formData: { donor: null, recepient: null, organ: null },
+  };
+
+  handleChange = async (e) => {
+    this.setState;
   };
 
   loadBlockChainData = async () => {

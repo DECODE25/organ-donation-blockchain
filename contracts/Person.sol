@@ -12,8 +12,6 @@ contract Person {
 	address public myaddress;
 	string public aadhar_number ;
 	mapping(address =>bool) doctorexists;
-	uint256 public count ;
-
 
 
 	modifier isAdmin () {
@@ -25,6 +23,9 @@ contract Person {
 		_;
 	}
 
+	//events addDoctor
+	//approveStage
+
 	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  ) public
 	{
 	    name = _name;
@@ -33,7 +34,6 @@ contract Person {
 	}
 	function addTransplant( address  _transplant) public {
 		transplants.push(_transplant);
-		count++;
 	}
 	function addDoctor( address  _doc) public isAdmin{
 		doctor.push(_doc);
@@ -46,12 +46,6 @@ contract Person {
 
 	function isDoctor( address _doc) public view returns(bool) {
 		return doctorexists[_doc];
-	}
-	function transplantCount() public view returns(uint256) {
-		return transplants.length
-	}
-	function oppositecount() public view returns(uint256) {
-		return doctor.length
 	}
 
 

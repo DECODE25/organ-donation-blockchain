@@ -11,8 +11,11 @@ contract Doctor {
 	address[] public transplants ;
 	address public myaddress;
 	string public aadhar_number ;
-	    uint256 public count ;
 
+
+	//events approveStage
+	//events complete stage
+	//events complete current stage
 
 	modifier isAdmin () {
 		require(tx.origin == myaddress);
@@ -39,13 +42,6 @@ contract Doctor {
     }
 	function addTransplant( address  _transplant) public {
 		transplants.push(_transplant);
-		count ++ ;
-	}
-	function transplantCount() public view returns(uint256) {
-		return transplants.length
-	}
-	function oppositecount() public view returns(uint256) {
-		return patient.length
 	}
 
 
