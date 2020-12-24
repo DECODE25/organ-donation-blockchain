@@ -2,13 +2,9 @@
 
 <img height=200px src= "https://github.com/DECODE25/optim/blob/master/optim_logo.png">
 
-<h1>Name</h1>
+<h1>JEEVAN</h1>
 
-<a href=""><img src="https://github.com/aritraroy/social-icons/blob/master/medium-icon.png?raw=true" width="60"></a>
-<a href=""><img src="https://github.com/aritraroy/social-icons/blob/master/twitter-icon.png?raw=true" width="60"></a>
-<a href=""><img src="https://github.com/aritraroy/social-icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
-<a href=""><img src="https://github.com/aritraroy/social-icons/blob/master/facebook-icon.png?raw=true" width="60"></a>
-<a href=""><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a>
+<a href=""><img src="https://github.com/aritraroy/social-icons/blob/master/youtube-icon.png?raw=true" width="60"></a>
 
 # DECODE25
 
