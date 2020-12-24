@@ -1,0 +1,228 @@
+:root {
+    --darkest: #14274e;
+    --dark: #3e22ee;
+    --light: #5950fc;
+    --lighter: #d2d7ff;
+    --lightest: #e3e7f1;
+    --greyish-blue: #dae0ec;
+    --blue: #51adcf;
+    --hover-effect: #c6cbef;
+  }
+  
+  body {
+    background-color: var(--lightest);
+    font-family: "Roboto", sans-serif;
+    font-size: 13.3px;
+    color: var(--darkest);
+    font-weight: 700;
+  }
+  
+  .brand {
+    background-color: #fff;
+  }
+  
+  .brand:hover {
+    cursor: pointer;
+  }
+  
+  .brand .logo {
+    width: 25px;
+    margin-left: -3px;
+  }
+  
+  .brand-name {
+    margin-left: 10px;
+  }
+  
+  .menu {
+    color: var(--darkest);
+    margin-left: 20px;
+    padding: 0.3em 0;
+  }
+  
+  .menu:hover {
+    background-color: var(--hover-effect);
+  }
+  
+  .menu.active {
+    background-color: var(--lighter);
+  }
+  
+  .notification-icons {
+    margin-left: auto;
+  }
+  
+  .notification-icons button {
+    padding-left: 6px;
+    color: var(--darkest);
+  }
+  
+  .notification-icons .btn .badge {
+    right: 8px;
+    top: 3px;
+    background-color: var(--blue);
+  }
+  
+  .sidebar {
+    flex: 0 0 168.25px;
+  }
+  
+  .sidebar-button,
+  .button-label {
+    cursor: pointer;
+  }
+  
+  .sidebar-button {
+    background-color: var(--greyish-blue);
+    color: var(--darkest);
+    height: 38px;
+    padding-top: 10px;
+    width: 38px;
+    text-align: center;
+  }
+  
+  .sidebar-button span {
+    display: none;
+    background-color: var(--dark);
+  }
+  
+  .sidebar-button.active {
+    background-color: var(--light);
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .sidebar-button.active span {
+    display: inline-block;
+  }
+  
+  .sidebar .button-label {
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.65;
+  }
+  
+  .sidebar .button-label.active {
+    opacity: 1;
+  }
+  
+  .dashboard {
+    margin-left: 1.5em;
+  }
+  
+  .purple-card {
+    background-color: var(--light);
+    color: #fff;
+    height: 13.4em;
+  }
+  
+  .purple-card div {
+    left: 42%;
+    top: 52%;
+  }
+  
+  .purple-card div h5 {
+    font-size: 1.2rem;
+  }
+  
+  .purple-card div p {
+    font-weight: 300;
+  }
+  
+  .purple-card div .btn {
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  
+  .purple-card .img-doctor {
+    width: 18rem;
+    right: 1rem;
+    bottom: -2rem;
+  }
+  
+  .info-card {
+    background-color: #fff;
+  }
+  
+  .info-card .heading {
+    font-size: 0.9rem;
+  }
+  
+  .info-card .avatar {
+    width: 3rem;
+  }
+  
+  .info-card .desc {
+    font-size: 0.8em;
+    opacity: 0.55;
+    color: var(--darkest);
+  }
+  
+  .info-card .card-img {
+    width: 2rem;
+  }
+  
+  .info-card .additional-info {
+    color: var(--light);
+    font-size: 0.93rem;
+  }
+  
+  .info-card .desc .positive {
+    color: rgb(0, 173, 0);
+  }
+  
+  .info-card .desc .negative {
+    color: red;
+  }
+  
+  .info-card .important-info {
+    background-color: var(--lightest);
+    color: var(--light);
+    padding: 0.5rem 0.8rem;
+    opacity: 0.8;
+  }
+  
+  .info-card a {
+    font-size: 0.8em;
+  }
+  
+  .list-icon {
+    margin-right: 1rem;
+  }
+  
+  .list-button {
+    background-color: var(--greyish-blue);
+    opacity: 0.7;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .purple-card div {
+      top: 50%;
+    }
+    .purple-card .img-doctor {
+      width: 15rem;
+      right: -0.5rem;
+      bottom: 0rem;
+    }
+  }
+  
+  /* @media screen and (max-width: 768px) {
+    .sidebar{
+      position: fixed;
+      z-index: 1;
+      background: #fff;    
+      padding: 5rem 1rem;
+      width: 16.5rem;
+      height: 100vh;    
+      left: 0;
+      top:0;
+    }
+    .brand {
+     z-index: 2;
+     border: 1px solid var(--lighter)
+    }
+    .menu {
+      z-index: 2;
+    }
+  } */

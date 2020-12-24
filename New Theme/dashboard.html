@@ -1,0 +1,443 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="d-flex align-items-center m-3 mt-4 pr-3">
+        <div class="brand d-flex align-items-center px-4 py-2 shadow-sm rounded-3">
+            <img src="img/codebeat.svg" class="img-fluid logo">
+            <p class="d-inline-block mb-0 brand-name">Mario Hospital</p>
+        </div>
+        <!--ADD ACTIVE CLASS WHEN BUTTON IS CLICKED-->
+        <div class="menu rounded-3 active">
+            <button class="btn shadow-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+        </div>
+        <div class="notification-icons">
+            <button class="btn position-relative shadow-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                    class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                </svg>
+                <span class="position-absolute badge border border-light rounded-circle p-1"><span
+                        class="visually-hidden">unread messages</span></span>
+            </button>
+            <button class="btn position-relative shadow-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell"
+                    viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z" />
+                    <path fill-rule="evenodd"
+                        d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                </svg>
+                <span class="position-absolute badge border border-light rounded-circle p-1"><span
+                        class="visually-hidden">unread messages</span></span>
+            </button>
+        </div>
+    </div>
+    <!--navbar-->
+    <div class="d-flex p-3">
+        <!--Sidebar-->
+        <div class="sidebar">
+            <p class="mb-4">Menu</p>
+            <div class="row justify-content-center m-0">
+                <div class="col-6">
+                    <!--ADD ACTIVE AND SHADOW CLASSES WHEN BUTTON IS CLICKED-->
+                    <div class="mx-auto position-relative rounded-3 sidebar-button shadow active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-house" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                            <path fill-rule="evenodd"
+                                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <!--ADD ACTIVE CLASS WHEN BUTTON IS CLICKED-->
+                    <p class="button-label pt-2 text-center active">Dashboard</p>
+                </div>
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-clipboard-check" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                            <path fill-rule="evenodd"
+                                d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3zm4.354 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center">Appointments</p>
+                </div>
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-briefcase" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6h-1v6a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-6H0v6z" />
+                            <path fill-rule="evenodd"
+                                d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v2.384l-7.614 2.03a1.5 1.5 0 0 1-.772 0L0 6.884V4.5zM1.5 4a.5.5 0 0 0-.5.5v1.616l6.871 1.832a.5.5 0 0 0 .258 0L15 6.116V4.5a.5.5 0 0 0-.5-.5h-13zM5 2.5A1.5 1.5 0 0 1 6.5 1h3A1.5 1.5 0 0 1 11 2.5V3h-1v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V3H5v-.5z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center">Doctors</p>
+                </div>
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-info-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                            <circle cx="8" cy="4.5" r="1" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center">Staff</p>
+                </div>
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-door-open" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z" />
+                            <path fill-rule="evenodd"
+                                d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z" />
+                            <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center">Room Allotment</p>
+                </div>
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-wallet2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center">Payment</p>
+                </div>
+            </div>
+            <p class="mt-1 mb-4">Appearance</p>
+            <div class="row justify-content-center m-0">
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button shadow active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-person" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center active">Profile</p>
+                </div>
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-sliders" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center">Settings</p>
+                </div>
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z" />
+                            <path
+                                d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center">Support</p>
+                </div>
+                <div class="col-6">
+                    <div class="mx-auto position-relative rounded-3 sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-power" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M5.578 4.437a5 5 0 1 0 4.922.044l.5-.866a6 6 0 1 1-5.908-.053l.486.875z" />
+                            <path fill-rule="evenodd" d="M7.5 8V1h1v7h-1z" />
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle h-100 w-100 rounded-circle"></span>
+                    </div>
+                    <p class="button-label pt-2 text-center">Log Out</p>
+                </div>
+            </div>
+        </div>
+        <!--Sidebar-->
+        <!--Dashboard-->
+        <div class="dashboard flex-grow-1">
+            <h5 class="fs-5">Dashboard</h5>
+            <div class="row m-0 g-3 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="rounded-3 position-relative overflow-hidden purple-card">
+                        <img class="img-fluid w-25 position-absolute start-0 translate-middle top-100"
+                            src="img/undraw_my_password_d6kg.svg">
+                        <div class="position-absolute translate-middle">
+                            <h5>Welcome Neri Kwang!</h5>
+                            <p class="w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni suscipit
+                                molestiae vero optio
+                                vitae alias tenetur</p>
+                            <button class="btn btn-sm px-2 py-1 shadow-none rounded-3">Connect To Doctor</button>
+                        </div>
+                        <img src="img/undraw_medicine_b1ol.svg" class="img-fluid position-absolute img-doctor">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="info-card rounded-3 p-3">
+                        <p class="heading">Profile</p>
+                        <div class="text-center mt-3">
+                            <img src="img/woman.svg" class="img-fluid avatar rounded-circle shadow">
+                            <h6 class="heading mt-3 fw-bold">Dr. Neri Kwang</h6>
+                            <p class="desc mt-2 pt-1 mb-0">Heart Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="info-card rounded-3 p-3">
+                        <img src="img/water-drops.svg" class="img-fluid card-img">
+                        <p class="heading mt-3 mb-0">Blood Pressure</p>
+                        <p class="additional-info pt-1 mb-2">110/70</p>
+                        <p class="desc pt-1 mb-2">
+                            <span class="positive">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                    class="bi bi-graph-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                            </span>
+                            10% Higher Than Last Month
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="info-card rounded-3 p-3">
+                        <img src="img/cardiogram.svg" class="img-fluid card-img">
+                        <p class="heading mt-3 mb-0">Heart Rate</p>
+                        <p class="additional-info pt-1 mb-2">85 BPM</p>
+                        <p class="desc pt-1 mb-2">
+                            <span class="negative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                    class="bi bi-graph-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 0h1v15h15v1H0V0zm10 11.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-1 0v2.6l-3.613-4.417a.5.5 0 0 0-.74-.037L7.06 8.233 3.404 3.206a.5.5 0 0 0-.808.588l4 5.5a.5.5 0 0 0 .758.06l2.609-2.61L13.445 11H10.5a.5.5 0 0 0-.5.5z" />
+                                </svg>
+                            </span>
+                            5% Less Than Last Month
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="info-card rounded-3 p-3">
+                        <img src="img/intravenous-saline-drip.svg" class="img-fluid card-img">
+                        <p class="heading mt-3 mb-0">Glucose Level</p>
+                        <p class="additional-info pt-1 mb-2">75-90</p>
+                        <p class="desc pt-1 mb-2">
+                            <span class="positive">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                    class="bi bi-graph-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                            </span>
+                            20% Higher Than Last Month
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-12 col-xl-3">
+                    <div class="info-card rounded-3 p-3 text-lg-center text-xl-start">
+                        <img src="img/erythrocytes.svg" class="img-fluid card-img">
+                        <p class="heading mt-3 mb-0">RBC Count</p>
+                        <p class="additional-info pt-1 mb-2">9,456/mL</p>
+                        <p class="desc pt-1 mb-2">
+                            <span class="negative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                    class="bi bi-graph-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 0h1v15h15v1H0V0zm10 11.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-1 0v2.6l-3.613-4.417a.5.5 0 0 0-.74-.037L7.06 8.233 3.404 3.206a.5.5 0 0 0-.808.588l4 5.5a.5.5 0 0 0 .758.06l2.609-2.61L13.445 11H10.5a.5.5 0 0 0-.5.5z" />
+                                </svg>
+                            </span>
+                            25% Less Than Last Month
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="info-card rounded-3 p-3">
+                        <div class="d-flex">
+                            <div class="flex-fill">
+                                <p class="heading mb-1">Performance Heart Rate</p>
+                                <button class="btn shadow-none p-0 desc fw-bold dropdown-toggle">1-7 December 2020</a>
+                            </div>
+                            <div class="flex-fill text-end">
+                                <p class="important-info d-inline-block rounded-3">72 bpm <span
+                                        class="desc">Average</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="info-card rounded-3 p-3">
+                        <p class="heading mb-1">Health Reports Document</p>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-fill">
+                                <button class="btn shadow-none p-0 desc fw-bold dropdown-toggle">1-7 December
+                                    2020</a>
+                            </div>
+                            <div class="flex-fill text-end">
+                                <a class="text-decoration-none" href="!#">VIEW MORE</a>
+                            </div>
+                        </div>
+                        <div class="d-flex my-2 pt-2">
+                            <img class="img-fluid card-img list-icon" src="img/document.svg">
+                            <div class="flex-fill">
+                                <p class="mb-1">Medical Check Up Report.pdf</p>
+                                <span class="desc">2MB</span>
+                            </div>
+                            <div class="flex-fill text-end">
+                                <button class="btn shadow-none list-button p-2 mx-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                    </svg>
+                                </button>
+                                <button class="btn shadow-none list-button p-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-flex my-2 pt-2">
+                            <img class="img-fluid card-img list-icon" src="img/document.svg">
+                            <div class="flex-fill">
+                                <p class="mb-1">Blood Count Report.docx</p>
+                                <span class="desc">4MB</span>
+                            </div>
+                            <div class="flex-fill text-end">
+                                <button class="btn shadow-none list-button p-2 mx-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                    </svg>
+                                </button>
+                                <button class="btn shadow-none list-button p-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-flex my-2 pt-2">
+                            <img class="img-fluid card-img list-icon" src="img/document.svg">
+                            <div class="flex-fill">
+                                <p class="mb-1">Glucose Level Report.docx</p>
+                                <span class="desc">12MB</span>
+                            </div>
+                            <div class="flex-fill text-end">
+                                <button class="btn shadow-none list-button p-2 mx-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                    </svg>
+                                </button>
+                                <button class="btn shadow-none list-button p-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-flex my-2 pt-2">
+                            <img class="img-fluid card-img list-icon" src="img/document.svg">
+                            <div class="flex-fill">
+                                <p class="mb-1">Heart Rate Report.pdf</p>
+                                <span class="desc">2.5MB</span>
+                            </div>
+                            <div class="flex-fill text-end">
+                                <button class="btn shadow-none list-button p-2 mx-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                    </svg>
+                                </button>
+                                <button class="btn shadow-none list-button p-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Dashboard-->
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
