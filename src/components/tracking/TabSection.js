@@ -77,7 +77,11 @@ const TabSection = () => {
           <Tab label="Donor" icon={<FavoriteIcon />} {...a11yProps(1)} />
           <Tab label="Recipient" icon={<PersonPinIcon />} {...a11yProps(2)} />
           <Tab label="Doctors" icon={<HelpIcon />} {...a11yProps(3)} />
-          <Tab label="Govt Auth I" icon={<ShoppingBasket />} {...a11yProps(4)} />
+          <Tab
+            label="Govt Auth I"
+            icon={<ShoppingBasket />}
+            {...a11yProps(4)}
+          />
           <Tab label="Govt Auth II" icon={<ThumbUp />} {...a11yProps(4)} />
         </Tabs>
       </AppBar>

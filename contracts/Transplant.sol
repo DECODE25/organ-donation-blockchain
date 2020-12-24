@@ -9,7 +9,7 @@ contract Transplant {
 		    address uploader ;
 		    string hexCode ;
 		}
-		
+
 		struct Stage {
 		    bool started ;
 		    bool completed ;
@@ -29,7 +29,7 @@ contract Transplant {
 
 		uint256 public stageNo ;
 		Stage[] public stages ;
-		
+
 		//mapping user address => stage no => bool
 		mapping (address => bool) entity ;
 		mapping ( uint256 => mapping ( address => bool )) public approval ;
@@ -43,7 +43,7 @@ contract Transplant {
 		    require (tx.origin == donor || tx.origin == recepient || tx.origin == doctor || tx.origin == approval_authority1 || tx.origin == approval_authority2 );
 		    _;
 		}
-		
+
 
 		constructor ( address _receient , address _donor , address _approval_authority1 , address _approval_authority2 , uint _organ ) public  {
 		    recepient =_receient;
@@ -55,14 +55,14 @@ contract Transplant {
 		    Stage memory newStage = Stage({
 		        completed:false,
 		        voteCount:0,
-		        started:true 
+		        started:true
 		    });
 		    stages.push(newStage);
 		    stageNo=0;
-		    
-		    
+
+
 		}
-		
+
 		function startNextStage () public onlyDoctor {
 			require(stages[stageNo].voteCount == 5 , "Not Enough Votes");
 			require(stages[stageNo].completed == true , "Stage Not completed yet");
@@ -70,11 +70,11 @@ contract Transplant {
 		    Stage memory newStage = Stage({
 		        completed:false,
 		        voteCount:0,
-		        started:true 
+		        started:true
 		    });
 		    stages.push(newStage);
 		}
-		function currentStageApproval () public belongs  { //upload ipfs docs here pending functionality  
+		function currentStageApproval () public belongs  { //upload ipfs docs here pending functionality
 		//check the stage has been started and the user has not already applied
 			require(!approval[stageNo][tx.origin]);
 			approval[stageNo][tx.origin]= true ;
@@ -92,5 +92,5 @@ contract Transplant {
 		function getmapppingvalue (uint256 _stage , address _addr ) public view returns (bool) {
 		    return (approval[_stage][_addr]);
 		}
-		
+
 }

@@ -1,49 +1,46 @@
 import React from "react";
-import {connect} from "react-redux";
-import {withRouter} from 'react-router-dom'
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { setTypeOfUser } from "../../actions/contractActions";
 import img29 from "../../images/img29.jpg";
 import doc from "../../images/doc.jpg";
-import Person from '../../abis/Person.json'
-import Doctor from '../../abis/Doctor.json'
-import {setAuthentication} from '../../actions/contractActions'
+import Person from "../../abis/Person.json";
+import Doctor from "../../abis/Doctor.json";
+import { setAuthentication } from "../../actions/contractActions";
 
-
-
-const Intro = ({ contract , setTypeOfUser , setAuthentication , history}) => {
+const Intro = ({ contract, setTypeOfUser, setAuthentication, history }) => {
   const handleClick = async (e) => {
-      setTypeOfUser(e.target.id);
-      const accounts = await contract.web3.eth.getAccounts()
-      if(e.target.id === "User")
-      {
-        console.log("persowwwwwwwwwn"  )
-        const perso = await contract.Factory.methods.people(accounts[0]).call();
-        console.log("person" ,perso )
-        if (perso === "0x0000000000000000000000000000000000000000" )
-        {
-          history.push("/form");
-        }
-        else {
-        const personContract = new contract.web3.eth.Contract(Person.abi , perso);
-        setAuthentication(personContract)
-        history.push('/dashboard')
-
-        }
-      }
-      if(e.target.id === "Doctor")
-      {
-        const perso = await contract.Factory.methods.doctors(accounts[0]).call();
-        if (perso === "0x0000000000000000000000000000000000000000" )
-        {
-          history.push("/form");
-        }
-        else {
-        const personContract = new contract.web3.eth.Contract(Doctor.abi , perso);
+    setTypeOfUser(e.target.id);
+    const accounts = await contract.web3.eth.getAccounts();
+    if (e.target.id === "User") {
+      console.log("persowwwwwwwwwn");
+      const perso = await contract.Factory.methods.people(accounts[0]).call();
+      console.log("person", perso);
+      if (perso === "0x0000000000000000000000000000000000000000") {
+        history.push("/form");
+      } else {
+        const personContract = new contract.web3.eth.Contract(
+          Person.abi,
+          perso
+        );
         setAuthentication(personContract);
-        history.push('/dashboard');
-        }
+        history.push("/dashboard");
       }
-  }
+    }
+    if (e.target.id === "Doctor") {
+      const perso = await contract.Factory.methods.doctors(accounts[0]).call();
+      if (perso === "0x0000000000000000000000000000000000000000") {
+        history.push("/form");
+      } else {
+        const personContract = new contract.web3.eth.Contract(
+          Doctor.abi,
+          perso
+        );
+        setAuthentication(personContract);
+        history.push("/dashboard");
+      }
+    }
+  };
   return (
     <div class="skin-light">
       {/* Main Navigation */}
@@ -69,10 +66,12 @@ const Intro = ({ contract , setTypeOfUser , setAuthentication , history}) => {
   );
 };
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   return {
-    contract : state.contract
-  }
-}
+    contract: state.contract,
+  };
+};
 
-export default connect(mapStateToProps, {setTypeOfUser , setAuthentication})(withRouter(Intro));
+export default connect(mapStateToProps, { setTypeOfUser, setAuthentication })(
+  withRouter(Intro)
+);
