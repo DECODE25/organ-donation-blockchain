@@ -1,5 +1,6 @@
 const DonateOrganFactory = artifacts.require("DonateOrganFactory");
 const Person = artifacts.require("Person");
+const Doctor = artifacts.require("Doctor");
 
 contract("DonateOrganFactory", (accounts) => {
   let factory;
@@ -58,13 +59,68 @@ contract("DonateOrganFactory", (accounts) => {
       assert.equal(event.args.name, "ujjwal", "name check in person event");
     });
     it("creates and deploys a person smart contract", async () => {
-      // console.log(address)
-      // console.log(personContract.address);
       assert.equal(
         address,
         personContract.address,
         "address in map of factory and address from deployed instance"
       );
+    });
+  });
+
+  describe("create doctor functionality", () => {
+    let address;
+    let person;
+    let personContract;
+    before(async () => {
+      factory = await DonateOrganFactory.deployed();
+      person = await factory.createDoctor("ujjwal", "1234321234", {
+        from: doctor,
+      });
+      address = await factory.doctors(doctor);
+      personContract = await Doctor.at(address);
+    });
+    it("fires the personCreate event", async () => {
+      const event = await person.logs[0];
+      assert.equal(event.event, "doctorEvent", "fires the doctorEvent name");
+      assert.equal(event.args.sender, doctor, "sender check in doctor event");
+      assert.equal(
+        event.args.doctorAddress,
+        address,
+        "doctorAddress check in doctor event"
+      );
+      assert.equal(event.args.name, "ujjwal", "name check in doctor event");
+    });
+    it("creates and deploys a person smart contract", async () => {
+      assert.equal(
+        address,
+        personContract.address,
+        "address in map of factory and address from deployed instance"
+      );
+    });
+  });
+
+  describe("testing the complete transplant functionality", () => {
+    let address;
+    let recepientContract;
+    let donorContract;
+    let doctorContract;
+    before(async () => {
+      factory = await DonateOrganFactory.deployed();
+      // create the recepient
+      await factory.createPerson("ujjwal", "1234321234", { from: recepient });
+      let address1 = await factory.people(recepient);
+      recepientContract = Person.at(address1);
+
+      //create the donor
+      await factory.createPerson("ujjwal", "1234321234", { from: donor });
+      let address2 = await factory.people(recepient);
+      donorContract = Person.at(address2);
+
+      //create the doctor
+
+      await factory.createDoctor("ujjwal", "1234321234", { from: doctor });
+      let address3 = await factory.doctors(doctor);
+      doctorContract = await Doctor.at(address3);
     });
   });
 });
