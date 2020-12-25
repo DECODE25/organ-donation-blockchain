@@ -15,6 +15,25 @@ contract DonateOrganFactory {
     mapping( address => address) public  doctors ;
     address[] public transplants ;
 
+    event personEvent (
+        address indexed sender,
+        address indexed personAddress,
+        string name
+    );
+
+    event doctorEvent (
+        address indexed sender,
+        address indexed doctorAddress,
+        string name
+    );
+
+    event transplantEvent (
+        address indexed sender,
+        address indexed transplantAddress,
+        string name
+    );
+
+
     //events person created
     //events doctor created
     //events approved
@@ -43,11 +62,14 @@ contract DonateOrganFactory {
     function createPerson( string memory _name , string memory  _aadhar_number ) public {
         Person person = new Person(_name , _aadhar_number , msg.sender);
         people[msg.sender] = address(person);
+        emit personEvent(msg.sender , address(person) , _name);
     }
 
     function createDoctor ( string memory _name , string memory  _aadhar_number  ) public {
         Doctor doctor = new Doctor(_name , _aadhar_number , msg.sender);
         doctors[msg.sender] = address(doctor);
+        emit doctorEvent(msg.sender , address(doctor) , _name);
+
     }
 
     function createTransplant (address _receient , address _donor , uint _organ) public  {
