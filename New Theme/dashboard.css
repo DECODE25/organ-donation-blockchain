@@ -303,6 +303,79 @@ body {
   margin: 0;
 }
 
+.complain-form, .complain-form .form-img-container {
+  border-radius: 15px
+}
+
+.complain-form h3 {
+  font-weight: 400;
+}
+
+.complain-form p {
+  font-size: 0.95rem
+}
+
+.complain-form label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--darkest);
+  opacity: 0.8;
+  margin-bottom: 2px
+}
+
+.complain-form label:active, .complain-form label:focus {
+  color: var(--light);
+  opacity: 1;
+}
+
+.complain-form input, textarea {
+  border: none;
+  background-color: inherit;
+  border-bottom: 2px solid var(--lighter);
+  outline: none;
+  padding-bottom: 0.5rem;
+  color: var(--darkest);
+  width: 90%;
+}
+
+.complain-form textarea {
+  width: 95%;
+}
+
+.complain-form input:active, .complain-form input:focus, .complain-form textarea:active, .complain-form textarea:focus {
+  border-bottom: 2px solid var(--light);
+}
+
+.complain-form button {
+  background-color: var(--dark);
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  border-radius: 10px
+}
+
+.form-img-container {
+  position: relative;
+  width: 100%;
+  height: calc(100% - .62em);
+  overflow: hidden;
+  border-radius: 10px
+}
+
+.form-img-container img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70rem;
+  transform: translate(-49%, -37%);
+}
+
+@media screen and (max-width: 1400px) {  
+  .form-img-container img {
+    transform: translate(-40%, -37%);
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .purple-card div {
     top: 50%;
@@ -346,7 +419,7 @@ body {
 
 form .btn {
   font-size: 95%;
-  border-radius: 5rem;
+  /*border-radius: 5rem;*/
   font-weight: bold;
   transition: all 0.2s;
 }
