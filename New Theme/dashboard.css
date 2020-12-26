@@ -1,213 +1,214 @@
+/* DASHBOARD CSS */
+
 :root {
-    --darkest: #14274e;
-    --dark: #3e22ee;
-    --light: #5950fc;
-    --lighter: #d2d7ff;
-    --lightest: #e3e7f1;
-    --greyish-blue: #dae0ec;
-    --blue: #51adcf;
-    --hover-effect: #c6cbef;
-  }
-  
-  body {
-    background-color: var(--lightest);
-    font-family: "Roboto", sans-serif;
-    font-size: 13.3px;
-    color: var(--darkest);
-    font-weight: 700;
-  }
-  
-  .brand {
-    background-color: #fff;
-  }
-  
-  .brand:hover {
-    cursor: pointer;
-  }
-  
-  .brand .logo {
-    width: 25px;
-    margin-left: -3px;
-  }
-  
-  .brand-name {
-    margin-left: 10px;
-  }
-  
-  .menu {
-    color: var(--darkest);
-    margin-left: 20px;
-    padding: 0.3em 0;
-  }
-  
-  .menu:hover {
-    background-color: var(--hover-effect);
-  }
-  
-  .menu.active {
-    background-color: var(--lighter);
-  }
-  
-  .notification-icons {
-    margin-left: auto;
-  }
-  
-  .notification-icons button {
-    padding-left: 6px;
-    color: var(--darkest);
-  }
-  
-  .notification-icons .btn .badge {
-    right: 8px;
-    top: 3px;
-    background-color: var(--blue);
-  }
-  
-  .sidebar {
-    flex: 0 0 168.25px;
-  }
-  
-  .sidebar-button,
-  .button-label {
-    cursor: pointer;
-  }
-  
-  .sidebar-button {
-    background-color: var(--greyish-blue);
-    color: var(--darkest);
-    height: 38px;
-    padding-top: 10px;
-    width: 38px;
-    text-align: center;
-  }
-  
-  .sidebar-button span {
-    display: none;
-    background-color: var(--dark);
-  }
-  
-  .sidebar-button.active {
-    background-color: var(--light);
-    color: #fff;
-    overflow: hidden;
-  }
-  
-  .sidebar-button.active span {
-    display: inline-block;
-  }
-  
-  .sidebar .button-label {
-    font-size: 12px;
-    font-weight: 300;
-    opacity: 0.65;
-  }
-  
-  .sidebar .button-label.active {
-    opacity: 1;
-  }
-  
-  .dashboard {
-    margin-left: 1.5em;
-  }
-  
-  .purple-card {
-    background-color: var(--light);
-    color: #fff;
-    height: 13.4em;
-  }
-  
+  --darkest: #14274e;
+  --dark: #3e22ee;
+  --light: #5950fc;
+  --lighter: #d2d7ff;
+  --lightest: #e3e7f1;
+  --greyish-blue: #dae0ec;
+  --blue: #51adcf;
+  --hover-effect: #c6cbef;
+}
+
+body {
+  background-color: var(--lightest);
+  font-family: "Roboto", sans-serif;
+  font-size: 13.3px;
+  color: var(--darkest);
+  font-weight: 700;
+}
+
+.brand {
+  background-color: #fff;
+}
+
+.brand:hover {
+  cursor: pointer;
+}
+
+.brand .logo {
+  width: 25px;
+  margin-left: -3px;
+}
+
+.brand-name {
+  margin-left: 10px;
+}
+
+.menu {
+  color: var(--darkest);
+  margin-left: 20px;
+  padding: 0.3em 0;
+}
+
+.menu:hover {
+  background-color: var(--hover-effect);
+}
+
+.menu.active {
+  background-color: var(--lighter);
+}
+
+.notification-icons {
+  margin-left: auto;
+}
+
+.notification-icons button {
+  padding-left: 6px;
+  color: var(--darkest);
+}
+
+.notification-icons .btn .badge {
+  right: 8px;
+  top: 3px;
+  background-color: var(--blue);
+}
+
+.sidebar {
+  flex: 0 0 168.25px;
+}
+
+.sidebar-button, .button-label {
+  cursor: pointer;
+}
+
+.sidebar-button {
+  background-color: var(--greyish-blue);
+  color: var(--darkest);
+  height: 38px;
+  padding-top: 10px;
+  width: 38px;
+  text-align: center;
+}
+
+.sidebar-button span {
+  display: none;
+  background-color: var(--dark);
+}
+
+.sidebar-button.active {
+  background-color: var(--light);
+  color: #fff;
+  overflow: hidden;
+}
+
+.sidebar-button.active span {
+  display: inline-block;
+}
+
+.sidebar .button-label {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.65;
+}
+
+.sidebar .button-label.active {
+  opacity: 1;
+}
+
+.dashboard {
+  margin-left: 1.5em;
+}
+
+.purple-card {
+  background-color: var(--light);
+  color: #fff;
+  height: 13.4em;
+}
+
+.purple-card div {
+  left: 42%;
+  top: 52%;
+}
+
+.purple-card div h5 {
+  font-size: 1.2rem;
+}
+
+.purple-card div p {
+  font-weight: 300;
+}
+
+.purple-card div .btn {
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.purple-card .img-doctor {
+  width: 18rem;
+  right: 1rem;
+  bottom: -2rem;
+}
+
+.info-card {
+  background-color: #fff;
+}
+
+.info-card .heading {
+  font-size: 0.9rem;
+}
+
+.info-card .avatar {
+  width: 3rem;
+}
+
+.info-card .desc {
+  font-size: 0.8em;
+  opacity: 0.55;
+  color: var(--darkest);
+}
+
+.info-card .card-img {
+  width: 2rem;
+}
+
+.info-card .additional-info {
+  color: var(--light);
+  font-size: 0.93rem;
+}
+
+.info-card .desc .positive {
+  color: rgb(0, 173, 0);
+}
+
+.info-card .desc .negative {
+  color: red;
+}
+
+.info-card .important-info {
+  background-color: var(--lightest);
+  color: var(--light);
+  padding: 0.5rem 0.8rem;
+  opacity: 0.8;
+}
+
+.info-card a {
+  font-size: 0.8em;
+}
+
+.list-icon {
+  margin-right: 1rem;
+}
+
+.list-button {
+  background-color: var(--greyish-blue);
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1200px) {
   .purple-card div {
-    left: 42%;
-    top: 52%;
+    top: 50%;
   }
-  
-  .purple-card div h5 {
-    font-size: 1.2rem;
-  }
-  
-  .purple-card div p {
-    font-weight: 300;
-  }
-  
-  .purple-card div .btn {
-    background-color: var(--blue);
-    color: #fff;
-    font-size: 0.8rem;
-  }
-  
   .purple-card .img-doctor {
-    width: 18rem;
-    right: 1rem;
-    bottom: -2rem;
+    width: 15rem;
+    right: -0.5rem;
+    bottom: 0rem;
   }
-  
-  .info-card {
-    background-color: #fff;
-  }
-  
-  .info-card .heading {
-    font-size: 0.9rem;
-  }
-  
-  .info-card .avatar {
-    width: 3rem;
-  }
-  
-  .info-card .desc {
-    font-size: 0.8em;
-    opacity: 0.55;
-    color: var(--darkest);
-  }
-  
-  .info-card .card-img {
-    width: 2rem;
-  }
-  
-  .info-card .additional-info {
-    color: var(--light);
-    font-size: 0.93rem;
-  }
-  
-  .info-card .desc .positive {
-    color: rgb(0, 173, 0);
-  }
-  
-  .info-card .desc .negative {
-    color: red;
-  }
-  
-  .info-card .important-info {
-    background-color: var(--lightest);
-    color: var(--light);
-    padding: 0.5rem 0.8rem;
-    opacity: 0.8;
-  }
-  
-  .info-card a {
-    font-size: 0.8em;
-  }
-  
-  .list-icon {
-    margin-right: 1rem;
-  }
-  
-  .list-button {
-    background-color: var(--greyish-blue);
-    opacity: 0.7;
-  }
-  
-  @media screen and (max-width: 1200px) {
-    .purple-card div {
-      top: 50%;
-    }
-    .purple-card .img-doctor {
-      width: 15rem;
-      right: -0.5rem;
-      bottom: 0rem;
-    }
-  }
-  
-  /* @media screen and (max-width: 768px) {
+}
+
+/* @media screen and (max-width: 768px) {
     .sidebar{
       position: fixed;
       z-index: 1;
@@ -226,3 +227,188 @@
       z-index: 2;
     }
   } */
+
+/* LANDING CSS */
+
+.form-signin {
+  width: 100%;
+}
+
+form .btn {
+  font-size: 95%;
+  border-radius: 5rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-google {
+  color: white;
+  --color: #ea4335;
+  background-color: #ea4335;
+}
+
+@media(min-width:768px) {
+  .modal-dialog {
+    max-width: 60vw;
+  }
+}
+
+.btn {
+  font-size: 1rem!important;
+}
+
+.btn-facebook {
+  color: white;
+  --color: #3b5998;
+  background-color: #3b5998;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+.btn-facebook:hover, .btn-facebook:focus, .btn-google:hover, .btn-google:focus {
+  color: white;
+  box-shadow: 0 4px 11px var(--color);
+  transform: translateY(-0.25em);
+}
+
+.third, .third:focus {
+  border-color: #3498db;
+  color: #fff!important;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+}
+
+.third:hover {
+  color: black!important;
+  box-shadow: 0 0 10px 0 #f6fdff inset, 0 0 10px 4px #77e2f6;
+}
+
+.wave-container {
+  z-index: -1;
+}
+
+[class*='hover-'] {
+  transition: all 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [class*='hover-'] {
+    transition: none;
+  }
+}
+
+[class*="shadow"] {
+  transition: all 0.2s ease;
+}
+
+.hover-translate-y-n10:hover {
+  transform: translateY(-10px)!important;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+}
+
+.icon {
+  min-width: 3rem;
+  min-height: 3rem;
+  line-height: 3rem;
+}
+
+.icon i {
+  font-size: 2.75rem;
+}
+
+.icon-lg {
+  min-width: 4rem;
+  min-height: 4rem;
+  line-height: 4rem;
+}
+
+.icon-lg i {
+  font-size: 3.75rem;
+}
+
+.icon-shape {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+
+.icon-shape i {
+  font-size: 1.25rem;
+}
+
+.icon-shape.icon-lg i {
+  font-size: 1.75rem;
+}
+
+.fluid-paragraph {
+  width: 680px;
+  margin: auto;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .fluid-paragraph {
+    width: 100%;
+  }
+  .mb-n {
+    margin-bottom: -3rem;
+  }
+}
+
+/* REGISTER MODAL */
+
+.register-right {
+  background: var(--lightest);
+}
+
+.rocket-image {
+  -webkit-animation: mover 2s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+#account-type li a {
+  color: white;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+#account-type li a.active {
+  background-color: white;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  color: #0062cc;
+  border: 2px solid #0062cc;
+}
