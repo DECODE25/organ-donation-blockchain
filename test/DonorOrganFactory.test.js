@@ -1,6 +1,7 @@
 const DonateOrganFactory = artifacts.require("DonateOrganFactory");
 const Person = artifacts.require("Person");
 const Doctor = artifacts.require("Doctor");
+const Transplant = artifacts.require("Transplant");
 
 contract("DonateOrganFactory", (accounts) => {
   let factory;
@@ -104,23 +105,38 @@ contract("DonateOrganFactory", (accounts) => {
     let recepientContract;
     let donorContract;
     let doctorContract;
+    let transplant;
     before(async () => {
       factory = await DonateOrganFactory.deployed();
       // create the recepient
       await factory.createPerson("ujjwal", "1234321234", { from: recepient });
       let address1 = await factory.people(recepient);
-      recepientContract = Person.at(address1);
+      recepientContract = await Person.at(address1);
 
       //create the donor
       await factory.createPerson("ujjwal", "1234321234", { from: donor });
       let address2 = await factory.people(recepient);
-      donorContract = Person.at(address2);
+      donorContract = await Person.at(address2);
 
       //create the doctor
 
       await factory.createDoctor("ujjwal", "1234321234", { from: doctor });
       let address3 = await factory.doctors(doctor);
       doctorContract = await Doctor.at(address3);
+
+      //create the transaplant
+      await factory.createTransplant(recepient, donor, 1234, { from: doctor });
+      let count = await factory.count();
+      address = await factory.transplants(count - 1);
+      transplant = await Transplant.at(address);
+    });
+
+    it("creates and deploys a person smart contract", async () => {
+      assert.equal(
+        address,
+        transplant.address,
+        "address in map of factory and address from deployed instance"
+      );
     });
   });
 });

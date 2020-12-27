@@ -14,6 +14,7 @@ contract DonateOrganFactory {
     mapping( address => address) public  people ;
     mapping( address => address) public  doctors ;
     address[] public transplants ;
+    uint256 public count ;
 
     event personEvent (
         address indexed sender,
@@ -55,7 +56,7 @@ contract DonateOrganFactory {
         admin = msg.sender ;
         authority1=_authority1;
         authority2=_authority2;
-
+        count = 0 ;
     }
 
 
@@ -84,6 +85,7 @@ contract DonateOrganFactory {
         recepient.addTransplant(address(transplant));
         donor.addTransplant(address(transplant));
         doctor.addTransplant(address(transplant));
+        count ++ ;
 
     }
     function approveTranspantStage (address _trans) public  isrestricted {
