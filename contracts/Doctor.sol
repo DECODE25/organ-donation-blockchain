@@ -18,7 +18,7 @@ contract Doctor {
 	//events complete current stage
 
 	modifier isAdmin () {
-		require(tx.origin == myaddress);
+		require(tx.origin == myaddress  , "Not the admin of Doctor contract ");
 		_;
 	}
 	constructor( string memory _name , string memory  _aadhar_number , address  _myaddress  ) public

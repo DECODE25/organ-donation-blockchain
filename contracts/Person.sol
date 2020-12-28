@@ -15,11 +15,11 @@ contract Person {
 
 
 	modifier isAdmin () {
-		require(msg.sender == myaddress);
+		require(msg.sender == myaddress , "Not the admin of this person contract");
 		_;
 	}
 	modifier restrictedDoctor () {
-		require(doctorexists[tx.origin] == true );
+		require(doctorexists[tx.origin] == true , "the doctor does not exists in the approved list of doctors ");
 		_;
 	}
 

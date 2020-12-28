@@ -36,11 +36,11 @@ contract Transplant {
 		mapping (uint256 => doc[]) docs ;
 
 		modifier onlyDoctor() {
-		    require(tx.origin == doctor);
+		    require(tx.origin == doctor , "is not the doctor of this transplant");
 		    _;
 		}
 		modifier belongs () {
-		    require (tx.origin == donor || tx.origin == recepient || tx.origin == doctor || tx.origin == approval_authority1 || tx.origin == approval_authority2 );
+		    require (tx.origin == donor || tx.origin == recepient || tx.origin == doctor || tx.origin == approval_authority1 || tx.origin == approval_authority2 , "is not an verified entity of the transplant");
 		    _;
 		}
 

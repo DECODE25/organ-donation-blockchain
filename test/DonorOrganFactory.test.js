@@ -139,4 +139,18 @@ contract("DonateOrganFactory", (accounts) => {
       );
     });
   });
+
+  describe("failure tests for create transplant functionality", () => {
+    //checks that only doctor is able to create the trasnplant
+    it("only doctors can create transplant", async () => {
+      try {
+        await factory.createTransplant(recepient, donor, 1234, {
+          from: recepient,
+        });
+        assert(false);
+      } catch (error) {
+        assert(error);
+      }
+    });
+  });
 });
