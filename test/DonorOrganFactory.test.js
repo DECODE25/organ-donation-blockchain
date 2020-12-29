@@ -101,11 +101,11 @@ contract("DonateOrganFactory", (accounts) => {
   });
 
   describe("testing the complete transplant functionality", () => {
-    let address;
+    let address; //adddress of the transplant cotract
     let recepientContract;
     let donorContract;
     let doctorContract;
-    let transplant;
+    let transplant; //transpant contract
     before(async () => {
       factory = await DonateOrganFactory.deployed();
       // create the recepient
@@ -138,6 +138,19 @@ contract("DonateOrganFactory", (accounts) => {
         "address in map of factory and address from deployed instance"
       );
     });
+    it("stage approval tests", async () => {
+      let approvalCount;
+      let stage;
+      let stageNumber = await transplant.stageNo();
+      stage = await transplant.stages(stageNumber);
+      approvalCount = stage.voteCount();
+      await recepientContract.approveStage(address, { from: recepient });
+
+      await donorContract.approveStage(address, { from: donor });
+      await doctorContract.approveStage(address, { from: doctor });
+      await factory.approveTranspantStage(address, { from: authority1 });
+      await factory.approveTranspantStage(address, { from: authority2 });
+    });
   });
 
   describe("failure tests for create transplant functionality", () => {
@@ -147,6 +160,7 @@ contract("DonateOrganFactory", (accounts) => {
         await factory.createTransplant(recepient, donor, 1234, {
           from: recepient,
         });
+
         assert(false);
       } catch (error) {
         assert(error);

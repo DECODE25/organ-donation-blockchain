@@ -30,8 +30,7 @@ contract DonateOrganFactory {
 
     event transplantEvent (
         address indexed sender,
-        address indexed transplantAddress,
-        string name
+        address indexed transplantAddress
     );
 
 
