@@ -1,16 +1,16 @@
 import React from "react";
 import Logo from "../../images/codebeat.svg";
 
-const Navbar = () => {
+const Navbar = ({setShowSidebar, showSidebar, brandStyle, menuStyle}) => {
   return (
     <div className="d-flex align-items-center m-3 mt-4 pr-3">
-      <div className="brand d-flex align-items-center px-4 py-2 shadow-sm rounded-3">
+      <div className="brand d-flex align-items-center px-4 py-2 shadow-sm rounded-3" style={brandStyle}>
         <img src={Logo} className="img-fluid logo" alt="logo" />
         <p className="d-inline-block mb-0 brand-name">Mario Hospital</p>
       </div>
       {/*ADD ACTIVE CLASS WHEN BUTTON IS CLICKED*/}
-      <div className="menu rounded-3 active">
-        <button className="btn shadow-none">
+      <div className={showSidebar ? "menu rounded-3 active" : "menu rounded-3"} style={menuStyle}>
+        <button className="btn shadow-none" onClick={()=>{setShowSidebar(!showSidebar)}}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={16}
