@@ -36,7 +36,7 @@ contract Doctor {
 		tr.startNextStage();
 
     }
-    function completecurrentStage ( address _contractAddress ) external isAdmin {
+    function completecurrentStage ( address _contractAddress ) public isAdmin {
         Transplant tr = Transplant(_contractAddress);
 		tr.completeStage();
     }

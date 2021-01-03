@@ -41,13 +41,13 @@ contract DonateOrganFactory {
 
 
     modifier isDoctor() {
-        require(doctors[msg.sender] != address(0) , "only doctors can create the transplant");
+        require(doctors[msg.sender] != address(0) , "only doctors can create the transplant --> Factory contract");
         _;
     }
 
 
     modifier isrestricted () {
-        require(msg.sender == authority1 || msg.sender == authority2  , "is not an authority");
+        require(msg.sender == authority1 || msg.sender == authority2  , "is not an authority --> Factory contract");
         _;
     }
 

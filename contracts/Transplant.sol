@@ -36,11 +36,11 @@ contract Transplant {
 		mapping (uint256 => doc[]) docs ;
 
 		modifier onlyDoctor() {
-		    require(tx.origin == doctor , "is not the doctor of this transplant");
+		    require(tx.origin == doctor , "is not the doctor of this transplant --> transplant contract");
 		    _;
 		}
 		modifier belongs () {
-		    require (tx.origin == donor || tx.origin == recepient || tx.origin == doctor || tx.origin == approval_authority1 || tx.origin == approval_authority2 , "is not an verified entity of the transplant");
+		    require (tx.origin == donor || tx.origin == recepient || tx.origin == doctor || tx.origin == approval_authority1 || tx.origin == approval_authority2 , "is not an verified entity of the transplant --> Transplant contract");
 		    _;
 		}
 
@@ -64,8 +64,8 @@ contract Transplant {
 		}
 
 		function startNextStage () public onlyDoctor {
-			require(stages[stageNo].voteCount == 5 , "Not Enough Votes");
-			require(stages[stageNo].completed == true , "Stage Not completed yet");
+			require(stages[stageNo].voteCount == 5 , "Not Enough Votes --> Transplant contract");
+			require(stages[stageNo].completed == true , "Stage Not completed yet --> Transplant contract");
 		    stageNo = stageNo+1;
 		    Stage memory newStage = Stage({
 		        completed:false,

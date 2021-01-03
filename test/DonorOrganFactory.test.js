@@ -115,7 +115,7 @@ contract("DonateOrganFactory", (accounts) => {
 
       //create the donor
       await factory.createPerson("ujjwal", "1234321234", { from: donor });
-      let address2 = await factory.people(recepient);
+      let address2 = await factory.people(donor);
       donorContract = await Person.at(address2);
 
       //create the doctor
@@ -131,25 +131,50 @@ contract("DonateOrganFactory", (accounts) => {
       transplant = await Transplant.at(address);
     });
 
-    it("creates and deploys a person smart contract", async () => {
+    it("creates and deploys a trnspalant smart contract", async () => {
       assert.equal(
         address,
         transplant.address,
         "address in map of factory and address from deployed instance"
       );
     });
-    it("stage approval tests", async () => {
+    it("stage approval tests --> ideal", async () => {
       let approvalCount;
       let stage;
       let stageNumber = await transplant.stageNo();
       stage = await transplant.stages(stageNumber);
-      approvalCount = stage.voteCount();
+      approvalCount = stage.voteCount;
+      assert.equal(approvalCount.toNumber(), 0, "vote count is 0 at the start");
       await recepientContract.approveStage(address, { from: recepient });
-
       await donorContract.approveStage(address, { from: donor });
       await doctorContract.approveStage(address, { from: doctor });
       await factory.approveTranspantStage(address, { from: authority1 });
       await factory.approveTranspantStage(address, { from: authority2 });
+      stage = await transplant.stages(stageNumber);
+      approvalCount = stage.voteCount;
+      assert.equal(approvalCount.toNumber(), 5, "vote count is 5 at the end ");
+    });
+    it("stage completion tests --> ideal ", async () => {
+      let stageNumber = await transplant.stageNo();
+      await doctorContract.completecurrentStage(address, { from: doctor });
+      let stage = await transplant.stages(stageNumber);
+      let status = stage.completed;
+      assert.equal(status, true, "stage is marked as correct");
+    });
+
+    it("create new stage --> ideal ", async () => {
+      let stageNumberOld = await transplant.stageNo();
+      await doctorContract.createStage(address, { from: doctor });
+      let stageNumberNew = await transplant.stageNo();
+      let stage = await transplant.stages(stageNumberNew);
+      assert.equal(
+        stageNumberNew.toNumber(),
+        stageNumberOld.toNumber() + 1,
+        "stage is incremneted by 1"
+      );
+      assert.equal(stage.completed, false, "stage is not complete");
+      assert.equal(stage.voteCount, 0, "stage voteCount is 0");
+      assert.equal(stage.started, true, "new stage has been started");
     });
   });
 
