@@ -179,12 +179,99 @@ contract("DonateOrganFactory", (accounts) => {
   });
 
   describe("failure tests for create transplant functionality", () => {
+    let address; //adddress of the transplant cotract
+    let recepientContract;
+    let donorContract;
+    let doctorContract;
+    let transplant; //transpant contract
+    before(async () => {
+      factory = await DonateOrganFactory.deployed();
+      // create the recepient
+      await factory.createPerson("ujjwal", "1234321234", { from: recepient });
+      let address1 = await factory.people(recepient);
+      recepientContract = await Person.at(address1);
+
+      //create the donor
+      await factory.createPerson("ujjwal", "1234321234", { from: donor });
+      let address2 = await factory.people(donor);
+      donorContract = await Person.at(address2);
+
+      //create the doctor
+
+      await factory.createDoctor("ujjwal", "1234321234", { from: doctor });
+      let address3 = await factory.doctors(doctor);
+      doctorContract = await Doctor.at(address3);
+
+      //create the transaplant
+      await factory.createTransplant(recepient, donor, 1234, { from: doctor });
+      let count = await factory.count();
+      address = await factory.transplants(count - 1);
+      transplant = await Transplant.at(address);
+    });
     //checks that only doctor is able to create the trasnplant
     it("only doctors can create transplant", async () => {
       try {
         await factory.createTransplant(recepient, donor, 1234, {
           from: recepient,
         });
+
+        assert(false);
+      } catch (error) {
+        assert(error);
+      }
+    });
+    it("only authorities can approve the stage from inside the factory contract ", async () => {
+      try {
+        await factory.approveTranspantStage(address, { from: recepient });
+
+        assert(false);
+      } catch (error) {
+        assert(error);
+      }
+    });
+    it("is Admin modifier check in doctor contract ", async () => {
+      try {
+        await doctorContract.approveStage(address, { from: recepient });
+
+        assert(false);
+      } catch (error) {
+        assert(error);
+      }
+    });
+    it("is Admin modifier check in person contract ", async () => {
+      try {
+        await recepientContract.approveStage(address, { from: donor });
+
+        assert(false);
+      } catch (error) {
+        assert(error);
+      }
+    });
+    it("belongs modifier check in transpant contract ", async () => {
+      try {
+        await transplant.currentStageApproval({ from: accounts[6] });
+        assert(false);
+      } catch (error) {
+        assert(error);
+      }
+    });
+    it("stage is only completed when it gets 5 votes ", async () => {
+      try {
+        await doctorContract.createStage(address, { from: doctor });
+        assert(false);
+      } catch (error) {
+        assert(error);
+      }
+    });
+    it("onlyDoctor modifier check in trasnpant contract ", async () => {
+      try {
+        await recepientContract.approveStage(address, { from: recepient });
+        await donorContract.approveStage(address, { from: donor });
+        await doctorContract.approveStage(address, { from: doctor });
+        await factory.approveTranspantStage(address, { from: authority1 });
+        await factory.approveTranspantStage(address, { from: authority2 });
+
+        await transplant.completeStage({ from: recepient });
 
         assert(false);
       } catch (error) {

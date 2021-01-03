@@ -24,8 +24,8 @@ contract Transplant {
 		address public doctor ;
 		address public recepient ;
 		address public donor ;
-		address public approval_authority1;
-		address public approval_authority2;
+		address  approval_authority1;
+		address  approval_authority2;
 
 		uint256 public stageNo ;
 		Stage[] public stages ;
