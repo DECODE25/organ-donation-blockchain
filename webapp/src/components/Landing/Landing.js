@@ -1,6 +1,12 @@
 import React from "react";
 import Rocket from "../../images/logo_white.png";
 import Logo from "../../images/codebeat.svg";
+import Delivery from "../../images/delivery.svg";
+import Money from "../../images/money.svg";
+import ReturnOfInvestment from "../../images/return-of-investment.svg";
+import Line from "../../images/line.svg";
+import Conversation from "../../images/conversation.svg";
+import BadReview from "../../images/bad-review.svg";
 
 const Landing = () => {
   return (
@@ -58,7 +64,7 @@ const Landing = () => {
                     <div className="col-md-7 col-lg-6 align-self-center">
                       <img
                         src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg"
-                        className="img-fluid mb-3 d-none d-md-block"                        
+                        className="img-fluid mb-3 d-none d-md-block"
                         alt="showpiece"
                       />
                     </div>
@@ -387,7 +393,7 @@ const Landing = () => {
       {/*navbar*/}
       <div className="position-relative d-flex align-items-center m-3 mt-4 pr-3">
         <div className="brand d-flex align-items-center px-4 py-2 shadow-sm rounded-3">
-          <img src={Logo} className="img-fluid logo" alt="logo"/>
+          <img src={Logo} className="img-fluid logo" alt="logo" />
           <p className="d-inline-block mb-0 brand-name">Mario Hospital</p>
         </div>
         <div className="notification-icons">
@@ -418,14 +424,14 @@ const Landing = () => {
         >
           <path
             xmlns="http://www.w3.org/2000/svg"
-            fill="#dff8fd"
+            fill="#d2d7ff"
             fillOpacity="0.7"
             transform="translate(0 -50)"
             d="M0,96L80,96C160,96,320,96,480,112C640,128,800,160,960,154.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
           />
           <path
             xmlns="http://www.w3.org/2000/svg"
-            fill="#eefcff"
+            fill="#e3e7f1"
             fillOpacity="0.5"
             transform="translate(-32 -20)"
             d="M0,64L48,106.7C96,149,192,235,288,245.3C384,256,480,192,576,154.7C672,117,768,107,864,138.7C960,171,1056,245,1152,229.3C1248,213,1344,107,1392,53.3L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
@@ -437,13 +443,13 @@ const Landing = () => {
           <path
             xmlns="http://www.w3.org/2000/svg"
             transform="translate(-520 40)"
-            fill="#77e2f6"
+            fill="#8b85ff"
             fillOpacity={1}
             d="M0,256L48,250.7C96,245,192,235,288,192C384,149,480,75,576,53.3C672,32,768,64,864,101.3C960,139,1056,181,1152,202.7C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           />
           <path
             xmlns="http://www.w3.org/2000/svg"
-            fill="#50adf3"
+            fill="#3e22ee"
             fillOpacity={1}
             transform="translate(0 30)"
             d="M-50,288L40,272C80,256,160,224,240,181.3C320,139,400,85,480,106.7C560,128,640,224,720,234.7C800,245,880,171,960,144C1040,117,1120,139,1200,154.7C1280,171,1360,181,1400,186.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L-50,320Z"
@@ -453,11 +459,11 @@ const Landing = () => {
       <section className="pt-5">
         <div className="container pt-4">
           <div className="mb-5 text-center">
-            <h3 className=" mt-4 ">Features that you really love</h3>
+            <h3 className=" mt-4 ">Organ Donations Made Easy...</h3>
             <div className="fluid-paragraph mt-3">
               <p className="lead lh-180 ">
-                Start building fast, beautiful and modern looking websites in no
-                time using our theme.
+                Ecosystem for donors and recipients to interact
+                on secure lines to make the process easy and secure❤️
               </p>
             </div>
           </div>
@@ -466,30 +472,30 @@ const Landing = () => {
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-primary rounded-circle icon-lg icon-shape shadow">
-                    <i className="fab fa-twitter" />
+                    <img class="img-fluid landing-page-icon" src={Delivery} />
                   </div>
                 </div>
-                <h5 className="font-weight-bold">Based on Bootstrap</h5>
+                <h5 className="font-weight-bold">Tracking Procedure Status</h5>
               </div>
             </div>
             <div className="col-4">
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-success rounded-circle icon-lg icon-shape shadow">
-                    <i className="fab fa-sass" />
+                  <img class="img-fluid landing-page-icon" src={Money} />
                   </div>
                 </div>
-                <h5 className="font-weight-bold">Built with Sass</h5>
+                <h5 className="font-weight-bold">Funding from NGO's</h5>
               </div>
             </div>
             <div className="col-4">
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-danger rounded-circle icon-lg icon-shape shadow">
-                    <i className="fas fa-code" />
+                  <img class="img-fluid landing-page-icon" src={ReturnOfInvestment} />
                   </div>
                 </div>
-                <h5 className="font-weight-bold">Tones of variables</h5>
+                <h5 className="font-weight-bold">Moneyback Guarantee</h5>
               </div>
             </div>
           </div>
@@ -498,30 +504,30 @@ const Landing = () => {
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-primary rounded-circle icon-lg icon-shape shadow">
-                    <i className="fas fa-tint" />
+                  <img class="img-fluid landing-page-icon" src={Line} />
                   </div>
                 </div>
-                <h5 className="font-weight-bold">Extended color palette</h5>
+                <h5 className="font-weight-bold">Status in Waiting List</h5>
               </div>
             </div>
             <div className="col-4">
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-info rounded-circle icon-lg icon-shape shadow">
-                    <i className="fas fa-box-open" />
+                  <img class="img-fluid landing-page-icon" src={Conversation} />
                   </div>
                 </div>
-                <h5 className="font-weight-bold">Integrated plugins</h5>
+                <h5 className="font-weight-bold">Direct Contact with Professionals</h5>
               </div>
             </div>
             <div className="col-4">
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-warning rounded-circle icon-lg icon-shape shadow">
-                    <i className="fas fa-comment" />
+                  <img class="img-fluid landing-page-icon" src={BadReview} />
                   </div>
                 </div>
-                <h5 className="font-weight-bold">Friendly support</h5>
+                <h5 className="font-weight-bold">Grievance Portal</h5>
               </div>
             </div>
           </div>

@@ -7,6 +7,9 @@ import Cardiogram from "../../images/cardiogram.svg";
 import Drip from "../../images/intravenous-saline-drip.svg";
 import Rbc from "../../images/erythrocytes.svg";
 import Doc from "../../images/document.svg";
+import Doctor1 from "../../images/doctor (1).svg";
+import Doctor2 from "../../images/doctor (2).svg";
+import Doctor3 from "../../images/doctor (3).svg";
 
 const Dashboard = () => {
   return (
@@ -31,7 +34,7 @@ const Dashboard = () => {
               </button>
             </div>
             <img
-              className="img-fluid position-absolute img-doctor"              
+              className="img-fluid position-absolute img-doctor"
               src={Doctor}
               alt="doctor"
             />
@@ -53,7 +56,7 @@ const Dashboard = () => {
         </div>
         <div className="col-md-6 col-lg-4 col-xl-3">
           <div className="info-card rounded-3 p-3">
-            <img src={Blood} className="img-fluid card-img" alt="blood"/>
+            <img src={Blood} className="img-fluid card-img" alt="blood" />
             <p className="heading mt-3 mb-0">Blood Pressure</p>
             <p className="additional-info pt-1 mb-2">110/70</p>
             <p className="desc pt-1 mb-2">
@@ -78,7 +81,11 @@ const Dashboard = () => {
         </div>
         <div className="col-md-6 col-lg-4 col-xl-3">
           <div className="info-card rounded-3 p-3">
-            <img src={Cardiogram} className="img-fluid card-img" alt="cardiogram"/>
+            <img
+              src={Cardiogram}
+              className="img-fluid card-img"
+              alt="cardiogram"
+            />
             <p className="heading mt-3 mb-0">Heart Rate</p>
             <p className="additional-info pt-1 mb-2">85 BPM</p>
             <p className="desc pt-1 mb-2">
@@ -103,11 +110,7 @@ const Dashboard = () => {
         </div>
         <div className="col-md-6 col-lg-4 col-xl-3">
           <div className="info-card rounded-3 p-3">
-            <img
-              src={Drip}
-              className="img-fluid card-img"
-              alt="drip"
-            />
+            <img src={Drip} className="img-fluid card-img" alt="drip" />
             <p className="heading mt-3 mb-0">Glucose Level</p>
             <p className="additional-info pt-1 mb-2">75-90</p>
             <p className="desc pt-1 mb-2">
@@ -132,7 +135,7 @@ const Dashboard = () => {
         </div>
         <div className="col-md-6 col-lg-12 col-xl-3">
           <div className="info-card rounded-3 p-3 text-lg-center text-xl-start">
-            <img src={Rbc} className="img-fluid card-img" alt="rbc"/>
+            <img src={Rbc} className="img-fluid card-img" alt="rbc" />
             <p className="heading mt-3 mb-0">RBC Count</p>
             <p className="additional-info pt-1 mb-2">9,456/mL</p>
             <p className="desc pt-1 mb-2">
@@ -157,17 +160,155 @@ const Dashboard = () => {
         </div>
         <div className="col-lg-6">
           <div className="info-card rounded-3 p-3">
-            <div className="d-flex">
+            <div className="d-flex align-items-center mb-3">
               <div className="flex-fill">
-                <p className="heading mb-1">Performance Heart Rate</p>
-                <button className="btn shadow-none p-0 desc fw-bold dropdown-toggle">
-                  1-7 December 2020
-                </button>
+                <p className="heading mb-0">Approved Doctors</p>
               </div>
               <div className="flex-fill text-end">
-                <p className="important-info d-inline-block rounded-3">
-                  72 bpm <span className="desc">Average</span>
-                </p>
+                <a className="text-decoration-none" href="!#">
+                  VIEW MORE
+                </a>
+              </div>
+            </div>
+            <div className="d-flex my-2 pt-2 align-items-center">
+              <img
+                className="img-fluid card-img list-icon"
+                src={Doctor1}
+                alt="document"
+              />
+              <div className="flex-fill">
+                <p className="mb-0">Dr. Michael P</p>
+              </div>
+              <div className="flex-fill text-end">
+                <button className="btn shadow-none list-button p-2 mx-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-trash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                    />
+                  </svg>
+                </button>
+                <button className="btn shadow-none list-button p-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-box-arrow-down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"
+                    />
+                    <path
+                      fillRule="evenodd"
+                      d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="d-flex my-2 pt-2 align-items-center">
+              <img
+                className="img-fluid card-img list-icon"
+                src={Doctor2}
+                alt="document"
+              />
+              <div className="flex-fill">
+                <p className="mb-0">Dr. Thomas A</p>
+              </div>
+              <div className="flex-fill text-end">
+                <button className="btn shadow-none list-button p-2 mx-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-trash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                    />
+                  </svg>
+                </button>
+                <button className="btn shadow-none list-button p-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-box-arrow-down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"
+                    />
+                    <path
+                      fillRule="evenodd"
+                      d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="d-flex my-2 pt-2 align-items-center">
+              <img
+                className="img-fluid card-img list-icon"
+                src={Doctor3}
+                alt="document"
+              />
+              <div className="flex-fill">
+                <p className="mb-0">Dr. Daniel D</p>
+              </div>
+              <div className="flex-fill text-end">
+                <button className="btn shadow-none list-button p-2 mx-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-trash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                    />
+                  </svg>
+                </button>
+                <button className="btn shadow-none list-button p-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-box-arrow-down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"
+                    />
+                    <path
+                      fillRule="evenodd"
+                      d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>

@@ -52,25 +52,27 @@ function App() {
               }}
             ></div>
           )}
-          <TopBarLoggedIn
-            setShowSidebar={setShowSidebar}
-            showSidebar={showSidebar}
-            menuStyle={menuStyle}
-            brandStyle={brandStyle}
-          />
-          <div class="d-flex p-3">
-            {showSidebar && <Sidebar />}
-            <Switch>
-              <Route path="/dashboard">
-                <Dashboard />
-              </Route>
-              <Route path="/complain">
-                <Complain />
-              </Route>
-              <Route path="/track">
-                <Track />
-              </Route>
-            </Switch>
+          <div className="logged-in-bg">
+            <TopBarLoggedIn
+              setShowSidebar={setShowSidebar}
+              showSidebar={showSidebar}
+              menuStyle={menuStyle}
+              brandStyle={brandStyle}
+            />
+            <div class="d-flex p-3">
+              {showSidebar && <Sidebar />}
+              <Switch>
+                <Route path="/dashboard">
+                  <Dashboard />
+                </Route>
+                <Route path="/complain">
+                  <Complain />
+                </Route>
+                <Route path="/track">
+                  <Track />
+                </Route>
+              </Switch>
+            </div>
           </div>
         </Route>
       </Switch>
