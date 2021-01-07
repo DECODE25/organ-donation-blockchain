@@ -1,5 +1,6 @@
 /* DASHBOARD and TRACKING CSS */
 
+
 :root {
   --darkest: #14274e;
   --dark: #3e22ee;
@@ -13,11 +14,16 @@
 }
 
 body {
-  background-color: var(--lightest);
   font-family: "Roboto", sans-serif;
   font-size: 13.3px;
   color: var(--darkest);
   font-weight: 700;
+}
+
+.logged-in-bg {
+  background-color: var(--lightest);
+  height: 100vh;
+  overflow: auto;
 }
 
 .brand {
@@ -128,7 +134,7 @@ body {
   font-weight: 300;
 }
 
-button.action-button {
+button.action-button, button.action-button:hover {
   background-color: var(--blue);
   color: #fff;
   font-size: 0.8rem!important;
@@ -230,7 +236,6 @@ button.action-button {
 }
 
 .circle.active {
-  padding-top: 4px;
   border-color: var(--green);
   color: var(--green);
 }
@@ -414,6 +419,10 @@ button.action-button {
 
 .form-signin {
   width: 100%;
+}
+
+.landing-page-icon {
+  width: 32px
 }
 
 form .btn {
