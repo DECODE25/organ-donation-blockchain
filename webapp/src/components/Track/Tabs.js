@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 
-const Tabs = () => {
-    const [selectedTabNum, setSelectedTabNum] = useState(1);
+const Tabs = ({selectedTabNum, setSelectedTabNum}) => {
   return (
     <div className="tracking-tabs d-flex mx-auto shadow align-items-center">
       <div className={selectedTabNum === 1 ? "tab text-center active": "tab text-center"} onClick={()=>setSelectedTabNum(1)}>

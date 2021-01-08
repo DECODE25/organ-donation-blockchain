@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import Tabs from "./Tabs";
 import Doctor from "../../images/doctor.svg";
 import Donor from "../../images/man.svg";
 import Recipient from "../../images/worker.svg";
 
-const Track = () => {
+const Track = () => {  
+  const [selectedTabNum, setSelectedTabNum] = useState(1);
   return (
     <div className="dashboard flex-grow-1">
       <h5 className="fs-5">Track Procedure</h5>
@@ -249,7 +250,7 @@ const Track = () => {
             </div>
             <div className="col-12">
               <div className="info-card rounded px-3 py-4">
-              <Tabs />
+              <Tabs selectedTabNum={selectedTabNum} setSelectedTabNum={setSelectedTabNum}/>
                 <div className="tab-content mx-auto">
                   <p className="mt-4 text-center fs-6 mb-2">Kidney Donor</p>
                   <p className="designation text-center mb-4">Age: 35</p>
