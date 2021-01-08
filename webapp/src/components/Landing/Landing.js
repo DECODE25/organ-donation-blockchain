@@ -472,7 +472,7 @@ const Landing = () => {
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-primary rounded-circle icon-lg icon-shape shadow">
-                    <img class="img-fluid landing-page-icon" src={Delivery} />
+                    <img class="img-fluid landing-page-icon" src={Delivery} alt="Delivery-img"/>
                   </div>
                 </div>
                 <h5 className="font-weight-bold">Tracking Procedure Status</h5>
@@ -482,7 +482,7 @@ const Landing = () => {
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-success rounded-circle icon-lg icon-shape shadow">
-                  <img class="img-fluid landing-page-icon" src={Money} />
+                  <img class="img-fluid landing-page-icon" src={Money} alt="Money-img"/>
                   </div>
                 </div>
                 <h5 className="font-weight-bold">Funding from NGO's</h5>
@@ -492,7 +492,7 @@ const Landing = () => {
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-danger rounded-circle icon-lg icon-shape shadow">
-                  <img class="img-fluid landing-page-icon" src={ReturnOfInvestment} />
+                  <img class="img-fluid landing-page-icon" src={ReturnOfInvestment} alt="ReturnOfInvestment-img"/>
                   </div>
                 </div>
                 <h5 className="font-weight-bold">Moneyback Guarantee</h5>
@@ -504,7 +504,7 @@ const Landing = () => {
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-primary rounded-circle icon-lg icon-shape shadow">
-                  <img class="img-fluid landing-page-icon" src={Line} />
+                  <img class="img-fluid landing-page-icon" src={Line} alt="Line-img"/>
                   </div>
                 </div>
                 <h5 className="font-weight-bold">Status in Waiting List</h5>
@@ -514,7 +514,7 @@ const Landing = () => {
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-info rounded-circle icon-lg icon-shape shadow">
-                  <img class="img-fluid landing-page-icon" src={Conversation} />
+                  <img class="img-fluid landing-page-icon" src={Conversation} alt="Conversation-img"/>
                   </div>
                 </div>
                 <h5 className="font-weight-bold">Direct Contact with Professionals</h5>
@@ -524,7 +524,7 @@ const Landing = () => {
               <div className="text-center">
                 <div className="pb-2">
                   <div className="icon bg-white text-warning rounded-circle icon-lg icon-shape shadow">
-                  <img class="img-fluid landing-page-icon" src={BadReview} />
+                  <img class="img-fluid landing-page-icon" src={BadReview} alt="BadReview-img"/>
                   </div>
                 </div>
                 <h5 className="font-weight-bold">Grievance Portal</h5>
